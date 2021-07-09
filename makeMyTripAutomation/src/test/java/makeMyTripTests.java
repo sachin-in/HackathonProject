@@ -46,7 +46,7 @@ public class makeMyTripTests {
 	}
 	@BeforeTest
 	public void createExtentReport() {
-		report=ExtentReport.createExtentReport("Hackathon");	
+		report=ExtentReport.createExtentReport("HackathonProject");	
 	}
 
 	@Test(priority=0)
@@ -70,6 +70,7 @@ public class makeMyTripTests {
 			driver.findElement(By.xpath("//span[contains(text(),'Next')]")).click();//click next
 			driver.switchTo().window(parentwindowid);
 			Thread.sleep(5000);
+			System.out.println("Logged in by google account");
 			
 		}
 		catch(Exception e) {
