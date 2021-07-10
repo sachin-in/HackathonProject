@@ -2,6 +2,30 @@
 <testng-results ignored="6" total="7" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
+
+  <suite started-at="2021-07-10T15:10:48 IST" name="Default suite" finished-at="2021-07-10T15:13:31 IST" duration-ms="163142">
+    <groups>
+    </groups>
+    <test started-at="2021-07-10T15:10:48 IST" name="Default test" finished-at="2021-07-10T15:13:31 IST" duration-ms="163142">
+      <class name="makeMyTripTests">
+        <test-method is-config="true" signature="getExcelData()[pri:0, instance:makeMyTripTests@3023df74]" started-at="2021-07-10T15:10:29 IST" name="getExcelData" finished-at="2021-07-10T15:10:48 IST" duration-ms="18750" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getExcelData -->
+        <test-method is-config="true" signature="createExtentReport()[pri:0, instance:makeMyTripTests@3023df74]" started-at="2021-07-10T15:10:48 IST" name="createExtentReport" finished-at="2021-07-10T15:10:49 IST" duration-ms="1094" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createExtentReport -->
+        <test-method is-config="true" signature="getWebDriver()[pri:0, instance:makeMyTripTests@3023df74]" started-at="2021-07-10T15:10:49 IST" name="getWebDriver" finished-at="2021-07-10T15:13:06 IST" duration-ms="137058" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getWebDriver -->
+        <test-method signature="getHomePageSignature()[pri:0, instance:makeMyTripTests@3023df74]" started-at="2021-07-10T15:13:06 IST" name="getHomePageSignature" finished-at="2021-07-10T15:13:17 IST" duration-ms="11098" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getHomePageSignature -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:makeMyTripTests@3023df74]" started-at="2021-07-10T15:13:17 IST" name="closeBrowser" finished-at="2021-07-10T15:13:31 IST" duration-ms="13717" status="PASS">
+
   <suite started-at="2021-07-10T15:08:22 IST" name="Default suite" finished-at="2021-07-10T15:10:21 IST" duration-ms="118285">
     <groups>
     </groups>
@@ -24,6 +48,7 @@
           </reporter-output>
         </test-method> <!-- loginWithGmail -->
         <test-method is-config="true" signature="closeBrowser()[pri:0, instance:makeMyTripTests@42a48628]" started-at="2021-07-10T15:10:12 IST" name="closeBrowser" finished-at="2021-07-10T15:10:21 IST" duration-ms="8490" status="PASS">
+
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->

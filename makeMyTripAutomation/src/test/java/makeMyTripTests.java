@@ -46,15 +46,15 @@ public class makeMyTripTests {
 	}
 	@BeforeTest
 	public void createExtentReport() {
-		report=ExtentReport.createExtentReport("HackathonProject");	
+		report=ExtentReport.createExtentReport("Hackathon");	
 	}
 
 	@Test(priority=0)
 	public void loginWithGmail() {
 		try {
-			ElementContainer.loginButton(driver).click();
+			ElementContainer.loginButton(driver).click();//login button
 			Thread.sleep(500);
-			driver.findElement(By.xpath("//body/div[@id='root']/div[1]/div[1]/div[1]/div[2]/div[2]/section[1]/div[4]")).click();//login by google
+			ElementContainer.googleLogin(driver).click();//login by google
 			
 			Set<String> handle = driver.getWindowHandles();
 			Iterator<String> it = handle.iterator();
@@ -63,14 +63,13 @@ public class makeMyTripTests {
 			driver.switchTo().window(childwindowid);
 			Thread.sleep(1000);
 			
-			driver.findElement(By.id("identifierId")).sendKeys("bughunterss01@gmail.com");//enter email
-			driver.findElement(By.xpath("//span[contains(text(),'Next')]")).click();//click next
+			ElementContainer.emailInput(driver).sendKeys("bughunterss01@gmail.com");//enter email
+			ElementContainer.nextButton(driver).click();//click next
 			Thread.sleep(1000);
-			driver.findElement(By.name("password")).sendKeys("Bughunter$6");//enter password
-			driver.findElement(By.xpath("//span[contains(text(),'Next')]")).click();//click next
+			ElementContainer.passwordInput(driver).sendKeys("Bughunter$6");//enter password
+			ElementContainer.nextButton(driver).click();//click next
 			driver.switchTo().window(parentwindowid);
 			Thread.sleep(5000);
-			System.out.println("Logged in by google account");
 			
 		}
 		catch(Exception e) {
@@ -81,9 +80,9 @@ public class makeMyTripTests {
 	@Test(priority=1)
 	public void loginFromPopUp() {
 		try {
-		String popUp=driver.findElement(By.xpath("//p[contains(text(),'Login/Signup for Best Prices')]")).getText();//popup title
+		String popUp=ElementContainer.popupTitle(driver).getText();//popup title
 		if(popUp.equalsIgnoreCase("Login/Signup for Best Prices")) {
-			driver.findElement(By.xpath("//span[contains(text(),'Google')]")).click();//login by google
+			ElementContainer.googleClick(driver).click();//login by google
 			Set<String> handle = driver.getWindowHandles();
 			Iterator<String> it = handle.iterator();
 			String parentwindowid = it.next();
@@ -91,14 +90,13 @@ public class makeMyTripTests {
 			driver.switchTo().window(childwindowid);
 			Thread.sleep(1000);
 			
-			driver.findElement(By.id("identifierId")).sendKeys("bughunterss01@gmail.com");//enter email
-			driver.findElement(By.xpath("//span[contains(text(),'Next')]")).click();//click next
+			ElementContainer.emailInput(driver).sendKeys("bughunterss01@gmail.com");//enter email
+			ElementContainer.nextButton(driver).click();//click next
 			Thread.sleep(1000);
-			driver.findElement(By.name("password")).sendKeys("Bughunter$6");//enter password
-			driver.findElement(By.xpath("//span[contains(text(),'Next')]")).click();//click next
+			ElementContainer.passwordInput(driver).sendKeys("Bughunter$6");//enter password
+			ElementContainer.nextButton(driver).click();//click next
 			driver.switchTo().window(parentwindowid);
 			Thread.sleep(5000);
-			System.out.println("Logged in with Google account");
 			
 		}
 		}
@@ -110,31 +108,30 @@ public class makeMyTripTests {
 	
 	@Test()
 	public void getHomePageSignature() {
-		String title=driver.findElement(By.xpath("//p[contains(text(),'© 2021 MAKEMYTRIP PVT. LTD.')]")).getText();//Web Page signature
+		String title=ElementContainer.homepageSignature(driver).getText();//Web Page signature
 		Assert.assertEquals(title, data[1][1], "Title is not correct");
 		Screenshot.captureScreenshot("Homepage", driver);
 	}
 	
 	@Test(priority=2)
 	public void searchCab() {
-		driver.findElement(By.xpath("//span[@class='chNavText darkGreyText'][normalize-space()='Cabs']")).click();// Cab button
-        driver.findElement(By.xpath("//span[normalize-space()='From']")).click();//from option
-        driver.findElement(By.xpath("//input[contains(@placeholder,'From')]")).sendKeys("Delhi");//departure city
+		ElementContainer.cabButton(driver).click();// Cab button
+        ElementContainer.fromCity(driver).click();//from option
+        ElementContainer.selectDeparture(driver).sendKeys("Delhi");//departure city
         try {
 			Thread.sleep(500);
 		} catch(InterruptedException e) {
 		}
         Actions keyPress=new Actions(driver);
         keyPress.sendKeys(Keys.chord(Keys.ARROW_DOWN,Keys.ENTER)).perform();
-        driver.findElement(By.xpath("//input[contains(@placeholder,'To')]")).sendKeys("Manali");// arrival city
+       ElementContainer.selectArrival(driver).sendKeys("Manali");// arrival city
         try {
 			Thread.sleep(500);
 		} catch(InterruptedException e) {
 		}
         keyPress.sendKeys(Keys.chord(Keys.ARROW_DOWN,Keys.ENTER)).perform();
-        
-        driver.findElement(By.xpath("//span[contains(text(),'DEPARTURE')]")).click();// calender
-        List<WebElement> dates=driver.findElements(By.className("DayPicker-Day"));//day picker list
+        ElementContainer.calender(driver).click(); // calender
+        List<WebElement> dates=ElementContainer.daySelect(driver);//day picker list
       
         for(int i=0;i<dates.size();i++) {
             String test=dates.get(i).getText();
@@ -170,14 +167,14 @@ public class makeMyTripTests {
 	@Test
 	public void getAdultsList() {
 			
-			WebElement hotels=driver.findElement(By.xpath("//li[@class='menu_Hotels']//span[2]"));// hotels tab
+			WebElement hotels=ElementContainer.hotelTab(driver);// hotels tab
 			Highlight.flash(hotels, driver);
 			hotels.click();
 			ArrayList<String> adults = new ArrayList<String>();
-	        WebElement guest=driver.findElement(By.id("guest"));// guest button
+	        WebElement guest=ElementContainer.guestsButton(driver);// guest button
 	        Highlight.flash(guest, driver);
 	        guest.click();
-	        List <WebElement> adultsCount = driver.findElements(By.xpath("//ul[@data-cy='adultCount']/li"));//no. of adults list
+	        List <WebElement> adultsCount = ElementContainer.adultsList(driver);//no. of adults list
 	        for (WebElement c : adultsCount)
 	        {
 	             adults.add(c.getText());
