@@ -161,7 +161,9 @@ public class makeMyTripTests {
 	
 	@Test
 	public void buyGiftCard() throws InterruptedException {
-			
+		Actions moveCursor=new Actions(driver);
+		moveCursor.moveToElement(driver.findElement(By.xpath("//*[@id=\"SW\"]/div[1]/div[2]/div/div/nav/ul/li[9]/a/span[1]"))).perform();
+		driver.findElement(By.xpath("//*[@id=\"SW\"]/div[1]/div[2]/div/div/nav/ul/li[9]/div/a[4]")).click();	
 		
 	}
 	
