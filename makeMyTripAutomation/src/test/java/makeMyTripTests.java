@@ -98,6 +98,7 @@ public class makeMyTripTests {
 			driver.findElement(By.xpath("//span[contains(text(),'Next')]")).click();//click next
 			driver.switchTo().window(parentwindowid);
 			Thread.sleep(5000);
+			System.out.println("Logged in with Google account");
 			
 		}
 		}
