@@ -71,7 +71,7 @@ public class makeMyTripTests {
 			ElementContainer.passwordInput(driver).sendKeys(data[1][5]);// enter password
 			ElementContainer.nextButton(driver).click();// click next
 			driver.switchTo().window(parentwindowid);
-			Thread.sleep(5000);
+			Thread.sleep(10000);
 
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -97,7 +97,7 @@ public class makeMyTripTests {
 				ElementContainer.passwordInput(driver).sendKeys(data[1][5]);// enter password
 				ElementContainer.nextButton(driver).click();// click next
 				driver.switchTo().window(parentwindowid);
-				Thread.sleep(5000);
+				Thread.sleep(10000);
 
 			}
 		} catch (Exception e) {
@@ -136,7 +136,7 @@ public class makeMyTripTests {
 		for (int i = 0; i < dates.size(); i++) {
 			String test = dates.get(i).getText();
 
-			if (test.equalsIgnoreCase("20")) {
+			if (test.equalsIgnoreCase(data[1][9])) {
 				dates.get(i).click();
 				break;
 			}
