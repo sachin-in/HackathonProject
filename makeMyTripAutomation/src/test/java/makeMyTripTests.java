@@ -42,13 +42,13 @@ public class makeMyTripTests {
 		 * Get Excel data from readExcelData class Pass the size of data array as int
 		 * type, name of excel file and name of excel sheet as string type
 		 */
-		data = readExcelData.getData(7, "HackathonData.xlsx", "readData");
+		data = readExcelData.getData(12, "HackathonData.xlsx", "readData");
 		return data;
 	}
 
 	@BeforeTest
 	public void createExtentReport() {
-		report = ExtentReport.createExtentReport("Hackathon");
+		report = ExtentReport.createExtentReport(data[1][3]);
 	}
 
 	@Test(priority = 0)
@@ -65,10 +65,10 @@ public class makeMyTripTests {
 			driver.switchTo().window(childwindowid);
 			Thread.sleep(1000);
 
-			ElementContainer.emailInput(driver).sendKeys("bughunterss01@gmail.com");// enter email
+			ElementContainer.emailInput(driver).sendKeys(data[1][4]);// enter email
 			ElementContainer.nextButton(driver).click();// click next
 			Thread.sleep(1000);
-			ElementContainer.passwordInput(driver).sendKeys("Bughunter$6");// enter password
+			ElementContainer.passwordInput(driver).sendKeys(data[1][5]);// enter password
 			ElementContainer.nextButton(driver).click();// click next
 			driver.switchTo().window(parentwindowid);
 			Thread.sleep(5000);
@@ -82,7 +82,7 @@ public class makeMyTripTests {
 	public void loginFromPopUp() {
 		try {
 			String popUp = ElementContainer.popupTitle(driver).getText();// popup title
-			if (popUp.equalsIgnoreCase("Login/Signup for Best Prices")) {
+			if (popUp.equalsIgnoreCase(data[1][6])) {
 				ElementContainer.googleClick(driver).click();// login by google
 				Set<String> handle = driver.getWindowHandles();
 				Iterator<String> it = handle.iterator();
@@ -91,10 +91,10 @@ public class makeMyTripTests {
 				driver.switchTo().window(childwindowid);
 				Thread.sleep(1000);
 
-				ElementContainer.emailInput(driver).sendKeys("bughunterss01@gmail.com");// enter email
+				ElementContainer.emailInput(driver).sendKeys(data[1][4]);// enter email
 				ElementContainer.nextButton(driver).click();// click next
 				Thread.sleep(1000);
-				ElementContainer.passwordInput(driver).sendKeys("Bughunter$6");// enter password
+				ElementContainer.passwordInput(driver).sendKeys(data[1][5]);// enter password
 				ElementContainer.nextButton(driver).click();// click next
 				driver.switchTo().window(parentwindowid);
 				Thread.sleep(5000);
@@ -117,14 +117,14 @@ public class makeMyTripTests {
 	public void searchCab() {
 		ElementContainer.cabButton(driver).click();// Cab button
 		ElementContainer.fromCity(driver).click();// from option
-		ElementContainer.selectDeparture(driver).sendKeys("Delhi");// departure city
+		ElementContainer.selectDeparture(driver).sendKeys(data[1][7]);// departure city
 		try {
 			Thread.sleep(500);
 		} catch (InterruptedException e) {
 		}
 		Actions keyPress = new Actions(driver);
 		keyPress.sendKeys(Keys.chord(Keys.ARROW_DOWN, Keys.ENTER)).perform();
-		ElementContainer.selectArrival(driver).sendKeys("Manali");// arrival city
+		ElementContainer.selectArrival(driver).sendKeys(data[1][8]);// arrival city
 		try {
 			Thread.sleep(500);
 		} catch (InterruptedException e) {
