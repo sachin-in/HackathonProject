@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.Set;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -116,6 +117,14 @@ public class makeMyTripTests {
 	@Test(priority = 2)
 	public void searchCab() {
 		ElementContainer.cabButton(driver).click();// Cab button
+		WebElement radio = ElementContainer.radioButton(driver);
+		if (radio.isSelected() == false) {
+			radio.click();
+
+		}
+	}
+@Test(dependsOnMethods = "searchCab")
+	public void departure() {
 		ElementContainer.fromCity(driver).click();// from option
 		ElementContainer.selectDeparture(driver).sendKeys(data[1][7]);// departure city
 		try {
@@ -124,12 +133,21 @@ public class makeMyTripTests {
 		}
 		Actions keyPress = new Actions(driver);
 		keyPress.sendKeys(Keys.chord(Keys.ARROW_DOWN, Keys.ENTER)).perform();
+	}
+
+	@Test(dependsOnMethods = "departure")
+	public void arrival() {
 		ElementContainer.selectArrival(driver).sendKeys(data[1][8]);// arrival city
 		try {
 			Thread.sleep(500);
 		} catch (InterruptedException e) {
 		}
+		Actions keyPress = new Actions(driver);
 		keyPress.sendKeys(Keys.chord(Keys.ARROW_DOWN, Keys.ENTER)).perform();
+	}
+
+	@Test(dependsOnMethods = "departure")
+	public void calender() {
 		ElementContainer.calender(driver).click(); // calender
 		List<WebElement> dates = ElementContainer.daySelect(driver);// day picker list
 
@@ -141,15 +159,18 @@ public class makeMyTripTests {
 				break;
 			}
 		}
-		driver.findElement(By.xpath("//span[contains(text(),'PICKUP-TIME')]")).click();// pickup time
-		List<WebElement> time = driver.findElements(By.className("timeDropDown blackText"));
-		for (int j = 0; j < time.size(); j++) {
-			String test2 = time.get(j).getText();
-			if (test2.equalsIgnoreCase("6:30")) {
-				time.get(j).click();
-			}
-		}
 	}
+
+	@Test(dependsOnMethods = "calender")
+	public void time() throws InterruptedException {
+		driver.findElement(By.xpath("//span[contains(text(),'PICKUP-TIME')]")).click();// pickup time
+		List<WebElement> optionList = driver.findElements(By.xpath("//ul[@class = 'timeDropDown blackText']/li"));
+		JavascriptExecutor je = (JavascriptExecutor) driver;
+		je.executeScript("arguments[0].scrollIntoView(true);", optionList.get(14));
+		driver.findElement(By.xpath("//ul[@class = 'timeDropDown blackText']/li[14]")).click();
+		Thread.sleep(1500);
+		driver.findElement(By.xpath("//a[normalize-space()='Search']")).click();
+		}
 
 	@Test(dependsOnMethods = "searchCab")
 	public void getCabDetails() {
