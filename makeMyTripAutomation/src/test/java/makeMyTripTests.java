@@ -120,6 +120,7 @@ public class makeMyTripTests {
 		WebElement radio = ElementContainer.radioButton(driver);
 		if (radio.isSelected() == false) {
 			radio.click();
+
 		}
 	}
 @Test(dependsOnMethods="searchCab")
@@ -177,24 +178,31 @@ public class makeMyTripTests {
 	}
 
 	@Test
-	public void giftCard() throws InterruptedException {
+	public void giftCards() throws InterruptedException {
 		Actions moveCursor = new Actions(driver);
 		moveCursor.moveToElement(ElementContainer.moreDropDown(driver)).perform();
-		ElementContainer.giftCard(driver).click();
+		ElementContainer.giftCardTab(driver).click();
 	}
 	@Test(dependsOnMethods="giftCards")
 	public void buyGiftCard() throws InterruptedException {
 		Actions click=new Actions(driver);
-		click.moveToElement(driver.findElement(By.xpath("//div[@class='card__data']"))).click().perform();
+		click.moveToElement(ElementContainer.giftCard(driver)).click().perform();
 		Thread.sleep(500);
 		
 		JavascriptExecutor js=(JavascriptExecutor)driver;
 		js.executeScript("window.scrollBy(0,500)");
 		
+<<<<<<< HEAD
 		driver.findElement(By.name("senderName")).sendKeys(data[3][0]);
 		driver.findElement(By.name("senderMobileNo")).sendKeys(data[3][1]);
 		driver.findElement(By.name("senderEmailId")).sendKeys(data[3][2]);
 		driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[2]/div/div[1]/div/div[2]/div[1]/div[1]/button")).click();
+=======
+		ElementContainer.sendersName(driver).sendKeys("Bughunters");
+		ElementContainer.sendersMobile(driver).sendKeys("9999999562");
+		ElementContainer.sendersEmail(driver).sendKeys("test@gmail");
+		ElementContainer.buyNowButton(driver).click();
+>>>>>>> 852c2055a133e9da0bc360c855149b54dbecf3c3
 	}
 
 	@Test

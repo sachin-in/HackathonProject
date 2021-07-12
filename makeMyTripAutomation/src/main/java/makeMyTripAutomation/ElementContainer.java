@@ -115,11 +115,40 @@ public class ElementContainer {
 		element = driver.findElement(By.xpath("//*[@id='SW']/div[1]/div[2]/div/div/nav/ul/li[9]/a/span[1]"));
 		return element;
 	}
-
-	public static WebElement giftCard(WebDriver driver) {
+	// giftcard tab
+		public static WebElement giftCardTab(WebDriver driver) {
 		element = driver.findElement(By.xpath("//*[@id='SW']/div[1]/div[2]/div/div/nav/ul/li[9]/div/a[4]"));
 		return element;
 	}
+	
+	//	select gift card 
+	public static WebElement giftCard(WebDriver driver) {
+	element =driver.findElement(By.xpath("//div[@class='card__data']"));
+	return element;
+}
+	// senders name 
+	
+	public static WebElement sendersName(WebDriver driver) {
+	element =driver.findElement(By.name("senderName"));
+	return element;
+}
+	// senders mobile no. 
+	public static WebElement sendersMobile(WebDriver driver) {
+	element =driver.findElement(By.name("senderMobileNo"));
+	return element;
+}
+	// senders email 
+	public static WebElement sendersEmail(WebDriver driver) {
+	element =driver.findElement(By.name("senderEmailId"));
+	return element;
+}
+	// buy now button 
+	public static WebElement buyNowButton(WebDriver driver) {
+	element =driver.findElement(By.xpath("//*[@id='root']/div/div[2]/div/div[1]/div/div[2]/div[1]/div[1]/button"));
+	return element;
+}	
+	
+	
 	// ADULT List
 	// TO locate the hotel tab
 
