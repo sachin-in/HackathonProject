@@ -188,6 +188,9 @@ public class makeMyTripTests {
 		click.moveToElement(driver.findElement(By.xpath("//div[@class='card__data']"))).click().perform();
 		Thread.sleep(500);
 		
+		JavascriptExecutor js=(JavascriptExecutor)driver;
+		js.executeScript("window.scrollBy(0,500)");
+		
 		driver.findElement(By.name("senderName")).sendKeys("Bughunters");
 		driver.findElement(By.name("senderMobileNo")).sendKeys("9999999562");
 		driver.findElement(By.name("senderEmailId")).sendKeys("test@gmail");
