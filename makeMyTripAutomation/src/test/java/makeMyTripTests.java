@@ -120,6 +120,7 @@ public class makeMyTripTests {
 		WebElement radio = ElementContainer.radioButton(driver);
 		if (radio.isSelected() == false) {
 			radio.click();
+
 		}
 	}
 @Test(dependsOnMethods = "searchCab")
