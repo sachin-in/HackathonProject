@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>0/0/5</td>
+<td>Tests passed/Failed/Skipped:</td><td>5/1/1</td>
 </tr><tr>
-<td>Started on:</td><td>Wed Jul 07 22:44:04 IST 2021</td>
+<td>Started on:</td><td>Sun Jul 11 21:30:13 IST 2021</td>
 </tr>
-<tr><td>Total time:</td><td>0 seconds (28 ms)</td>
+<tr><td>Total time:</td><td>15 seconds (15022 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -68,32 +68,52 @@ function toggleAllBoxes() {
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
 <table width='100%' border='1' class='invocation-failed'>
-<tr><td colspan='4' align='center'><b>FAILED CONFIGURATIONS</b></td></tr>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
 <td width="30%"><b>Exception</b></td>
 <td width="10%"><b>Time (seconds)</b></td>
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='makeMyTripTests.getExcelData()'><b>getExcelData</b><br>Test class: makeMyTripTests</td>
-<td><div><pre>java.lang.NullPointerException
-	at readExcelData.getData(readExcelData.java:31)
-	at makeMyTripTests.getExcelData(makeMyTripTests.java:31)
-	at makeMyTripTests.invokeTestNG(makeMyTripTests.java:79)
-	at makeMyTripTests.main(makeMyTripTests.java:85)
-... Removed 16 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1970436060", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1970436060'><pre>java.lang.NullPointerException
-	at readExcelData.getData(readExcelData.java:31)
-	at makeMyTripTests.getExcelData(makeMyTripTests.java:31)
+<td title='makeMyTripTests.searchCab()'><b>searchCab</b><br>Test class: makeMyTripTests</td>
+<td><div><pre>org.openqa.selenium.InvalidSelectorException: Compound class names not permitted
+For documentation on this error, please visit: https://selenium.dev/exceptions/#invalid_selector_exception
+Build info: version: &apos;4.0.0-beta-4&apos;, revision: &apos;29f46d02dd&apos;
+System info: host: &apos;LAPTOP-U9BUGGJ3&apos;, ip: &apos;192.168.0.103&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.11&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.By$ByClassName.&lt;init&gt;(By.java:310)
+	at org.openqa.selenium.By.className(By.java:100)
+	at makeMyTripTests.searchCab(makeMyTripTests.java:146)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at makeMyTripTests.invokeTestNG(makeMyTripTests.java:204)
+	at makeMyTripTests.main(makeMyTripTests.java:210)
+... Removed 24 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace245703044", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace245703044'><pre>org.openqa.selenium.InvalidSelectorException: Compound class names not permitted
+For documentation on this error, please visit: https://selenium.dev/exceptions/#invalid_selector_exception
+Build info: version: &apos;4.0.0-beta-4&apos;, revision: &apos;29f46d02dd&apos;
+System info: host: &apos;LAPTOP-U9BUGGJ3&apos;, ip: &apos;192.168.0.103&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.11&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.By$ByClassName.&lt;init&gt;(By.java:310)
+	at org.openqa.selenium.By.className(By.java:100)
+	at makeMyTripTests.searchCab(makeMyTripTests.java:146)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
-	at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
-	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:317)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
 	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
 	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
 	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
@@ -101,29 +121,44 @@ function toggleAllBoxes() {
 	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
 	at org.testng.TestNG.runSuites(TestNG.java:1063)
 	at org.testng.TestNG.run(TestNG.java:1031)
-	at makeMyTripTests.invokeTestNG(makeMyTripTests.java:79)
-	at makeMyTripTests.main(makeMyTripTests.java:85)
+	at makeMyTripTests.invokeTestNG(makeMyTripTests.java:204)
+	at makeMyTripTests.main(makeMyTripTests.java:210)
 </pre></div></td>
-<td>0</td>
-<td>makeMyTripTests@40005471</td></tr>
+<td>2</td>
+<td>makeMyTripTests@2aceadd4</td></tr>
 </table><p>
-<table width='100%' border='1' class='invocation-skipped'>
-<tr><td colspan='4' align='center'><b>SKIPPED CONFIGURATIONS</b></td></tr>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
 <td width="30%"><b>Exception</b></td>
 <td width="10%"><b>Time (seconds)</b></td>
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='makeMyTripTests.getWebDriver()'><b>getWebDriver</b><br>Test class: makeMyTripTests</td>
+<td title='makeMyTripTests.loginFromPopUp()'><b>loginFromPopUp</b><br>Test class: makeMyTripTests</td>
 <td></td>
-<td>-1625678044</td>
-<td>makeMyTripTests@40005471</td></tr>
+<td>0</td>
+<td>makeMyTripTests@2aceadd4</td></tr>
 <tr>
-<td title='makeMyTripTests.closeBrowser()'><b>closeBrowser</b><br>Test class: makeMyTripTests</td>
+<td title='makeMyTripTests.getAdultsList()'><b>getAdultsList</b><br>Test class: makeMyTripTests</td>
 <td></td>
-<td>-1625678044</td>
-<td>makeMyTripTests@40005471</td></tr>
+<td>1</td>
+<td>makeMyTripTests@2aceadd4</td></tr>
+<tr>
+<td title='makeMyTripTests.loginWithGmail()'><b>loginWithGmail</b><br>Test class: makeMyTripTests</td>
+<td></td>
+<td>1</td>
+<td>makeMyTripTests@2aceadd4</td></tr>
+<tr>
+<td title='makeMyTripTests.getHomePageSignature()'><b>getHomePageSignature</b><br>Test class: makeMyTripTests</td>
+<td></td>
+<td>0</td>
+<td>makeMyTripTests@2aceadd4</td></tr>
+<tr>
+<td title='makeMyTripTests.buyGiftCard()'><b>buyGiftCard</b><br>Test class: makeMyTripTests</td>
+<td></td>
+<td>0</td>
+<td>makeMyTripTests@2aceadd4</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-skipped'>
 <tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
@@ -133,77 +168,13 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='makeMyTripTests.searchCab()'><b>searchCab</b><br>Test class: makeMyTripTests</td>
-<td><div><pre>java.lang.NullPointerException
-	at readExcelData.getData(readExcelData.java:31)
-	at makeMyTripTests.getExcelData(makeMyTripTests.java:31)
-	at makeMyTripTests.invokeTestNG(makeMyTripTests.java:79)
-	at makeMyTripTests.main(makeMyTripTests.java:85)
-... Removed 16 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace882646447", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace882646447'><pre>java.lang.NullPointerException
-	at readExcelData.getData(readExcelData.java:31)
-	at makeMyTripTests.getExcelData(makeMyTripTests.java:31)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
-	at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
-	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:317)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-	at org.testng.TestNG.runSuites(TestNG.java:1063)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at makeMyTripTests.invokeTestNG(makeMyTripTests.java:79)
-	at makeMyTripTests.main(makeMyTripTests.java:85)
-</pre></div></td>
-<td>0</td>
-<td>makeMyTripTests@40005471</td></tr>
-<tr>
-<td title='makeMyTripTests.buyGiftCard()'><b>buyGiftCard</b><br>Test class: makeMyTripTests</td>
-<td><div><pre>java.lang.NullPointerException
-	at readExcelData.getData(readExcelData.java:31)
-	at makeMyTripTests.getExcelData(makeMyTripTests.java:31)
-	at makeMyTripTests.invokeTestNG(makeMyTripTests.java:79)
-	at makeMyTripTests.main(makeMyTripTests.java:85)
-... Removed 16 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace79290250", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace79290250'><pre>java.lang.NullPointerException
-	at readExcelData.getData(readExcelData.java:31)
-	at makeMyTripTests.getExcelData(makeMyTripTests.java:31)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
-	at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
-	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:317)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-	at org.testng.TestNG.runSuites(TestNG.java:1063)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at makeMyTripTests.invokeTestNG(makeMyTripTests.java:79)
-	at makeMyTripTests.main(makeMyTripTests.java:85)
-</pre></div></td>
-<td>0</td>
-<td>makeMyTripTests@40005471</td></tr>
-<tr>
 <td title='makeMyTripTests.getCabDetails()'><b>getCabDetails</b><br>Test class: makeMyTripTests</td>
-<td><div><pre>java.lang.Throwable: Method makeMyTripTests.getCabDetails()[pri:0, instance:makeMyTripTests@40005471] depends on not successfully finished methods
+<td><div><pre>java.lang.Throwable: Method makeMyTripTests.getCabDetails()[pri:0, instance:makeMyTripTests@2aceadd4] depends on not successfully finished methods
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
-	at makeMyTripTests.invokeTestNG(makeMyTripTests.java:79)
-	at makeMyTripTests.main(makeMyTripTests.java:85)
-... Removed 15 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace109069556", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace109069556'><pre>java.lang.Throwable: Method makeMyTripTests.getCabDetails()[pri:0, instance:makeMyTripTests@40005471] depends on not successfully finished methods
+	at makeMyTripTests.invokeTestNG(makeMyTripTests.java:204)
+	at makeMyTripTests.main(makeMyTripTests.java:210)
+... Removed 15 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1038002783", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1038002783'><pre>java.lang.Throwable: Method makeMyTripTests.getCabDetails()[pri:0, instance:makeMyTripTests@2aceadd4] depends on not successfully finished methods
 	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:102)
 	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
 	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
@@ -220,75 +191,11 @@ function toggleAllBoxes() {
 	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
 	at org.testng.TestNG.runSuites(TestNG.java:1063)
 	at org.testng.TestNG.run(TestNG.java:1031)
-	at makeMyTripTests.invokeTestNG(makeMyTripTests.java:79)
-	at makeMyTripTests.main(makeMyTripTests.java:85)
+	at makeMyTripTests.invokeTestNG(makeMyTripTests.java:204)
+	at makeMyTripTests.main(makeMyTripTests.java:210)
 </pre></div></td>
 <td>0</td>
-<td>makeMyTripTests@40005471</td></tr>
-<tr>
-<td title='makeMyTripTests.getHomePageTitle()'><b>getHomePageTitle</b><br>Test class: makeMyTripTests</td>
-<td><div><pre>java.lang.NullPointerException
-	at readExcelData.getData(readExcelData.java:31)
-	at makeMyTripTests.getExcelData(makeMyTripTests.java:31)
-	at makeMyTripTests.invokeTestNG(makeMyTripTests.java:79)
-	at makeMyTripTests.main(makeMyTripTests.java:85)
-... Removed 16 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace179294202", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace179294202'><pre>java.lang.NullPointerException
-	at readExcelData.getData(readExcelData.java:31)
-	at makeMyTripTests.getExcelData(makeMyTripTests.java:31)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
-	at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
-	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:317)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-	at org.testng.TestNG.runSuites(TestNG.java:1063)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at makeMyTripTests.invokeTestNG(makeMyTripTests.java:79)
-	at makeMyTripTests.main(makeMyTripTests.java:85)
-</pre></div></td>
-<td>0</td>
-<td>makeMyTripTests@40005471</td></tr>
-<tr>
-<td title='makeMyTripTests.getAdultsList()'><b>getAdultsList</b><br>Test class: makeMyTripTests</td>
-<td><div><pre>java.lang.NullPointerException
-	at readExcelData.getData(readExcelData.java:31)
-	at makeMyTripTests.getExcelData(makeMyTripTests.java:31)
-	at makeMyTripTests.invokeTestNG(makeMyTripTests.java:79)
-	at makeMyTripTests.main(makeMyTripTests.java:85)
-... Removed 16 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1586151649", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1586151649'><pre>java.lang.NullPointerException
-	at readExcelData.getData(readExcelData.java:31)
-	at makeMyTripTests.getExcelData(makeMyTripTests.java:31)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
-	at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
-	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:317)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-	at org.testng.TestNG.runSuites(TestNG.java:1063)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at makeMyTripTests.invokeTestNG(makeMyTripTests.java:79)
-	at makeMyTripTests.main(makeMyTripTests.java:85)
-</pre></div></td>
-<td>0</td>
-<td>makeMyTripTests@40005471</td></tr>
+<td>makeMyTripTests@2aceadd4</td></tr>
 </table><p>
 </body>
 </html>

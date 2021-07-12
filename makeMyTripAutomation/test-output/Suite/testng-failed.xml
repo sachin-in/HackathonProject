@@ -6,13 +6,11 @@
       <class name="makeMyTripTests">
         <methods>
           <include name="getExcelData"/>
+          <include name="createExtentReport"/>
           <include name="getWebDriver"/>
           <include name="closeBrowser"/>
           <include name="searchCab"/>
           <include name="getCabDetails"/>
-          <include name="buyGiftCard"/>
-          <include name="getAdultsList"/>
-          <include name="getHomePageTitle"/>
         </methods>
       </class> <!-- makeMyTripTests -->
     </classes>

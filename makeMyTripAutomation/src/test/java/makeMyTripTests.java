@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.Set;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -42,13 +43,13 @@ public class makeMyTripTests {
 		 * Get Excel data from readExcelData class Pass the size of data array as int
 		 * type, name of excel file and name of excel sheet as string type
 		 */
-		data = readExcelData.getData(7, "HackathonData.xlsx", "readData");
+		data = readExcelData.getData(12, "HackathonData.xlsx", "readData");
 		return data;
 	}
 
 	@BeforeTest
 	public void createExtentReport() {
-		report = ExtentReport.createExtentReport("Hackathon");
+		report = ExtentReport.createExtentReport(data[1][3]);
 	}
 
 	@Test(priority = 0)
@@ -65,13 +66,13 @@ public class makeMyTripTests {
 			driver.switchTo().window(childwindowid);
 			Thread.sleep(1000);
 
-			ElementContainer.emailInput(driver).sendKeys("bughunterss01@gmail.com");// enter email
+			ElementContainer.emailInput(driver).sendKeys(data[1][4]);// enter email
 			ElementContainer.nextButton(driver).click();// click next
 			Thread.sleep(1000);
-			ElementContainer.passwordInput(driver).sendKeys("Bughunter$6");// enter password
+			ElementContainer.passwordInput(driver).sendKeys(data[1][5]);// enter password
 			ElementContainer.nextButton(driver).click();// click next
 			driver.switchTo().window(parentwindowid);
-			Thread.sleep(5000);
+			Thread.sleep(10000);
 
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -82,7 +83,7 @@ public class makeMyTripTests {
 	public void loginFromPopUp() {
 		try {
 			String popUp = ElementContainer.popupTitle(driver).getText();// popup title
-			if (popUp.equalsIgnoreCase("Login/Signup for Best Prices")) {
+			if (popUp.equalsIgnoreCase(data[1][6])) {
 				ElementContainer.googleClick(driver).click();// login by google
 				Set<String> handle = driver.getWindowHandles();
 				Iterator<String> it = handle.iterator();
@@ -91,13 +92,13 @@ public class makeMyTripTests {
 				driver.switchTo().window(childwindowid);
 				Thread.sleep(1000);
 
-				ElementContainer.emailInput(driver).sendKeys("bughunterss01@gmail.com");// enter email
+				ElementContainer.emailInput(driver).sendKeys(data[1][4]);// enter email
 				ElementContainer.nextButton(driver).click();// click next
 				Thread.sleep(1000);
-				ElementContainer.passwordInput(driver).sendKeys("Bughunter$6");// enter password
+				ElementContainer.passwordInput(driver).sendKeys(data[1][5]);// enter password
 				ElementContainer.nextButton(driver).click();// click next
 				driver.switchTo().window(parentwindowid);
-				Thread.sleep(5000);
+				Thread.sleep(10000);
 
 			}
 		} catch (Exception e) {
@@ -116,40 +117,59 @@ public class makeMyTripTests {
 	@Test(priority = 2)
 	public void searchCab() {
 		ElementContainer.cabButton(driver).click();// Cab button
+		WebElement radio = ElementContainer.radioButton(driver);
+		if (radio.isSelected() == false) {
+			radio.click();
+		}
+	}
+@Test(dependsOnMethods = "searchCab")
+	public void departure() {
 		ElementContainer.fromCity(driver).click();// from option
-		ElementContainer.selectDeparture(driver).sendKeys("Delhi");// departure city
+		ElementContainer.selectDeparture(driver).sendKeys(data[1][7]);// departure city
 		try {
 			Thread.sleep(500);
 		} catch (InterruptedException e) {
 		}
 		Actions keyPress = new Actions(driver);
 		keyPress.sendKeys(Keys.chord(Keys.ARROW_DOWN, Keys.ENTER)).perform();
-		ElementContainer.selectArrival(driver).sendKeys("Manali");// arrival city
+	}
+
+	@Test(dependsOnMethods = "departure")
+	public void arrival() {
+		ElementContainer.selectArrival(driver).sendKeys(data[1][8]);// arrival city
 		try {
 			Thread.sleep(500);
 		} catch (InterruptedException e) {
 		}
+		Actions keyPress = new Actions(driver);
 		keyPress.sendKeys(Keys.chord(Keys.ARROW_DOWN, Keys.ENTER)).perform();
+	}
+
+	@Test(dependsOnMethods = "departure")
+	public void calender() {
 		ElementContainer.calender(driver).click(); // calender
 		List<WebElement> dates = ElementContainer.daySelect(driver);// day picker list
 
 		for (int i = 0; i < dates.size(); i++) {
 			String test = dates.get(i).getText();
 
-			if (test.equalsIgnoreCase("20")) {
+			if (test.equalsIgnoreCase(data[1][9])) {
 				dates.get(i).click();
 				break;
 			}
 		}
-		driver.findElement(By.xpath("//span[contains(text(),'PICKUP-TIME')]")).click();// pickup time
-		List<WebElement> time = driver.findElements(By.className("timeDropDown blackText"));
-		for (int j = 0; j < time.size(); j++) {
-			String test2 = time.get(j).getText();
-			if (test2.equalsIgnoreCase("6:30")) {
-				time.get(j).click();
-			}
-		}
 	}
+
+	@Test(dependsOnMethods = "calender")
+	public void time() throws InterruptedException {
+		driver.findElement(By.xpath("//span[contains(text(),'PICKUP-TIME')]")).click();// pickup time
+		List<WebElement> optionList = driver.findElements(By.xpath("//ul[@class = 'timeDropDown blackText']/li"));
+		JavascriptExecutor je = (JavascriptExecutor) driver;
+		je.executeScript("arguments[0].scrollIntoView(true);", optionList.get(14));
+		driver.findElement(By.xpath("//ul[@class = 'timeDropDown blackText']/li[14]")).click();
+		Thread.sleep(1500);
+		driver.findElement(By.xpath("//a[normalize-space()='Search']")).click();
+		}
 
 	@Test(dependsOnMethods = "searchCab")
 	public void getCabDetails() {

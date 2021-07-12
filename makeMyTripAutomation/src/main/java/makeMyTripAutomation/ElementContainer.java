@@ -74,6 +74,12 @@ public class ElementContainer {
 
 	}
 
+	// radio button
+	public static WebElement radioButton(WebDriver driver) {
+		element = driver.findElement(By.xpath("//li[@class='selected']//span[@class='tabsCircle appendRight5']"));
+		return element;
+	}
+
 	// TO LOCATE "From" Drop down ListBox
 	public static WebElement fromCity(WebDriver driver) {
 		element = driver.findElement(By.xpath("//span[normalize-space()='From']"));
