@@ -11,6 +11,7 @@
           <include name="closeBrowser"/>
           <include name="searchCab"/>
           <include name="getCabDetails"/>
+          <include name="getAdultsList"/>
         </methods>
       </class> <!-- makeMyTripTests -->
     </classes>
