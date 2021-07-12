@@ -178,24 +178,24 @@ public class makeMyTripTests {
 	}
 
 	@Test
-	public void giftCard() throws InterruptedException {
+	public void giftCards() throws InterruptedException {
 		Actions moveCursor = new Actions(driver);
 		moveCursor.moveToElement(ElementContainer.moreDropDown(driver)).perform();
-		ElementContainer.giftCard(driver).click();
+		ElementContainer.giftCardTab(driver).click();
 	}
 	@Test(dependsOnMethods="giftCards")
 	public void buyGiftCard() throws InterruptedException {
 		Actions click=new Actions(driver);
-		click.moveToElement(driver.findElement(By.xpath("//div[@class='card__data']"))).click().perform();
+		click.moveToElement(ElementContainer.giftCard(driver)).click().perform();
 		Thread.sleep(500);
 		
 		JavascriptExecutor js=(JavascriptExecutor)driver;
 		js.executeScript("window.scrollBy(0,500)");
 		
-		driver.findElement(By.name("senderName")).sendKeys("Bughunters");
-		driver.findElement(By.name("senderMobileNo")).sendKeys("9999999562");
-		driver.findElement(By.name("senderEmailId")).sendKeys("test@gmail");
-		driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[2]/div/div[1]/div/div[2]/div[1]/div[1]/button")).click();
+		ElementContainer.sendersName(driver).sendKeys("Bughunters");
+		ElementContainer.sendersMobile(driver).sendKeys("9999999562");
+		ElementContainer.sendersEmail(driver).sendKeys("test@gmail");
+		ElementContainer.buyNowButton(driver).click();
 	}
 
 	@Test
