@@ -157,10 +157,21 @@ public class makeMyTripTests {
 	}
 
 	@Test
-	public void buyGiftCard() throws InterruptedException {
+	public void giftCard() throws InterruptedException {
 		Actions moveCursor = new Actions(driver);
 		moveCursor.moveToElement(ElementContainer.moreDropDown(driver)).perform();
 		ElementContainer.giftCard(driver).click();
+	}
+	@Test(dependsOnMethods="giftCards")
+	public void buyGiftCard() throws InterruptedException {
+		Actions click=new Actions(driver);
+		click.moveToElement(driver.findElement(By.xpath("//div[@class='card__data']"))).click().perform();
+		Thread.sleep(500);
+		
+		driver.findElement(By.name("senderName")).sendKeys("Bughunters");
+		driver.findElement(By.name("senderMobileNo")).sendKeys("9999999562");
+		driver.findElement(By.name("senderEmailId")).sendKeys("test@gmail");
+		driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[2]/div/div[1]/div/div[2]/div[1]/div[1]/button")).click();
 	}
 
 	@Test
