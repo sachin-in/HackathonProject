@@ -12,7 +12,7 @@ public class readExcelData {
 	
 	public static String[][] getData(int cells, String fileName, String sheetName) throws IOException {
 		
-			String[][] data=new String[2][cells];
+			String[][] data=new String[4][cells];
 		
 			//getting absolute path of excel file
 			String cwd=new File(fileName).getAbsolutePath();
@@ -26,7 +26,7 @@ public class readExcelData {
 			
 			//read data
 			int j, i;
-			for(j=0;j<2;j++)
+			for(j=0;j<4;j++)
 			{
 				
 				for(i=0;i<cells;i++)
