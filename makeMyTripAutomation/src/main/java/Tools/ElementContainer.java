@@ -1,4 +1,4 @@
-package makeMyTripAutomation;
+package Tools;
 
 import java.util.List;
 
