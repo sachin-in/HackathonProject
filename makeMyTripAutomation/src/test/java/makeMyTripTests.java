@@ -107,14 +107,14 @@ public class makeMyTripTests {
 
 	}
 
-	@Test()
+	@Test(priority=2)
 	public void getHomePageSignature() {
 		String title = ElementContainer.homepageSignature(driver).getText();// Web Page signature
 		Assert.assertEquals(title, data[1][1], "Title is not correct");
 		Screenshot.captureScreenshot("Homepage", driver);
 	}
 
-	@Test(priority = 2)
+	@Test(priority = 3)
 	public void searchCab() {
 		ElementContainer.cabButton(driver).click();// Cab button
 		WebElement radio = ElementContainer.radioButton(driver);
@@ -122,7 +122,7 @@ public class makeMyTripTests {
 			radio.click();
 		}
 	}
-@Test(dependsOnMethods = "searchCab")
+@Test(dependsOnMethods="searchCab")
 	public void departure() {
 		ElementContainer.fromCity(driver).click();// from option
 		ElementContainer.selectDeparture(driver).sendKeys(data[1][7]);// departure city
@@ -134,7 +134,7 @@ public class makeMyTripTests {
 		keyPress.sendKeys(Keys.chord(Keys.ARROW_DOWN, Keys.ENTER)).perform();
 	}
 
-	@Test(dependsOnMethods = "departure")
+	@Test(priority=4)
 	public void arrival() {
 		ElementContainer.selectArrival(driver).sendKeys(data[1][8]);// arrival city
 		try {
@@ -145,7 +145,7 @@ public class makeMyTripTests {
 		keyPress.sendKeys(Keys.chord(Keys.ARROW_DOWN, Keys.ENTER)).perform();
 	}
 
-	@Test(dependsOnMethods = "departure")
+	@Test(priority=5)
 	public void calender() {
 		ElementContainer.calender(driver).click(); // calender
 		List<WebElement> dates = ElementContainer.daySelect(driver);// day picker list
@@ -160,7 +160,7 @@ public class makeMyTripTests {
 		}
 	}
 
-	@Test(dependsOnMethods = "calender")
+	@Test(priority=6)
 	public void time() throws InterruptedException {
 		driver.findElement(By.xpath("//span[contains(text(),'PICKUP-TIME')]")).click();// pickup time
 		List<WebElement> optionList = driver.findElements(By.xpath("//ul[@class = 'timeDropDown blackText']/li"));
@@ -171,7 +171,7 @@ public class makeMyTripTests {
 		driver.findElement(By.xpath("//a[normalize-space()='Search']")).click();
 		}
 
-	@Test(dependsOnMethods = "searchCab")
+	@Test(priority=7)
 	public void getCabDetails() {
 
 	}

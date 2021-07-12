@@ -10,6 +10,7 @@
           <include name="getWebDriver"/>
           <include name="closeBrowser"/>
           <include name="searchCab"/>
+          <include name="getCabDetails"/>
         </methods>
       </class> <!-- makeMyTripTests -->
     </classes>
