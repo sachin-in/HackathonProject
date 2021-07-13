@@ -2,14 +2,23 @@ package SmokeTesting;
 import java.util.Iterator;
 import java.util.Set;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import Executor.testExecutor;
 import Tools.ElementContainer;
+import Tools.Screenshot;
 
 public class logingIn extends testExecutor{
+	
+	@Test(priority=0)
+	public void getHomePageSignature() {
+		String title = ElementContainer.homepageSignature(driver).getText();// Web Page signature
+		Assert.assertEquals(title, data[1][1], "Title is not correct");
+		Screenshot.captureScreenshot("Homepage", driver);
+	}
 
-	@Test(priority = 0)
+	@Test(priority = 1)
 	public void loginWithGmail() {
 		try {
 			ElementContainer.loginButton(driver).click();// login button
@@ -36,7 +45,7 @@ public class logingIn extends testExecutor{
 		}
 	}
 
-	@Test(priority = 1)
+	@Test(priority = 2)
 	public void loginFromPopUp() {
 		try {
 			String popUp = ElementContainer.popupTitle(driver).getText();// popup title

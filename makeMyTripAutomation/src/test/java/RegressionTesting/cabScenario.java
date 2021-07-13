@@ -2,7 +2,6 @@ package RegressionTesting;
 
 import java.util.List;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
@@ -11,6 +10,7 @@ import org.testng.annotations.Test;
 
 import Executor.testExecutor;
 import Tools.ElementContainer;
+import Tools.ExcelData;
 
 public class cabScenario extends testExecutor {
 
@@ -51,10 +51,10 @@ public class cabScenario extends testExecutor {
 	public void calender() {
 		ElementContainer.calender(driver).click(); // calender
 		List<WebElement> dates = ElementContainer.daySelect(driver);// day picker list
-		System.out.println(data[1][9]);
+		
 		for (int i = 0; i < dates.size(); i++) {
 			String test = dates.get(i).getText();
-			System.out.println(test);
+			
 			if ((test + ".0").equalsIgnoreCase(data[1][9])) {
 				dates.get(i).click();
 				break;
@@ -75,12 +75,16 @@ public class cabScenario extends testExecutor {
 	}
 
 	@Test(dependsOnMethods = "time")
-	public void getCabDetails() {
+	public void getCabDetails() throws Exception {
 		ElementContainer.suvSelect(driver).click();
-		System.out.println(ElementContainer.carName(driver).getText());
-		System.out.println(ElementContainer.charges(driver).getText().split(" ")[1]);
-		System.out.println(ElementContainer.rating(driver).getText());
-
+		
+		String vehicleName=ElementContainer.carName(driver).getText();
+		String fare=ElementContainer.charges(driver).getText().split(" ")[1];
+		String popularity=ElementContainer.rating(driver).getText();
+		ExcelData.writeData(0, 0, "CabScenario");
+		ExcelData.writeData(1, 0, vehicleName);
+		ExcelData.writeData(1, 1, fare);
+		ExcelData.writeData(1, 2, popularity);
 	}
 
 }

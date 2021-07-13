@@ -3,15 +3,21 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="RegressionTesting.giftCardScenario">
+      <class name="RegressionTesting.cabScenario">
         <methods>
-          <include name="getHomePageSignature"/>
+          <include name="arrival"/>
+          <include name="searchCab"/>
           <include name="getWebDriver"/>
           <include name="getExcelData"/>
+          <include name="calender"/>
+          <include name="time"/>
+          <include name="createExcelSheet"/>
           <include name="createExtentReport"/>
+          <include name="departure"/>
+          <include name="getCabDetails"/>
           <include name="closeBrowser"/>
         </methods>
-      </class> <!-- RegressionTesting.giftCardScenario -->
+      </class> <!-- RegressionTesting.cabScenario -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

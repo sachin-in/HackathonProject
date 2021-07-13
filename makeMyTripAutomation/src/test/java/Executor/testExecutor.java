@@ -16,7 +16,7 @@ import Tools.DriverSetup;
 import Tools.ElementContainer;
 import Tools.ExtentReport;
 import Tools.Screenshot;
-import Tools.readExcelData;
+import Tools.ExcelData;
 
 public class testExecutor {
 
@@ -39,21 +39,21 @@ public class testExecutor {
 		 * Get Excel data from readExcelData class Pass the size of data array as int
 		 * type, name of excel file and name of excel sheet as string type
 		 */
-		data = readExcelData.getData(12, "HackathonData.xlsx", "readData");
+		data = ExcelData.readData(12, "HackathonData.xlsx", "readData");
 		return data;
 	}
+	
+//	@BeforeSuite
+//	public void createExcelSheet() {
+//		ExcelData.createSheet("HackathonOutputData.xlsx");
+//	}
 
 	@BeforeTest
 	public void createExtentReport() {
 		report = ExtentReport.createExtentReport(data[1][3]);
 	}
 
-	@Test(priority=2)
-	public void getHomePageSignature() {
-		String title = ElementContainer.homepageSignature(driver).getText();// Web Page signature
-		Assert.assertEquals(title, data[1][1], "Title is not correct");
-		Screenshot.captureScreenshot("Homepage", driver);
-	}
+	
 
 	@AfterTest
 	public void closeBrowser() {

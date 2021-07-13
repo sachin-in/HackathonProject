@@ -62,7 +62,7 @@ public class ElementContainer {
 
 	// 3 Webpage Signature
 	public static WebElement homepageSignature(WebDriver driver) {
-		element = driver.findElement(By.xpath("//p[contains(text(),'Â© 2021 MAKEMYTRIP PVT. LTD.')]"));
+		element = driver.findElement(By.xpath("//p[contains(text(),'© 2021 MAKEMYTRIP PVT. LTD.')]"));
 		return element;
 
 	}
