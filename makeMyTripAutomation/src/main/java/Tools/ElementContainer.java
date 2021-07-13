@@ -110,45 +110,106 @@ public class ElementContainer {
 		return elements;
 	}
 
+	// pickuptime
+	public static WebElement pickupTimeDropdown(WebDriver driver) {
+		element = driver.findElement(By.xpath("//span[contains(text(),'PICKUP-TIME')]"));
+		return element;
+	}
+
+	// listDropdown
+	public static List<WebElement> pickupTimeLists(WebDriver driver) {
+		elements = driver.findElements(By.xpath("//ul[@class = 'timeDropDown blackText']/li"));
+		return elements;
+	}
+
+	// get the time
+	public static WebElement timeSet(WebDriver driver) {
+		element = driver.findElement(By.xpath("//ul[@class = 'timeDropDown blackText']/li[14]"));
+		return element;
+	}
+
+	// search button
+	public static WebElement searchButton(WebDriver driver) {
+		element = driver.findElement(By.xpath("//a[normalize-space()='Search']"));
+		return element;
+	}
+
+	// Suv Select
+	public static WebElement suvSelect(WebDriver driver) {
+		element = driver.findElement(By.xpath("//label[normalize-space()='SUV']"));
+		return element;
+	}
+
+	// Select carName
+	public static WebElement carName(WebDriver driver) {
+		element = driver.findElement(By.xpath(
+				"//body/div[@id='root']/div[1]/div[2]/div[2]/div[2]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/span[1]"));
+		return element;
+	}
+
+	// get the charges
+	public static WebElement charges(WebDriver driver) {
+		element = driver.findElement(By.xpath(
+				"//body/div[@id='root']/div[1]/div[2]/div[2]/div[2]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/div[3]/div[1]/div[2]/div[1]/p[1]"));
+		return element;
+	}
+
+	// get the rating
+	public static WebElement rating(WebDriver driver) {
+		element = driver.findElement(By.xpath(
+				"//body/div[@id='root']/div[1]/div[2]/div[2]/div[2]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/span[1]"));
+		return element;
+	}
+	// Gift Card Starts
+
 	// more dropdown
 	public static WebElement moreDropDown(WebDriver driver) {
 		element = driver.findElement(By.xpath("//*[@id='SW']/div[1]/div[2]/div/div/nav/ul/li[9]/a/span[1]"));
 		return element;
 	}
+
 	// giftcard tab
-		public static WebElement giftCardTab(WebDriver driver) {
+	public static WebElement giftCardTab(WebDriver driver) {
 		element = driver.findElement(By.xpath("//*[@id='SW']/div[1]/div[2]/div/div/nav/ul/li[9]/div/a[4]"));
 		return element;
 	}
-	
-	//	select gift card 
+
+	// select gift card
 	public static WebElement giftCard(WebDriver driver) {
-	element =driver.findElement(By.xpath("//div[@class='card__data']"));
-	return element;
-}
-	// senders name 
-	
+		element = driver.findElement(By.xpath("//div[@class='card__data']"));
+		return element;
+	}
+	// senders name
+
 	public static WebElement sendersName(WebDriver driver) {
-	element =driver.findElement(By.name("senderName"));
-	return element;
-}
-	// senders mobile no. 
+		element = driver.findElement(By.name("senderName"));
+		return element;
+	}
+
+	// senders mobile no.
 	public static WebElement sendersMobile(WebDriver driver) {
-	element =driver.findElement(By.name("senderMobileNo"));
-	return element;
-}
-	// senders email 
+		element = driver.findElement(By.name("senderMobileNo"));
+		return element;
+	}
+
+	// senders email
 	public static WebElement sendersEmail(WebDriver driver) {
-	element =driver.findElement(By.name("senderEmailId"));
-	return element;
-}
-	// buy now button 
+		element = driver.findElement(By.name("senderEmailId"));
+		return element;
+	}
+
+	// error
+	public static WebElement errorMessage(WebDriver driver) {
+		element = driver.findElement(By.xpath("//p[contains(text(),'Please enter a valid Email id.')]"));
+		return element;
+	}
+
+	// buy now button
 	public static WebElement buyNowButton(WebDriver driver) {
-	element =driver.findElement(By.xpath("//*[@id='root']/div/div[2]/div/div[1]/div/div[2]/div[1]/div[1]/button"));
-	return element;
-}	
-	
-	
+		element = driver.findElement(By.xpath("//*[@id='root']/div/div[2]/div/div[1]/div/div[2]/div[1]/div[1]/button"));
+		return element;
+	}
+
 	// ADULT List
 	// TO locate the hotel tab
 
