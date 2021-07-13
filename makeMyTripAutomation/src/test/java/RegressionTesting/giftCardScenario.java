@@ -1,4 +1,5 @@
 package RegressionTesting;
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Test;
@@ -27,8 +28,8 @@ public class giftCardScenario extends testExecutor{
 		ElementContainer.sendersMobile(driver).sendKeys(data[3][1]);
 		ElementContainer.sendersEmail(driver).sendKeys(data[3][2]);
 		ElementContainer.buyNowButton(driver).click();
-		
-		System.out.println("Please enter a valid Email id.");
+		String errorMessage=driver.findElement(By.xpath("//p[contains(text(),'Please enter a valid Email id.')]")).getText();
+		System.out.println(errorMessage);
 		
 	}
 	
