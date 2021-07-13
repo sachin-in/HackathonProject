@@ -3,15 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="makeMyTripTests">
+      <class name="RegressionTesting.cabScenario">
         <methods>
+          <include name="getHomePageSignature"/>
+          <include name="getWebDriver"/>
           <include name="getExcelData"/>
           <include name="createExtentReport"/>
-          <include name="getWebDriver"/>
           <include name="closeBrowser"/>
-          <include name="searchCab"/>
         </methods>
-      </class> <!-- makeMyTripTests -->
+      </class> <!-- RegressionTesting.cabScenario -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

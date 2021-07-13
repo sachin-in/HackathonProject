@@ -15,7 +15,7 @@ public class cabScenario extends testExecutor {
 	
 	
 	
-	@Test(priority = 3)
+	@Test(priority = 0)
 	public void searchCab() {
 		ElementContainer.cabButton(driver).click();// Cab button
 		WebElement radio = ElementContainer.radioButton(driver);
@@ -24,7 +24,7 @@ public class cabScenario extends testExecutor {
 
 		}
 	}
-@Test(dependsOnMethods="searchCab")
+	@Test(priority=1)
 	public void departure() {
 		ElementContainer.fromCity(driver).click();// from option
 		ElementContainer.selectDeparture(driver).sendKeys(data[1][7]);// departure city
@@ -36,7 +36,7 @@ public class cabScenario extends testExecutor {
 		keyPress.sendKeys(Keys.chord(Keys.ARROW_DOWN, Keys.ENTER)).perform();
 	}
 
-	@Test(priority=4)
+	@Test(priority=2)
 	public void arrival() {
 		ElementContainer.selectArrival(driver).sendKeys(data[1][8]);// arrival city
 		try {
@@ -47,22 +47,22 @@ public class cabScenario extends testExecutor {
 		keyPress.sendKeys(Keys.chord(Keys.ARROW_DOWN, Keys.ENTER)).perform();
 	}
 
-	@Test(priority=5)
+	@Test(priority=3)
 	public void calender() {
 		ElementContainer.calender(driver).click(); // calender
 		List<WebElement> dates = ElementContainer.daySelect(driver);// day picker list
-
+		System.out.println(data[1][9]);
 		for (int i = 0; i < dates.size(); i++) {
 			String test = dates.get(i).getText();
-
-			if (test.equalsIgnoreCase(data[1][9])) {
+			System.out.println(test);
+			if ((test+".0").equalsIgnoreCase(data[1][9])) {
 				dates.get(i).click();
 				break;
 			}
 		}
 	}
 
-	@Test(priority=6)
+	@Test(dependsOnMethods={"searchCab","departure","arrival","calender"})
 	public void time() throws InterruptedException {
 		driver.findElement(By.xpath("//span[contains(text(),'PICKUP-TIME')]")).click();// pickup time
 		List<WebElement> optionList = driver.findElements(By.xpath("//ul[@class = 'timeDropDown blackText']/li"));
@@ -71,11 +71,16 @@ public class cabScenario extends testExecutor {
 		driver.findElement(By.xpath("//ul[@class = 'timeDropDown blackText']/li[14]")).click();
 		Thread.sleep(1500);
 		driver.findElement(By.xpath("//a[normalize-space()='Search']")).click();
+		Thread.sleep(5000);
 		}
 
-	@Test(priority=7)
+	@Test(dependsOnMethods="time")
 	public void getCabDetails() {
-
+		driver.findElement(By.xpath("//label[normalize-space()='SUV']")).click();
+        System.out.println(driver.findElement(By.xpath("//body/div[@id='root']/div[1]/div[2]/div[2]/div[2]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/span[1]")).getText());
+        System.out.println(driver.findElement(By.xpath("//body/div[@id='root']/div[1]/div[2]/div[2]/div[2]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/div[3]/div[1]/div[2]/div[1]/p[1]")).getText().split(" ")[1]);
+        System.out.println(driver.findElement(By.xpath("//body/div[@id='root']/div[1]/div[2]/div[2]/div[2]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/span[1]")).getText());
+ 
 	}
 
 }
