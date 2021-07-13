@@ -27,6 +27,9 @@ public class giftCardScenario extends testExecutor{
 		ElementContainer.sendersMobile(driver).sendKeys(data[3][1]);
 		ElementContainer.sendersEmail(driver).sendKeys(data[3][2]);
 		ElementContainer.buyNowButton(driver).click();
+		
+		System.out.println("Please enter a valid Email id.");
+		
 	}
 	
 }
