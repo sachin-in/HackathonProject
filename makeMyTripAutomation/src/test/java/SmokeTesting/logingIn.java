@@ -6,6 +6,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import Executor.testExecutor;
+import RegressionTesting.giftCardScenario;
 import Tools.ElementContainer;
 import Tools.Screenshot;
 
@@ -72,4 +73,14 @@ public class logingIn extends testExecutor{
 		}
 
 	}
+	@Test
+	public void verifyGiftCardTitle() throws InterruptedException {
+		giftCardScenario.giftCards();
+		Thread.sleep(500);
+		String gcTitle = driver.getTitle();
+		System.out.println("title is = "+gcTitle);
+		
+		Assert.assertEquals(gcTitle, "Gift Cards - Buy Gift Vouchers Online, Gift Vouchers | MakeMyTrip.com","Title is not correct");
+		
+		}
 }

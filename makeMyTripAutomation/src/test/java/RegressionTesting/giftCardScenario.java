@@ -11,7 +11,7 @@ import Tools.ElementContainer;
 public class giftCardScenario extends testExecutor {
 
 	@Test
-	public void giftCards() throws InterruptedException {
+	public static void giftCards() throws InterruptedException {
 		Actions moveCursor = new Actions(driver);
 		moveCursor.moveToElement(ElementContainer.moreDropDown(driver)).perform();
 		ElementContainer.giftCardTab(driver).click();
