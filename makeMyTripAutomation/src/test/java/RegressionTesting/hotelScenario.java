@@ -16,13 +16,13 @@ public class hotelScenario extends testExecutor{
 	@Test
 	public void getAdultsList() {
 
-		WebElement hotels = ElementContainer.hotelTab(driver);// hotels tab
-		Highlight.flash(hotels, driver);
-		hotels.click();
+		ElementContainer.hotelTab(driver);// hotels tab
+		Highlight.flash(ElementContainer.hotelTab(driver), driver);
+		ElementContainer.hotelTab(driver).click();
 		ArrayList<String> adults = new ArrayList<String>();
-		WebElement guest = ElementContainer.guestsButton(driver);// guest button
-		Highlight.flash(guest, driver);
-		guest.click();
+		ElementContainer.guestsButton(driver);// guest button
+		Highlight.flash(ElementContainer.guestsButton(driver), driver);
+		ElementContainer.guestsButton(driver).click();
 		List<WebElement> adultsCount = ElementContainer.adultsList(driver);// no. of adults list
 		for (WebElement c : adultsCount) {
 			adults.add(c.getText());

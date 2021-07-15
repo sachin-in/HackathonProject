@@ -3,15 +3,20 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="SmokeTesting.logingIn">
+      <class name="RegressionTesting.cabScenario">
         <methods>
+          <include name="arrival"/>
+          <include name="searchCab"/>
           <include name="getWebDriver"/>
           <include name="getExcelData"/>
+          <include name="calender"/>
+          <include name="time"/>
           <include name="createExtentReport"/>
-          <include name="verifyGiftCardTitle"/>
+          <include name="departure"/>
+          <include name="getCabDetails"/>
           <include name="closeBrowser"/>
         </methods>
-      </class> <!-- SmokeTesting.logingIn -->
+      </class> <!-- RegressionTesting.cabScenario -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

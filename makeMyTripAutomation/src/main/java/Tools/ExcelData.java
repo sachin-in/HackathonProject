@@ -8,6 +8,7 @@ import java.util.List;
 
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.openqa.selenium.WebElement;
 
 public class ExcelData { 
 	
@@ -78,5 +79,34 @@ public class ExcelData {
              e.printStackTrace();
          }
      }
+	 
+	 //The write Excel code FROM MY MINI PROJECT
+	 public static void writeExcelData(List<WebElement> list) throws Exception {   //Write the Test result to the excel sheet
+         
+	 		String sheetPath = "D:\\Selenium-Java Eclipse\\seleniumTesting\\Sheet.xlsx";
+	 		File file = new File(sheetPath);
+
+	 		
+	 		XSSFWorkbook workbook = new XSSFWorkbook();  
+         XSSFSheet sheet = workbook.createSheet("Sheet");
+         for(int i = 0; i<list.size(); i++)  
+         {
+         	sheet.createRow(i).createCell(0).setCellValue(list.get(i).getText());
+         }
+         
+         FileOutputStream fos;
+         try {
+             fos = new FileOutputStream(file);
+             workbook.write(fos);
+             fos.close();
+             workbook.close();
+         } catch (FileNotFoundException e) {
+             // TODO Auto-generated catch block
+             e.printStackTrace();
+         }
+         }
+         
         
-}
+}	
+        
+

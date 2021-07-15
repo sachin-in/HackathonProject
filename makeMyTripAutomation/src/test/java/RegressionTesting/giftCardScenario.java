@@ -7,6 +7,7 @@ import org.testng.annotations.Test;
 
 import Executor.testExecutor;
 import Tools.ElementContainer;
+import Tools.Highlight;
 
 public class giftCardScenario extends testExecutor {
 
@@ -14,12 +15,14 @@ public class giftCardScenario extends testExecutor {
 	public static void giftCards() throws InterruptedException {
 		Actions moveCursor = new Actions(driver);
 		moveCursor.moveToElement(ElementContainer.moreDropDown(driver)).perform();
+		Highlight.flash(ElementContainer.giftCardTab(driver), driver);
 		ElementContainer.giftCardTab(driver).click();
 	}
 
 	@Test(dependsOnMethods = "giftCards")
 	public void buyGiftCard() throws InterruptedException {
 		Actions click = new Actions(driver);
+		Highlight.flash(ElementContainer.giftCard(driver), driver);
 		click.moveToElement(ElementContainer.giftCard(driver)).click().perform();
 		Thread.sleep(500);
 
@@ -29,6 +32,8 @@ public class giftCardScenario extends testExecutor {
 		ElementContainer.sendersName(driver).sendKeys(data[3][0]);
 		ElementContainer.sendersMobile(driver).sendKeys(data[3][1]);
 		ElementContainer.sendersEmail(driver).sendKeys(data[3][2]);
+		Thread.sleep(2000);
+		Highlight.flash(ElementContainer.buyNowButton(driver), driver);
 		ElementContainer.buyNowButton(driver).click();
 		String errorMessage = ElementContainer.errorMessage(driver).getText();
 		System.out.println(errorMessage);
