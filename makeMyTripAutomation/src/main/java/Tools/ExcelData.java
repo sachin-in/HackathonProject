@@ -50,13 +50,7 @@ public class ExcelData {
 			
 	}
 	
-//	public static void createSheet(String outputFile) {
-//		sheetPath = new File(outputFile).getAbsolutePath();
-// 		file = new File(sheetPath);
-//
-// 		workbook = new XSSFWorkbook();  
-// 		sheet = workbook.createSheet("WebPageOutputs");
-//	}
+
 	
 	 public static void writeData(int rowNumber, int cellNumber, String cellValue) throws Exception {   //Write the Test result to the excel sheet
 		 sheetPath = new File("HackathonOutputData.xlsx").getAbsolutePath();

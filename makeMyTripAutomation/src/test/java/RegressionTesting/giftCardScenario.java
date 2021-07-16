@@ -1,8 +1,8 @@
 package RegressionTesting;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.interactions.Actions;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import Executor.testExecutor;
@@ -14,7 +14,9 @@ public class giftCardScenario extends testExecutor {
 	public void giftCards() throws InterruptedException {
 		Actions moveCursor = new Actions(driver);
 		moveCursor.moveToElement(ElementContainer.moreDropDown(driver)).perform();
+		String giftCardLink=ElementContainer.giftCardTab(driver).getText();
 		ElementContainer.giftCardTab(driver).click();
+		Assert.assertEquals(giftCardLink, "Giftcards", "Name doesn't match");
 	}
 
 	@Test(dependsOnMethods = "giftCards")

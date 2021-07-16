@@ -42,11 +42,6 @@ public class testExecutor {
 		data = ExcelData.readData(12, "HackathonData.xlsx", "readData");
 		return data;
 	}
-	
-//	@BeforeSuite
-//	public void createExcelSheet() {
-//		ExcelData.createSheet("HackathonOutputData.xlsx");
-//	}
 
 	@BeforeTest
 	public void createExtentReport() {

@@ -71,7 +71,7 @@ public class cabScenario extends testExecutor {
 		ElementContainer.timeSet(driver).click();
 		Thread.sleep(1500);
 		ElementContainer.searchButton(driver).click();
-		Thread.sleep(5000);
+		Thread.sleep(2000);
 	}
 
 	@Test(dependsOnMethods = "time")
@@ -81,10 +81,14 @@ public class cabScenario extends testExecutor {
 		String vehicleName=ElementContainer.carName(driver).getText();
 		String fare=ElementContainer.charges(driver).getText().split(" ")[1];
 		String popularity=ElementContainer.rating(driver).getText();
+		
 		ExcelData.writeData(0, 0, "CabScenario");
-		ExcelData.writeData(1, 0, vehicleName);
-		ExcelData.writeData(1, 1, fare);
-		ExcelData.writeData(1, 2, popularity);
+		ExcelData.writeData(1, 0, "Car Name");
+		ExcelData.writeData(1, 1, "Fare");
+		ExcelData.writeData(1, 2, "Ratings");
+		ExcelData.writeData(2, 0, vehicleName);
+		ExcelData.writeData(2, 1, fare);
+		ExcelData.writeData(2, 2, popularity);
 	}
 
 }

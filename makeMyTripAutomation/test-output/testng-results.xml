@@ -1,53 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="6" passed="6" failed="0" skipped="0">
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-07-13T22:13:08 IST" name="Default suite" finished-at="2021-07-13T22:13:28 IST" duration-ms="20678">
+  <suite started-at="2021-07-14T22:14:45 IST" name="Default suite" finished-at="2021-07-14T22:14:59 IST" duration-ms="14199">
     <groups>
     </groups>
-    <test started-at="2021-07-13T22:13:08 IST" name="Default test" finished-at="2021-07-13T22:13:28 IST" duration-ms="20678">
-      <class name="RegressionTesting.cabScenario">
-        <test-method is-config="true" signature="getExcelData()[pri:0, instance:RegressionTesting.cabScenario@5ab956d7]" started-at="2021-07-13T22:13:07 IST" name="getExcelData" finished-at="2021-07-13T22:13:08 IST" duration-ms="479" status="PASS">
+    <test started-at="2021-07-14T22:14:45 IST" name="Default test" finished-at="2021-07-14T22:14:59 IST" duration-ms="14199">
+      <class name="RegressionTesting.giftCardScenario">
+        <test-method is-config="true" signature="getExcelData()[pri:0, instance:RegressionTesting.giftCardScenario@63376bed]" started-at="2021-07-14T22:14:45 IST" name="getExcelData" finished-at="2021-07-14T22:14:45 IST" duration-ms="507" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getExcelData -->
-        <test-method is-config="true" signature="createExtentReport()[pri:0, instance:RegressionTesting.cabScenario@5ab956d7]" started-at="2021-07-13T22:13:08 IST" name="createExtentReport" finished-at="2021-07-13T22:13:08 IST" duration-ms="222" status="PASS">
+        <test-method is-config="true" signature="createExtentReport()[pri:0, instance:RegressionTesting.giftCardScenario@63376bed]" started-at="2021-07-14T22:14:45 IST" name="createExtentReport" finished-at="2021-07-14T22:14:45 IST" duration-ms="213" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createExtentReport -->
-        <test-method is-config="true" signature="getWebDriver()[pri:0, instance:RegressionTesting.cabScenario@5ab956d7]" started-at="2021-07-13T22:13:08 IST" name="getWebDriver" finished-at="2021-07-13T22:13:13 IST" duration-ms="4803" status="PASS">
+        <test-method is-config="true" signature="getWebDriver()[pri:0, instance:RegressionTesting.giftCardScenario@63376bed]" started-at="2021-07-14T22:14:45 IST" name="getWebDriver" finished-at="2021-07-14T22:14:51 IST" duration-ms="5659" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getWebDriver -->
-        <test-method signature="searchCab()[pri:0, instance:RegressionTesting.cabScenario@5ab956d7]" started-at="2021-07-13T22:13:13 IST" name="searchCab" finished-at="2021-07-13T22:13:14 IST" duration-ms="783" status="PASS">
+        <test-method signature="giftCards()[pri:0, instance:RegressionTesting.giftCardScenario@63376bed]" started-at="2021-07-14T22:14:51 IST" name="giftCards" finished-at="2021-07-14T22:14:54 IST" duration-ms="2920" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- searchCab -->
-        <test-method signature="departure()[pri:1, instance:RegressionTesting.cabScenario@5ab956d7]" started-at="2021-07-13T22:13:14 IST" name="departure" finished-at="2021-07-13T22:13:14 IST" duration-ms="918" status="PASS">
+        </test-method> <!-- giftCards -->
+        <test-method signature="buyGiftCard()[pri:0, instance:RegressionTesting.giftCardScenario@63376bed]" started-at="2021-07-14T22:14:54 IST" name="buyGiftCard" finished-at="2021-07-14T22:14:56 IST" depends-on-methods="RegressionTesting.giftCardScenario.giftCards" duration-ms="1533" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- departure -->
-        <test-method signature="arrival()[pri:2, instance:RegressionTesting.cabScenario@5ab956d7]" started-at="2021-07-13T22:13:14 IST" name="arrival" finished-at="2021-07-13T22:13:15 IST" duration-ms="613" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- arrival -->
-        <test-method signature="calender()[pri:3, instance:RegressionTesting.cabScenario@5ab956d7]" started-at="2021-07-13T22:13:15 IST" name="calender" finished-at="2021-07-13T22:13:16 IST" duration-ms="520" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- calender -->
-        <test-method signature="time()[pri:0, instance:RegressionTesting.cabScenario@5ab956d7]" started-at="2021-07-13T22:13:16 IST" name="time" finished-at="2021-07-13T22:13:24 IST" depends-on-methods="RegressionTesting.cabScenario.searchCab, RegressionTesting.cabScenario.calender, RegressionTesting.cabScenario.arrival, RegressionTesting.cabScenario.departure" duration-ms="8270" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- time -->
-        <test-method signature="getCabDetails()[pri:0, instance:RegressionTesting.cabScenario@5ab956d7]" started-at="2021-07-13T22:13:24 IST" name="getCabDetails" finished-at="2021-07-13T22:13:25 IST" depends-on-methods="RegressionTesting.cabScenario.time" duration-ms="781" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- getCabDetails -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:RegressionTesting.cabScenario@5ab956d7]" started-at="2021-07-13T22:13:25 IST" name="closeBrowser" finished-at="2021-07-13T22:13:28 IST" duration-ms="3722" status="PASS">
+        </test-method> <!-- buyGiftCard -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:RegressionTesting.giftCardScenario@63376bed]" started-at="2021-07-14T22:14:56 IST" name="closeBrowser" finished-at="2021-07-14T22:14:59 IST" duration-ms="3845" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
-      </class> <!-- RegressionTesting.cabScenario -->
+      </class> <!-- RegressionTesting.giftCardScenario -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
