@@ -15,8 +15,10 @@ public class giftCardScenario extends testExecutor {
 	public static void giftCards() throws InterruptedException {
 		Actions moveCursor = new Actions(driver);
 		moveCursor.moveToElement(ElementContainer.moreDropDown(driver)).perform();
+		String giftCardLink=ElementContainer.giftCardTab(driver).getText();
 		Highlight.flash(ElementContainer.giftCardTab(driver), driver);
 		ElementContainer.giftCardTab(driver).click();
+		Assert.assertEquals(giftCardLink, "Giftcards", "Name doesn't match");
 	}
 
 	@Test(dependsOnMethods = "giftCards")
