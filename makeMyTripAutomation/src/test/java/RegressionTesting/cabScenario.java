@@ -17,8 +17,9 @@ public class cabScenario extends testExecutor {
 
 	@Test(priority = 0)
 	public void searchCab() {
-		ElementContainer.cabButton(driver).click();// Cab button
+		
 		Highlight.flash(ElementContainer.cabButton(driver), driver);
+		ElementContainer.cabButton(driver).click();// Cab button
 		WebElement radio = ElementContainer.radioButton(driver);
 		if (radio.isSelected() == false) {
 			Highlight.flash(radio, driver);
@@ -75,7 +76,7 @@ public class cabScenario extends testExecutor {
 		List<WebElement> optionList = ElementContainer.pickupTimeLists(driver);
 		JavascriptExecutor je = (JavascriptExecutor) driver;
 		je.executeScript("arguments[0].scrollIntoView(true);", optionList.get(14));
-		Highlight.flash(ElementContainer.timeSet(driver), driver);
+		//Highlight.flash(ElementContainer.timeSet(driver), driver);
 		ElementContainer.timeSet(driver).click();
 		Thread.sleep(1500);
 		Highlight.flash(ElementContainer.searchButton(driver), driver);
@@ -85,6 +86,7 @@ public class cabScenario extends testExecutor {
 
 	@Test(dependsOnMethods = "time")
 	public void getCabDetails() throws Exception {
+		Thread.sleep(2000);
 		Highlight.flash(ElementContainer.suvSelect(driver), driver);
 		ElementContainer.suvSelect(driver).click();
 		

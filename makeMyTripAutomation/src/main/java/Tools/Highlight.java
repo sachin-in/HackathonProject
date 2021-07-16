@@ -11,7 +11,7 @@ public class Highlight {
 		
 		changeColor("rgb(255,83,73)", element, driver);
 		try {
-			Thread.sleep(3000);
+			Thread.sleep(500);
 		} catch(InterruptedException e) {
 		}
 		changeColor(bgColor, element, driver);
