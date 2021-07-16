@@ -11,7 +11,7 @@ public class Highlight {
 		
 		changeColor("rgb(255,83,73)", element, driver);
 		try {
-			Thread.sleep(250);
+			Thread.sleep(3000);
 		} catch(InterruptedException e) {
 		}
 		changeColor(bgColor, element, driver);
@@ -21,7 +21,6 @@ public class Highlight {
 	{
 		JavascriptExecutor js = ((JavascriptExecutor)driver);
 		js.executeScript("arguments[0].style.backgroundColor = '" +color+"'", element);
-		
-		
+			
 	}
 }
