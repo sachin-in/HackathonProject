@@ -75,9 +75,9 @@ public class ElementContainer {
 	}
 
 	// radio button
-	public static WebElement radioButton(WebDriver driver) {
-		element = driver.findElement(By.xpath("//li[@class='selected']//span[@class='tabsCircle appendRight5']"));
-		return element;
+	public static List<WebElement> radioButton(WebDriver driver) {
+		List<WebElement> elements = driver.findElements(By.xpath("//body/div[@id='root']/div[1]/div[2]/div[1]/div[1]/div[1]/ul[1]/li"));
+		return elements;
 	}
 
 	// TO LOCATE "From" Drop down ListBox
@@ -214,7 +214,7 @@ public class ElementContainer {
 	// TO locate the hotel tab
 
 	public static WebElement hotelTab(WebDriver driver) {
-		element = driver.findElement(By.xpath("//li[@class='menu_Hotels']//span[2]"));
+		element = driver.findElement(By.xpath("//body/div[@id='root']/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/nav[1]/ul[1]/li[2]/a[1]/span[2]"));
 		return element;
 	}
 

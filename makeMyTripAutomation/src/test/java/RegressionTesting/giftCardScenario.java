@@ -39,6 +39,8 @@ public class giftCardScenario extends testExecutor {
 		ElementContainer.buyNowButton(driver).click();
 		String errorMessage = ElementContainer.errorMessage(driver).getText();
 		System.out.println(errorMessage);
+		Thread.sleep(2000);
+		driver.navigate().to(data[1][0]);
 
 	}
 

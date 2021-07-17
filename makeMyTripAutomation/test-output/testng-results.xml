@@ -1,49 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="6" passed="6" failed="0" skipped="0">
+<testng-results ignored="5" total="6" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-07-16T12:27:02 IST" name="Default suite" finished-at="2021-07-16T12:27:28 IST" duration-ms="25350">
+  <suite started-at="2021-07-17T14:43:46 IST" name="Default suite" finished-at="2021-07-17T14:44:00 IST" duration-ms="13861">
     <groups>
     </groups>
-    <test started-at="2021-07-16T12:27:02 IST" name="Default test" finished-at="2021-07-16T12:27:28 IST" duration-ms="25350">
+    <test started-at="2021-07-17T14:43:46 IST" name="Default test" finished-at="2021-07-17T14:44:00 IST" duration-ms="13861">
       <class name="RegressionTesting.cabScenario">
-        <test-method is-config="true" signature="getExcelData()[pri:0, instance:RegressionTesting.cabScenario@5ab956d7]" started-at="2021-07-16T12:27:02 IST" name="getExcelData" finished-at="2021-07-16T12:27:02 IST" duration-ms="447" status="PASS">
+        <test-method is-config="true" signature="getExcelData()[pri:0, instance:RegressionTesting.cabScenario@2a7f1f10]" started-at="2021-07-17T14:43:45 IST" name="getExcelData" finished-at="2021-07-17T14:43:46 IST" duration-ms="465" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getExcelData -->
-        <test-method is-config="true" signature="createExtentReport()[pri:0, instance:RegressionTesting.cabScenario@5ab956d7]" started-at="2021-07-16T12:27:02 IST" name="createExtentReport" finished-at="2021-07-16T12:27:03 IST" duration-ms="194" status="PASS">
+        <test-method is-config="true" signature="createExtentReport()[pri:0, instance:RegressionTesting.cabScenario@2a7f1f10]" started-at="2021-07-17T14:43:46 IST" name="createExtentReport" finished-at="2021-07-17T14:43:46 IST" duration-ms="225" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createExtentReport -->
-        <test-method is-config="true" signature="getWebDriver()[pri:0, instance:RegressionTesting.cabScenario@5ab956d7]" started-at="2021-07-16T12:27:03 IST" name="getWebDriver" finished-at="2021-07-16T12:27:08 IST" duration-ms="5750" status="PASS">
+        <test-method is-config="true" signature="getWebDriver()[pri:0, instance:RegressionTesting.cabScenario@2a7f1f10]" started-at="2021-07-17T14:43:46 IST" name="getWebDriver" finished-at="2021-07-17T14:43:52 IST" duration-ms="6031" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getWebDriver -->
-        <test-method signature="searchCab()[pri:0, instance:RegressionTesting.cabScenario@5ab956d7]" started-at="2021-07-16T12:27:08 IST" name="searchCab" finished-at="2021-07-16T12:27:10 IST" duration-ms="1916" status="PASS">
+        <test-method signature="searchCab()[pri:0, instance:RegressionTesting.cabScenario@2a7f1f10]" started-at="2021-07-17T14:43:52 IST" name="searchCab" finished-at="2021-07-17T14:43:56 IST" duration-ms="3742" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- searchCab -->
-        <test-method signature="departure()[pri:1, instance:RegressionTesting.cabScenario@5ab956d7]" started-at="2021-07-16T12:27:10 IST" name="departure" finished-at="2021-07-16T12:27:12 IST" duration-ms="1577" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- departure -->
-        <test-method signature="arrival()[pri:2, instance:RegressionTesting.cabScenario@5ab956d7]" started-at="2021-07-16T12:27:12 IST" name="arrival" finished-at="2021-07-16T12:27:13 IST" duration-ms="803" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- arrival -->
-        <test-method signature="calender()[pri:3, instance:RegressionTesting.cabScenario@5ab956d7]" started-at="2021-07-16T12:27:13 IST" name="calender" finished-at="2021-07-16T12:27:14 IST" duration-ms="1357" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- calender -->
-        <test-method signature="time()[pri:0, instance:RegressionTesting.cabScenario@5ab956d7]" started-at="2021-07-16T12:27:14 IST" name="time" finished-at="2021-07-16T12:27:20 IST" depends-on-methods="RegressionTesting.cabScenario.searchCab, RegressionTesting.cabScenario.calender, RegressionTesting.cabScenario.arrival, RegressionTesting.cabScenario.departure" duration-ms="6177" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- time -->
-        <test-method signature="getCabDetails()[pri:0, instance:RegressionTesting.cabScenario@5ab956d7]" started-at="2021-07-16T12:27:20 IST" name="getCabDetails" finished-at="2021-07-16T12:27:24 IST" depends-on-methods="RegressionTesting.cabScenario.time" duration-ms="3758" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- getCabDetails -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:RegressionTesting.cabScenario@5ab956d7]" started-at="2021-07-16T12:27:24 IST" name="closeBrowser" finished-at="2021-07-16T12:27:28 IST" duration-ms="3771" status="PASS">
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:RegressionTesting.cabScenario@2a7f1f10]" started-at="2021-07-17T14:43:56 IST" name="closeBrowser" finished-at="2021-07-17T14:44:00 IST" duration-ms="3837" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->

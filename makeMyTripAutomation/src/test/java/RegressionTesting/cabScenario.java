@@ -16,15 +16,16 @@ import Tools.Highlight;
 public class cabScenario extends testExecutor {
 
 	@Test(priority = 0)
-	public void searchCab() {
+	public void searchCab() throws InterruptedException {
 		
 		Highlight.flash(ElementContainer.cabButton(driver), driver);
 		ElementContainer.cabButton(driver).click();// Cab button
-		WebElement radio = ElementContainer.radioButton(driver);
-		if (radio.isSelected() == false) {
-			Highlight.flash(radio, driver);
-			radio.click();
-
+		List<WebElement> radio = ElementContainer.radioButton(driver);
+		for(int i=0;i<radio.size();i++) {
+		if (radio.get(i).getText().equalsIgnoreCase(radio.get(0).getText())) {
+			Highlight.flash(radio.get(0), driver);
+			radio.get(i).click();
+		}
 		}
 	}
 
@@ -101,6 +102,8 @@ public class cabScenario extends testExecutor {
 		ExcelData.writeData(2, 0, vehicleName);
 		ExcelData.writeData(2, 1, fare);
 		ExcelData.writeData(2, 2, popularity);
+		Thread.sleep(2000);
+		driver.navigate().to(data[1][0]);
 	}
 
 }

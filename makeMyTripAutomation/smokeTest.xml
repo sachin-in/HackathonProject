@@ -3,7 +3,7 @@
 <suite name="SmokeTests">
   <test thread-count="5" name="Test">
     <classes>
-      <class name="SmokeTesting.logingIn"/>
+    <class name="SmokeTesting.logingIn"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- SmokeTests -->

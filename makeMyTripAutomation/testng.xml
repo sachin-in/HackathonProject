@@ -3,7 +3,16 @@
 <suite name="Executor">
   <test thread-count="5" name="Test">
     <classes>
-      <class name="Executor.testExecutor"/>
+       <class name="Executor.testExecutor"/>
+       <class name="SmokeTesting.logingIn">
+       		<methods>
+                  <include name="loginWithGmail"/>
+                  <include name="loginFromPopUp"/>
+            </methods>
+       </class>
+       <class name="RegressionTesting.hotelScenario"/>
+       <class name="RegressionTesting.cabScenario"/>
+       <class name="RegressionTesting.giftCardScenario"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Executor -->

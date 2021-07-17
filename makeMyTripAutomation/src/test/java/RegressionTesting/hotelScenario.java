@@ -13,8 +13,8 @@ import Tools.Highlight;
 
 public class hotelScenario extends testExecutor{
 
-	@Test
-	public void getAdultsList() {
+	@Test(priority=0)
+	public void getAdultsList() throws InterruptedException {
 
 		ElementContainer.hotelTab(driver);// hotels tab
 		Highlight.flash(ElementContainer.hotelTab(driver), driver);
@@ -28,5 +28,8 @@ public class hotelScenario extends testExecutor{
 			adults.add(c.getText());
 		}
 		Assert.assertEquals(adults.size() + ".0", data[1][2], "No. of adults is not correct");
+		
+		Thread.sleep(2000);
+		driver.navigate().to(data[1][0]);
 	}
 }

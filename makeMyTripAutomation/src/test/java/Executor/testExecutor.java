@@ -69,9 +69,10 @@ public class testExecutor {
 		// Invoke TestNG to run as java application
 		TestNG test = new TestNG();
 		List<String> suites = Lists.newArrayList();
-		suites.add("testng.xml");
+		
 		suites.add("smokeTest.xml");
-		suites.add("regressionTest");
+		suites.add("testng.xml");
+		
 		test.setTestSuites(suites);
 		test.run();
 	}
