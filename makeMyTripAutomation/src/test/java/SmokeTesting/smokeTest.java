@@ -116,9 +116,12 @@ public class smokeTest extends testExecutor{
 		Thread.sleep(2000);
 		driver.navigate().to(data[1][0]);
 	}
-	
-	public void verifyBuyNowButton() {//for gift card scenario
-		
+	@Test
+	public void verifyBuyNowButton() throws InterruptedException {//for gift card scenario
+		giftCardScenario.giftCards();
+		Highlight.flash(ElementContainer.buyNowButton(driver), driver);
+		String buttonName=driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[2]/div/div[1]/div/div[2]/div[1]/div[1]/button")).getText();
+		Assert.assertEquals(buttonName, "BUY NOW", "failed");
 	}
 	
 	public void verifyCabButton() {

@@ -1,51 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="4" total="5" passed="0" failed="1" skipped="0">
+<testng-results ignored="5" total="6" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-07-17T18:25:27 IST" name="Default suite" finished-at="2021-07-17T18:25:37 IST" duration-ms="10248">
+  <suite started-at="2021-07-17T23:10:57 IST" name="Default suite" finished-at="2021-07-17T23:11:27 IST" duration-ms="30056">
     <groups>
     </groups>
-    <test started-at="2021-07-17T18:25:27 IST" name="Default test" finished-at="2021-07-17T18:25:37 IST" duration-ms="10248">
+    <test started-at="2021-07-17T23:10:57 IST" name="Default test" finished-at="2021-07-17T23:11:27 IST" duration-ms="30056">
       <class name="SmokeTesting.smokeTest">
-        <test-method is-config="true" signature="getExcelData()[pri:0, instance:SmokeTesting.smokeTest@54c5a2ff]" started-at="2021-07-17T18:25:26 IST" name="getExcelData" finished-at="2021-07-17T18:25:27 IST" duration-ms="408" status="PASS">
+        <test-method is-config="true" signature="getExcelData()[pri:0, instance:SmokeTesting.smokeTest@3349e9bb]" started-at="2021-07-17T23:10:56 IST" name="getExcelData" finished-at="2021-07-17T23:10:57 IST" duration-ms="1215" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getExcelData -->
-        <test-method is-config="true" signature="createExtentReport()[pri:0, instance:SmokeTesting.smokeTest@54c5a2ff]" started-at="2021-07-17T18:25:27 IST" name="createExtentReport" finished-at="2021-07-17T18:25:27 IST" duration-ms="199" status="PASS">
+        <test-method is-config="true" signature="createExtentReport()[pri:0, instance:SmokeTesting.smokeTest@3349e9bb]" started-at="2021-07-17T23:10:57 IST" name="createExtentReport" finished-at="2021-07-17T23:10:57 IST" duration-ms="473" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createExtentReport -->
-        <test-method is-config="true" signature="getWebDriver()[pri:0, instance:SmokeTesting.smokeTest@54c5a2ff]" started-at="2021-07-17T18:25:27 IST" name="getWebDriver" finished-at="2021-07-17T18:25:33 IST" duration-ms="5572" status="PASS">
+        <test-method is-config="true" signature="getWebDriver()[pri:0, instance:SmokeTesting.smokeTest@3349e9bb]" started-at="2021-07-17T23:10:57 IST" name="getWebDriver" finished-at="2021-07-17T23:11:19 IST" duration-ms="21865" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getWebDriver -->
-        <test-method signature="verifyFathersDayGiftCard()[pri:0, instance:SmokeTesting.smokeTest@54c5a2ff]" started-at="2021-07-17T18:25:33 IST" name="verifyFathersDayGiftCard" finished-at="2021-07-17T18:25:33 IST" duration-ms="738" status="FAIL">
+        <test-method signature="verifyFathersDayGiftCard()[pri:0, instance:SmokeTesting.smokeTest@3349e9bb]" started-at="2021-07-17T23:11:19 IST" name="verifyFathersDayGiftCard" finished-at="2021-07-17T23:11:22 IST" duration-ms="3177" status="FAIL">
           <exception class="org.openqa.selenium.ElementNotInteractableException">
             <message>
               <![CDATA[element not interactable
   (Session info: chrome=91.0.4472.124)
 Build info: version: '4.0.0-beta-4', revision: '29f46d02dd'
-System info: host: 'SACHIN', ip: '192.168.0.103', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.11'
+System info: host: 'DESKTOP-MSFHR6T', ip: '192.168.225.48', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.1'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [3e191b213a5cb0303051b290ae7f4eb1, clickElement {id=e452ad19-bb7e-4c4f-9e5e-a762b6b37a28}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 91.0.4472.124, chrome: {chromedriverVersion: 91.0.4472.101 (af52a90bf870..., userDataDir: C:\Users\sachi\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:58275}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:58275/devtoo..., se:cdpVersion: 91.0.4472.124, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on WINDOWS (3e191b213a5cb0303051b290ae7f4eb1)] -> xpath: //*[@id='SW']/div[1]/div[2]/div/div/nav/ul/li[9]/div/a[4]]
-Session ID: 3e191b213a5cb0303051b290ae7f4eb1]]>
+Command: [fc7ec7644d8967e189766312c6558438, clickElement {id=9638d7a3-1c01-4a0d-879e-d4602fb44cc7}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 91.0.4472.124, chrome: {chromedriverVersion: 91.0.4472.101 (af52a90bf870..., userDataDir: C:\Users\JAHANG~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:59366}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:59366/devtoo..., se:cdpVersion: 91.0.4472.124, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on WINDOWS (fc7ec7644d8967e189766312c6558438)] -> xpath: //*[@id='SW']/div[1]/div[2]/div/div/nav/ul/li[9]/div/a[4]]
+Session ID: fc7ec7644d8967e189766312c6558438]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.openqa.selenium.ElementNotInteractableException: element not interactable
   (Session info: chrome=91.0.4472.124)
 Build info: version: '4.0.0-beta-4', revision: '29f46d02dd'
-System info: host: 'SACHIN', ip: '192.168.0.103', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.11'
+System info: host: 'DESKTOP-MSFHR6T', ip: '192.168.225.48', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.1'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [3e191b213a5cb0303051b290ae7f4eb1, clickElement {id=e452ad19-bb7e-4c4f-9e5e-a762b6b37a28}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 91.0.4472.124, chrome: {chromedriverVersion: 91.0.4472.101 (af52a90bf870..., userDataDir: C:\Users\sachi\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:58275}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:58275/devtoo..., se:cdpVersion: 91.0.4472.124, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on WINDOWS (3e191b213a5cb0303051b290ae7f4eb1)] -> xpath: //*[@id='SW']/div[1]/div[2]/div/div/nav/ul/li[9]/div/a[4]]
-Session ID: 3e191b213a5cb0303051b290ae7f4eb1
+Command: [fc7ec7644d8967e189766312c6558438, clickElement {id=9638d7a3-1c01-4a0d-879e-d4602fb44cc7}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 91.0.4472.124, chrome: {chromedriverVersion: 91.0.4472.101 (af52a90bf870..., userDataDir: C:\Users\JAHANG~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:59366}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:59366/devtoo..., se:cdpVersion: 91.0.4472.124, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on WINDOWS (fc7ec7644d8967e189766312c6558438)] -> xpath: //*[@id='SW']/div[1]/div[2]/div/div/nav/ul/li[9]/div/a[4]]
+Session ID: fc7ec7644d8967e189766312c6558438
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:78)
 at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
 at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
 at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
 at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
@@ -58,9 +59,9 @@ at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:73)
 at RegressionTesting.giftCardScenario.giftCards(giftCardScenario.java:20)
 at SmokeTesting.smokeTest.verifyFathersDayGiftCard(smokeTest.java:110)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+at java.base/java.lang.reflect.Method.invoke(Method.java:567)
 at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
 at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
 at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
@@ -69,7 +70,7 @@ at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java
 at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
 at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
 at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 at org.testng.TestRunner.privateRun(TestRunner.java:794)
 at org.testng.TestRunner.run(TestRunner.java:596)
 at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
@@ -91,7 +92,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyFathersDayGiftCard -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:SmokeTesting.smokeTest@54c5a2ff]" started-at="2021-07-17T18:25:33 IST" name="closeBrowser" finished-at="2021-07-17T18:25:37 IST" duration-ms="3711" status="PASS">
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:SmokeTesting.smokeTest@3349e9bb]" started-at="2021-07-17T23:11:22 IST" name="closeBrowser" finished-at="2021-07-17T23:11:27 IST" duration-ms="4391" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
