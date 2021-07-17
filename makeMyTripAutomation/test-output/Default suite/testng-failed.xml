@@ -3,15 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="SmokeTesting.logingIn">
+      <class name="SmokeTesting.smokeTest">
         <methods>
           <include name="getWebDriver"/>
           <include name="getExcelData"/>
           <include name="createExtentReport"/>
-          <include name="verifyGiftCardTitle"/>
           <include name="closeBrowser"/>
+          <include name="verifyFathersDayGiftCard"/>
         </methods>
-      </class> <!-- SmokeTesting.logingIn -->
+      </class> <!-- SmokeTesting.smokeTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

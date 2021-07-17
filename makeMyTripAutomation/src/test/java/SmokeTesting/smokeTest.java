@@ -3,6 +3,7 @@ import java.util.Iterator;
 import java.util.Set;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -104,9 +105,16 @@ public class smokeTest extends testExecutor{
 		Thread.sleep(2000);
 		driver.navigate().to(data[1][0]);
 		}
-	
-	public void verifyFathersDayGiftCard(){
-	
+	@Test
+	public void verifyFathersDayGiftCard() throws Exception{
+		giftCardScenario.giftCards();
+		Actions click = new Actions(driver);
+		Highlight.flash(ElementContainer.giftCard(driver), driver);
+		click.moveToElement(ElementContainer.giftCard(driver)).click().perform();
+		String giftCardName=driver.findElement(By.xpath("/html[1]/body[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/p[1]")).getText();
+		Assert.assertEquals(giftCardName, "Father's Day Gift Card", "Gift card is not expected");
+		Thread.sleep(2000);
+		driver.navigate().to(data[1][0]);
 	}
 	
 	public void verifyBuyNowButton() {//for gift card scenario
