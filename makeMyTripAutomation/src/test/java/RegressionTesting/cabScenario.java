@@ -16,7 +16,7 @@ import Tools.Highlight;
 public class cabScenario extends testExecutor {
 
 	@Test(priority = 0)
-	public void searchCab() throws InterruptedException {
+	public static void searchCab() throws InterruptedException {
 		
 		Highlight.flash(ElementContainer.cabButton(driver), driver);
 		ElementContainer.cabButton(driver).click();// Cab button
@@ -71,7 +71,7 @@ public class cabScenario extends testExecutor {
 	}
 
 	@Test(dependsOnMethods = { "searchCab", "departure", "arrival", "calender" })
-	public void time() throws InterruptedException {
+	public static void time() throws InterruptedException {
 		Highlight.flash(ElementContainer.pickupTimeDropdown(driver), driver);
 		ElementContainer.pickupTimeDropdown(driver).click();// pickup time
 		List<WebElement> optionList = ElementContainer.pickupTimeLists(driver);
@@ -86,7 +86,7 @@ public class cabScenario extends testExecutor {
 	}
 
 	@Test(dependsOnMethods = "time")
-	public void getCabDetails() throws Exception {
+	public static void getCabDetails() throws Exception {
 		Thread.sleep(2000);
 		Highlight.flash(ElementContainer.suvSelect(driver), driver);
 		ElementContainer.suvSelect(driver).click();
