@@ -206,7 +206,7 @@ public class ElementContainer {
 
 	// buy now button
 	public static WebElement buyNowButton(WebDriver driver) {
-		element = driver.findElement(By.xpath("//*[@id='root']/div/div[2]/div/div[1]/div/div[2]/div[1]/div[1]/button"));
+		element = driver.findElement(By.xpath("//button[contains(text(),'BUY NOW')]"));
 		return element;
 	}
 
