@@ -81,7 +81,7 @@ public class smokeTest extends testExecutor{
 				ElementContainer.emailInput(driver).sendKeys(data[1][4]);// enter email
 				Highlight.flash(ElementContainer.nextButton(driver), driver);
 				ElementContainer.nextButton(driver).click();// click next
-				Thread.sleep(1000);
+				Thread.sleep(2000);
 				ElementContainer.passwordInput(driver).sendKeys(data[1][5]);// enter password
 				Highlight.flash(ElementContainer.nextButton(driver), driver);
 				ElementContainer.nextButton(driver).click();// click next
@@ -105,25 +105,25 @@ public class smokeTest extends testExecutor{
 		Thread.sleep(2000);
 		driver.navigate().to(data[1][0]);
 		}
-	@Test
+	@Test(priority=4)
 	public void verifyFathersDayGiftCard() throws Exception{
 		giftCardScenario.giftCards();
 		Actions click = new Actions(driver);
 		Highlight.flash(ElementContainer.giftCard(driver), driver);
 		click.moveToElement(ElementContainer.giftCard(driver)).click().perform();
-		Thread.sleep(500);
+		Thread.sleep(1000);
 		String giftCardName=driver.findElement(By.xpath("//body[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/p[1]")).getText();
 		Assert.assertEquals(giftCardName, "Father's Day Gift Card", "Gift card is not expected");
 		Thread.sleep(2000);
 		driver.navigate().to(data[1][0]);
 	}
-	@Test
+	@Test(priority=5)
 	public void verifyBuyNowButton() throws InterruptedException {//for gift card scenario
 		giftCardScenario.giftCards();
 		Actions click = new Actions(driver);
 		Highlight.flash(ElementContainer.giftCard(driver), driver);
 		click.moveToElement(ElementContainer.giftCard(driver)).click().perform();
-		Thread.sleep(500);
+		Thread.sleep(1000);
 		String buttonName=driver.findElement(By.xpath("//button[contains(text(),'BUY NOW')]")).getText();
 		Assert.assertEquals(buttonName, "BUY NOW", "failed");
 	}

@@ -6,10 +6,12 @@
       <class name="SmokeTesting.smokeTest">
         <methods>
           <include name="getWebDriver"/>
+          <include name="verifyBuyNowButton"/>
           <include name="getExcelData"/>
+          <include name="verifyGiftCardTitle"/>
           <include name="createExtentReport"/>
-          <include name="verifyErrorForSameCitySelected"/>
           <include name="closeBrowser"/>
+          <include name="verifyFathersDayGiftCard"/>
         </methods>
       </class> <!-- SmokeTesting.smokeTest -->
     </classes>
