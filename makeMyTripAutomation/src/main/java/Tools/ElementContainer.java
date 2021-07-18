@@ -17,6 +17,12 @@ public class ElementContainer {
 		element = driver.findElement(By.xpath("//body/div[@id='root']/div[1]/div[1]/div[1]/div[1]/ul[1]/li[3]/div[1]"));
 		return element;
 	}
+	// country 
+	public static WebElement countryVerify(WebDriver driver) {
+		element = driver.findElement(By.xpath("//body/div[@id='root']/div[1]/div[1]/div[1]/div[1]/ul[1]/li[4]/div[1]/span[2]")) ;
+		return element;
+	}
+	
 
 	// gooogle login
 	public static WebElement googleLogin(WebDriver driver) {

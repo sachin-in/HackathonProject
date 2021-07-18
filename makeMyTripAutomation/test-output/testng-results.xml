@@ -1,47 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="5" total="6" passed="0" failed="1" skipped="0">
+<testng-results ignored="14" total="15" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-07-17T23:10:57 IST" name="Default suite" finished-at="2021-07-17T23:11:27 IST" duration-ms="30056">
+  <suite started-at="2021-07-18T15:30:59 IST" name="Default suite" finished-at="2021-07-18T15:31:33 IST" duration-ms="33374">
     <groups>
     </groups>
-    <test started-at="2021-07-17T23:10:57 IST" name="Default test" finished-at="2021-07-17T23:11:27 IST" duration-ms="30056">
+    <test started-at="2021-07-18T15:30:59 IST" name="Default test" finished-at="2021-07-18T15:31:33 IST" duration-ms="33374">
       <class name="SmokeTesting.smokeTest">
-        <test-method is-config="true" signature="getExcelData()[pri:0, instance:SmokeTesting.smokeTest@3349e9bb]" started-at="2021-07-17T23:10:56 IST" name="getExcelData" finished-at="2021-07-17T23:10:57 IST" duration-ms="1215" status="PASS">
+        <test-method is-config="true" signature="getExcelData()[pri:0, instance:SmokeTesting.smokeTest@459e9125]" started-at="2021-07-18T15:30:58 IST" name="getExcelData" finished-at="2021-07-18T15:30:59 IST" duration-ms="1209" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getExcelData -->
-        <test-method is-config="true" signature="createExtentReport()[pri:0, instance:SmokeTesting.smokeTest@3349e9bb]" started-at="2021-07-17T23:10:57 IST" name="createExtentReport" finished-at="2021-07-17T23:10:57 IST" duration-ms="473" status="PASS">
+        <test-method is-config="true" signature="createExtentReport()[pri:0, instance:SmokeTesting.smokeTest@459e9125]" started-at="2021-07-18T15:30:59 IST" name="createExtentReport" finished-at="2021-07-18T15:31:00 IST" duration-ms="600" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createExtentReport -->
-        <test-method is-config="true" signature="getWebDriver()[pri:0, instance:SmokeTesting.smokeTest@3349e9bb]" started-at="2021-07-17T23:10:57 IST" name="getWebDriver" finished-at="2021-07-17T23:11:19 IST" duration-ms="21865" status="PASS">
+        <test-method is-config="true" signature="getWebDriver()[pri:0, instance:SmokeTesting.smokeTest@459e9125]" started-at="2021-07-18T15:31:00 IST" name="getWebDriver" finished-at="2021-07-18T15:31:26 IST" duration-ms="26530" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getWebDriver -->
-        <test-method signature="verifyFathersDayGiftCard()[pri:0, instance:SmokeTesting.smokeTest@3349e9bb]" started-at="2021-07-17T23:11:19 IST" name="verifyFathersDayGiftCard" finished-at="2021-07-17T23:11:22 IST" duration-ms="3177" status="FAIL">
-          <exception class="org.openqa.selenium.ElementNotInteractableException">
+        <test-method signature="verifySUVButton()[pri:0, instance:SmokeTesting.smokeTest@459e9125]" started-at="2021-07-18T15:31:26 IST" name="verifySUVButton" finished-at="2021-07-18T15:31:29 IST" duration-ms="2155" status="FAIL">
+          <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
-              <![CDATA[element not interactable
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//label[normalize-space()='SUV']"}
   (Session info: chrome=91.0.4472.124)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
 Build info: version: '4.0.0-beta-4', revision: '29f46d02dd'
-System info: host: 'DESKTOP-MSFHR6T', ip: '192.168.225.48', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.1'
+System info: host: 'DESKTOP-J31I2ID', ip: '192.168.43.212', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.1'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [fc7ec7644d8967e189766312c6558438, clickElement {id=9638d7a3-1c01-4a0d-879e-d4602fb44cc7}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 91.0.4472.124, chrome: {chromedriverVersion: 91.0.4472.101 (af52a90bf870..., userDataDir: C:\Users\JAHANG~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:59366}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:59366/devtoo..., se:cdpVersion: 91.0.4472.124, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on WINDOWS (fc7ec7644d8967e189766312c6558438)] -> xpath: //*[@id='SW']/div[1]/div[2]/div/div/nav/ul/li[9]/div/a[4]]
-Session ID: fc7ec7644d8967e189766312c6558438]]>
+Command: [cac0ee443a433256c5824070440c5bef, findElement {using=xpath, value=//label[normalize-space()='SUV']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 91.0.4472.124, chrome: {chromedriverVersion: 91.0.4472.101 (af52a90bf870..., userDataDir: C:\Users\UMASHA~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:53558}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:53558/devtoo..., se:cdpVersion: 91.0.4472.124, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: cac0ee443a433256c5824070440c5bef]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.ElementNotInteractableException: element not interactable
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//label[normalize-space()='SUV']"}
   (Session info: chrome=91.0.4472.124)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
 Build info: version: '4.0.0-beta-4', revision: '29f46d02dd'
-System info: host: 'DESKTOP-MSFHR6T', ip: '192.168.225.48', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.1'
+System info: host: 'DESKTOP-J31I2ID', ip: '192.168.43.212', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.1'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [fc7ec7644d8967e189766312c6558438, clickElement {id=9638d7a3-1c01-4a0d-879e-d4602fb44cc7}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 91.0.4472.124, chrome: {chromedriverVersion: 91.0.4472.101 (af52a90bf870..., userDataDir: C:\Users\JAHANG~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:59366}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:59366/devtoo..., se:cdpVersion: 91.0.4472.124, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on WINDOWS (fc7ec7644d8967e189766312c6558438)] -> xpath: //*[@id='SW']/div[1]/div[2]/div/div/nav/ul/li[9]/div/a[4]]
-Session ID: fc7ec7644d8967e189766312c6558438
+Command: [cac0ee443a433256c5824070440c5bef, findElement {using=xpath, value=//label[normalize-space()='SUV']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 91.0.4472.124, chrome: {chromedriverVersion: 91.0.4472.101 (af52a90bf870..., userDataDir: C:\Users\UMASHA~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:53558}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:53558/devtoo..., se:cdpVersion: 91.0.4472.124, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: cac0ee443a433256c5824070440c5bef
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:78)
 at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -54,10 +54,12 @@ at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.ja
 at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:162)
 at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:137)
 at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:612)
-at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:235)
-at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:73)
-at RegressionTesting.giftCardScenario.giftCards(giftCardScenario.java:20)
-at SmokeTesting.smokeTest.verifyFathersDayGiftCard(smokeTest.java:110)
+at org.openqa.selenium.remote.RemoteWebDriver$Mechanism$2.findElement(RemoteWebDriver.java:1251)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:379)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:373)
+at Tools.ElementContainer.suvSelect(ElementContainer.java:145)
+at RegressionTesting.cabScenario.getCabDetails(cabScenario.java:91)
+at SmokeTesting.smokeTest.verifySUVButton(smokeTest.java:185)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -88,11 +90,11 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.ElementNotInteractableException -->
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyFathersDayGiftCard -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:SmokeTesting.smokeTest@3349e9bb]" started-at="2021-07-17T23:11:22 IST" name="closeBrowser" finished-at="2021-07-17T23:11:27 IST" duration-ms="4391" status="PASS">
+        </test-method> <!-- verifySUVButton -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:SmokeTesting.smokeTest@459e9125]" started-at="2021-07-18T15:31:29 IST" name="closeBrowser" finished-at="2021-07-18T15:31:33 IST" duration-ms="4017" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->

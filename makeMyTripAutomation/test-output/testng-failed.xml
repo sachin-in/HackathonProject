@@ -7,9 +7,9 @@
         <methods>
           <include name="getWebDriver"/>
           <include name="getExcelData"/>
+          <include name="verifySUVButton"/>
           <include name="createExtentReport"/>
           <include name="closeBrowser"/>
-          <include name="verifyFathersDayGiftCard"/>
         </methods>
       </class> <!-- SmokeTesting.smokeTest -->
     </classes>
