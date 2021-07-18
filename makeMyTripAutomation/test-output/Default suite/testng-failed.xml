@@ -9,6 +9,7 @@
           <include name="getExcelData"/>
           <include name="verifySUVButton"/>
           <include name="createExtentReport"/>
+          <include name="verifyErrorForSameCitySelected"/>
           <include name="closeBrowser"/>
         </methods>
       </class> <!-- SmokeTesting.smokeTest -->

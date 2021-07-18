@@ -4,6 +4,7 @@ import java.util.Iterator;
 import java.util.Set;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -159,10 +160,31 @@ public class smokeTest extends testExecutor {
 		Assert.assertTrue(value);
 
 	}
-
+ 
 	@Test
-	public void verifyErrorForSameCitySelected() {
-
+	public void verifyErrorForSameCitySelected() throws InterruptedException {
+		cabScenario cb= new cabScenario();
+		cb.searchCab();
+		Highlight.flash(ElementContainer.fromCity(driver), driver);
+		ElementContainer.fromCity(driver).click();// from option
+		ElementContainer.selectDeparture(driver).sendKeys(data[1][7]);// departure city
+		try {
+			Thread.sleep(500);
+		} catch (InterruptedException e) {
+		}
+		Actions keyPress = new Actions(driver);
+		keyPress.sendKeys(Keys.chord(Keys.ARROW_DOWN, Keys.ENTER)).perform();
+		
+		ElementContainer.selectArrival(driver).sendKeys(data[1][7]);// arrival city
+		try {
+			Thread.sleep(500);
+		} catch (InterruptedException e) {
+		}
+		Actions keyPress1 = new Actions(driver);
+		keyPress1.sendKeys(Keys.chord(Keys.ARROW_DOWN, Keys.ENTER)).perform();
+		
+		String error=driver.findElement(By.xpath("//span[@class='redText errorMsgText']")).getText();
+		Assert.assertEquals(error, "The Origin City & Destination City cannot be the same.", "failed");
 	}
 
 	public void verifyCalenderDropDown() {
