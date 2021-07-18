@@ -3,21 +3,19 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="SmokeTesting.smokeTest">
+      <class name="RegressionTesting.cabScenario">
         <methods>
+          <include name="arrival"/>
           <include name="getWebDriver"/>
-          <include name="verifyBuyNowButton"/>
           <include name="getExcelData"/>
-<<<<<<< HEAD
-          <include name="verifyGiftCardTitle"/>
-=======
-          <include name="verifySUVButton"/>
->>>>>>> 3032845f43491c70bbcc8f09271506f73bf18802
+          <include name="calender"/>
+          <include name="time"/>
           <include name="createExtentReport"/>
+          <include name="departure"/>
+          <include name="getCabDetails"/>
           <include name="closeBrowser"/>
-          <include name="verifyFathersDayGiftCard"/>
         </methods>
-      </class> <!-- SmokeTesting.smokeTest -->
+      </class> <!-- RegressionTesting.cabScenario -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

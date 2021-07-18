@@ -9,7 +9,7 @@ public class ExtentReport {
 	public static ExtentReports createExtentReport(String name) {//creating extent report
 		
 				//Declaring path of the folder where the report is to be stored
-				String path=System.getProperty("user.dir")+"\\Extent Report\\Report.html";
+				String path=System.getProperty("user.dir")+"\\Extent Report\\"+name+".html";
 				
 				//Creating reporter
 				ExtentSparkReporter reporter=new ExtentSparkReporter(path);

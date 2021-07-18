@@ -1,23 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="Default test(failed)">
+<suite name="Failed suite [Executor]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="SmokeTesting.smokeTest">
+      <class name="RegressionTesting.giftCardScenario">
         <methods>
           <include name="getWebDriver"/>
-          <include name="verifyBuyNowButton"/>
           <include name="getExcelData"/>
-<<<<<<< HEAD
-          <include name="verifyGiftCardTitle"/>
-=======
-          <include name="verifySUVButton"/>
->>>>>>> 3032845f43491c70bbcc8f09271506f73bf18802
           <include name="createExtentReport"/>
+          <include name="buyGiftCard"/>
+          <include name="giftCards"/>
           <include name="closeBrowser"/>
-          <include name="verifyFathersDayGiftCard"/>
         </methods>
-      </class> <!-- SmokeTesting.smokeTest -->
+      </class> <!-- RegressionTesting.giftCardScenario -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Executor] -->

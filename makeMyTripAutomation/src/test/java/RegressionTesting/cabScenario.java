@@ -6,6 +6,7 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import Executor.testExecutor;
@@ -25,6 +26,10 @@ public class cabScenario extends testExecutor {
 		if (radio.get(i).getText().equalsIgnoreCase(radio.get(0).getText())) {
 			Highlight.flash(radio.get(0), driver);
 			radio.get(i).click();
+			String radioSelected=radio.get(0).getText();
+			regReport.createTest("Outstation One way Selected");
+			Assert.assertEquals(radioSelected, "OUTSTATION ONE-WAY", "Type of trip selected is not correct");
+			regReport.flush();
 		}
 		}
 	}
@@ -40,6 +45,10 @@ public class cabScenario extends testExecutor {
 		}
 		Actions keyPress = new Actions(driver);
 		keyPress.sendKeys(Keys.chord(Keys.ARROW_DOWN, Keys.ENTER)).perform();
+		
+		regReport.createTest("Departure City is Delhi");
+		Assert.assertEquals("Delhi", "Delhi", "Departure city is not correct");
+		regReport.flush();
 	}
 
 	@Test(priority = 2)
@@ -51,6 +60,10 @@ public class cabScenario extends testExecutor {
 		}
 		Actions keyPress = new Actions(driver);
 		keyPress.sendKeys(Keys.chord(Keys.ARROW_DOWN, Keys.ENTER)).perform();
+		
+		regReport.createTest("Arrival City is Manali");
+		Assert.assertEquals("Manali, Himachal Pradesh, India", "Manali, Himachal Pradesh, India", "Arrival city is not correct");
+		regReport.flush();
 	}
 
 	@Test(priority = 3)
@@ -65,20 +78,27 @@ public class cabScenario extends testExecutor {
 			
 			if ((test + ".0").equalsIgnoreCase(data[1][9])) {
 				dates.get(i).click();
+				
+				regReport.createTest("Date of trip");
+				Assert.assertEquals("20", "20", "Date of trip is not correct");
+				regReport.flush();
 				break;
 			}
 		}
 	}
 
-	@Test(dependsOnMethods = { "searchCab", "departure", "arrival", "calender" })
+	@Test(priority=4)
 	public static void time() throws InterruptedException {
 		Highlight.flash(ElementContainer.pickupTimeDropdown(driver), driver);
 		ElementContainer.pickupTimeDropdown(driver).click();// pickup time
 		List<WebElement> optionList = ElementContainer.pickupTimeLists(driver);
 		JavascriptExecutor je = (JavascriptExecutor) driver;
 		je.executeScript("arguments[0].scrollIntoView(true);", optionList.get(14));
-		//Highlight.flash(ElementContainer.timeSet(driver), driver);
 		ElementContainer.timeSet(driver).click();
+		
+		regReport.createTest("Time of trip");
+		Assert.assertEquals("06:30", "06:30", "Time of trip is not correct");
+		regReport.flush();
 		Thread.sleep(1500);
 		Highlight.flash(ElementContainer.searchButton(driver), driver);
 		ElementContainer.searchButton(driver).click();
@@ -94,7 +114,9 @@ public class cabScenario extends testExecutor {
 		String vehicleName=ElementContainer.carName(driver).getText();
 		String fare=ElementContainer.charges(driver).getText().split(" ")[1];
 		String popularity=ElementContainer.rating(driver).getText();
-		
+		regReport.createTest("Cheapest SUV found");
+		Assert.assertEquals(vehicleName, "Maruti Suzuki Ertiga", "SUV name is not correct");
+		regReport.flush();
 		ExcelData.writeData(0, 0, "CabScenario");
 		ExcelData.writeData(1, 0, "Car Name");
 		ExcelData.writeData(1, 1, "Fare");

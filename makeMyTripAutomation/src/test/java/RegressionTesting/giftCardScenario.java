@@ -11,14 +11,16 @@ import Tools.Highlight;
 
 public class giftCardScenario extends testExecutor {
 
-	@Test
+	@Test(priority=0)
 	public static void giftCards() throws InterruptedException {
 		Actions moveCursor = new Actions(driver);
 		moveCursor.moveToElement(ElementContainer.moreDropDown(driver)).perform();
 		String giftCardLink=ElementContainer.giftCardTab(driver).getText();
 		Highlight.flash(ElementContainer.giftCardTab(driver), driver);
 		ElementContainer.giftCardTab(driver).click();
+		regReport.createTest("Gift Card page");
 		Assert.assertEquals(giftCardLink, "Giftcards", "Name doesn't match");
+		regReport.flush();
 	}
 
 	@Test(dependsOnMethods = "giftCards")
@@ -39,6 +41,9 @@ public class giftCardScenario extends testExecutor {
 		ElementContainer.buyNowButton(driver).click();
 		String errorMessage = ElementContainer.errorMessage(driver).getText();
 		System.out.println(errorMessage);
+		regReport.createTest("Invalid email in gift card");
+		Assert.assertEquals(errorMessage, "Please enter a valid Email id.", "Error message displayed is not correct");
+		regReport.flush();
 		Thread.sleep(2000);
 		driver.navigate().to(data[1][0]);
 

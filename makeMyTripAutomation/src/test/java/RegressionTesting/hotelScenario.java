@@ -27,8 +27,9 @@ public class hotelScenario extends testExecutor{
 		for (WebElement c : adultsCount) {
 			adults.add(c.getText());
 		}
+		regReport.createTest("Number of adults (Hotel Scenario)");
 		Assert.assertEquals(adults.size() + ".0", data[1][2], "No. of adults is not correct");
-		
+		regReport.flush();
 		Thread.sleep(2000);
 		driver.navigate().to(data[1][0]);
 	}

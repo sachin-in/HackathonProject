@@ -22,7 +22,8 @@ public class testExecutor {
 
 	public static WebDriver driver;
 	public static String[][] data;
-	public static ExtentReports report;
+	public static ExtentReports regReport;
+	public static ExtentReports smokeReport;
 
 	@BeforeTest
 	public void getWebDriver() {
@@ -45,7 +46,8 @@ public class testExecutor {
 
 	@BeforeTest
 	public void createExtentReport() {
-		report = ExtentReport.createExtentReport(data[1][3]);
+		smokeReport = ExtentReport.createExtentReport("SmokeTest");
+		regReport = ExtentReport.createExtentReport("RegressionTest");
 	}
 
 	

@@ -22,6 +22,7 @@ public class smokeTest extends testExecutor {
 	public void getHomePageSignature() {
 		String title = ElementContainer.homepageSignature(driver).getText();// Web Page signature
 		Assert.assertEquals(title, data[1][1], "Title is not correct");
+		Highlight.flash(ElementContainer.homepageSignature(driver), driver);
 		Screenshot.captureScreenshot("Homepage", driver);
 	}
 
@@ -30,6 +31,8 @@ public class smokeTest extends testExecutor {
 		Highlight.flash(ElementContainer.countryVerify(driver), driver);
 		String name = ElementContainer.countryVerify(driver).getText();
 		Assert.assertEquals(name, "IN | ENG | INR", "India is not selected");
+		Highlight.flash(ElementContainer.countryVerify(driver), driver);
+
 	}
 
 	@Test(priority = 2)
@@ -113,27 +116,27 @@ public class smokeTest extends testExecutor {
 		Thread.sleep(500);
 		String gcTitle = driver.getTitle();
 		System.out.println("title is = " + gcTitle);
-
-		Assert.assertEquals(gcTitle, "Gift Cards - Buy Gift Vouchers Online, Gift Vouchers | MakeMyTrip.com",
-				"Title is not correct");
-		Thread.sleep(2000);
-		driver.navigate().to(data[1][0]);
-
+		smokeReport.createTest("Gift Card Page");
+		Assert.assertEquals(gcTitle, "Gift Cards - Buy Gift Vouchers Online, Gift Vouchers | MakeMyTrip.com", "Title is not correct");
+		smokeReport.flush();
+	
 		}
 
 
 	@Test(priority=15)
 	public void verifyFathersDayGiftCard() throws Exception {
 
-		giftCardScenario.giftCards();
 		Actions click = new Actions(driver);
 		Highlight.flash(ElementContainer.giftCard(driver), driver);
+		
 		click.moveToElement(ElementContainer.giftCard(driver)).click().perform();
 
 		Thread.sleep(1000);
 		String giftCardName=driver.findElement(By.xpath("//body[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/p[1]")).getText();
-
+		
+		smokeReport.createTest("Father's Day gift card");
 		Assert.assertEquals(giftCardName, "Father's Day Gift Card", "Gift card is not expected");
+		smokeReport.flush();
 		Thread.sleep(2000);
 		driver.navigate().to(data[1][0]);
 	}
@@ -146,8 +149,10 @@ public class smokeTest extends testExecutor {
 		click.moveToElement(ElementContainer.giftCard(driver)).click().perform();
 		Thread.sleep(1000);
 		String buttonName=driver.findElement(By.xpath("//button[contains(text(),'BUY NOW')]")).getText();
-
+		
+		smokeReport.createTest("Buy Now Button");
 		Assert.assertEquals(buttonName, "BUY NOW", "failed");
+		smokeReport.flush();
 		Thread.sleep(2000);
 		driver.navigate().to(data[1][0]);
 	}
@@ -157,7 +162,9 @@ public class smokeTest extends testExecutor {
 		cabScenario.searchCab();
 		Highlight.flash(ElementContainer.cabButton(driver), driver);
 		String buttonName = ElementContainer.cabButton(driver).getText();
+		smokeReport.createTest("Cab Button");
 		Assert.assertEquals(buttonName, "Cabs", "failed");
+		smokeReport.flush();
 	}
 
 	@Test(priority=7)
@@ -166,7 +173,9 @@ public class smokeTest extends testExecutor {
 		boolean value = driver
 				.findElement(By.xpath("//body/div[@id='root']/div[1]/div[2]/div[1]/div[1]/div[1]/ul[1]/li[1]"))
 				.isEnabled();
+		smokeReport.createTest("Radio Button test");
 		Assert.assertTrue(value);
+		smokeReport.flush();
 
 	}
 
@@ -189,8 +198,11 @@ public class smokeTest extends testExecutor {
 			Thread.sleep(500);
 		} catch (InterruptedException e) {
 		}
-		Actions keyPress1 = new Actions(driver);
-		keyPress1.sendKeys(Keys.chord(Keys.ARROW_DOWN, Keys.ENTER)).perform();
+		keyPress.sendKeys(Keys.chord(Keys.ARROW_DOWN, Keys.ENTER)).perform();
+		String sameCityError=driver.findElement(By.xpath("//body/div[@id='root']/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[2]/div[1]/span[2]")).getText();
+		smokeReport.createTest("Same City Error");
+		Assert.assertEquals(sameCityError, "The Origin City & Destination City cannot be the same.", "Same city error message is nnot correct");
+		smokeReport.flush();
 
 		
 	}
@@ -207,7 +219,9 @@ public class smokeTest extends testExecutor {
 	public void verifyCabSearchButton() throws InterruptedException {
 		Highlight.flash(ElementContainer.searchButton(driver), driver);
 		String buttonName = ElementContainer.searchButton(driver).getText();
+		smokeReport.createTest("Search button");
 		Assert.assertEquals(buttonName, "SEARCH", "failed");
+		smokeReport.flush();
 	}
 
 	@Test(priority=12)
@@ -219,7 +233,9 @@ public class smokeTest extends testExecutor {
 	public void verifyHotelButton() {
 		Highlight.flash(ElementContainer.hotelTab(driver), driver);
 		String buttonName = ElementContainer.hotelTab(driver).getText();
+		smokeReport.createTest("Hotel button");
 		Assert.assertEquals(buttonName, "Hotels","Hotels button not found");
+		smokeReport.flush();
 
 	}
 	@Test(priority=16)
