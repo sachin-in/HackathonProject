@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <testng-results ignored="5" total="6" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
@@ -24,6 +25,33 @@
           </reporter-output>
         </test-method> <!-- verifyFathersDayGiftCard -->
         <test-method is-config="true" signature="closeBrowser()[pri:0, instance:SmokeTesting.smokeTest@f78a47e]" started-at="2021-07-18T15:06:35 IST" name="closeBrowser" finished-at="2021-07-18T15:06:39 IST" duration-ms="3830" status="PASS">
+=======
+<testng-results ignored="6" total="7" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2021-07-18T15:05:35 IST" name="Default suite" finished-at="2021-07-18T15:05:57 IST" duration-ms="22302">
+    <groups>
+    </groups>
+    <test started-at="2021-07-18T15:05:35 IST" name="Default test" finished-at="2021-07-18T15:05:57 IST" duration-ms="22302">
+      <class name="SmokeTesting.smokeTest">
+        <test-method is-config="true" signature="getExcelData()[pri:0, instance:SmokeTesting.smokeTest@537f60bf]" started-at="2021-07-18T15:05:33 IST" name="getExcelData" finished-at="2021-07-18T15:05:35 IST" duration-ms="1492" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getExcelData -->
+        <test-method is-config="true" signature="createExtentReport()[pri:0, instance:SmokeTesting.smokeTest@537f60bf]" started-at="2021-07-18T15:05:35 IST" name="createExtentReport" finished-at="2021-07-18T15:05:35 IST" duration-ms="657" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createExtentReport -->
+        <test-method is-config="true" signature="getWebDriver()[pri:0, instance:SmokeTesting.smokeTest@537f60bf]" started-at="2021-07-18T15:05:35 IST" name="getWebDriver" finished-at="2021-07-18T15:05:47 IST" duration-ms="11332" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getWebDriver -->
+        <test-method signature="verifyErrorForSameCitySelected()[pri:0, instance:SmokeTesting.smokeTest@537f60bf]" started-at="2021-07-18T15:05:47 IST" name="verifyErrorForSameCitySelected" finished-at="2021-07-18T15:05:53 IST" duration-ms="5983" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyErrorForSameCitySelected -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:SmokeTesting.smokeTest@537f60bf]" started-at="2021-07-18T15:05:53 IST" name="closeBrowser" finished-at="2021-07-18T15:05:57 IST" duration-ms="4248" status="PASS">
+>>>>>>> 559c9f9466198c1db13549be987d0bef338ea957
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
