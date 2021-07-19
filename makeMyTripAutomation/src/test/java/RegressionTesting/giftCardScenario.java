@@ -16,10 +16,10 @@ public class giftCardScenario extends testExecutor {
 	public static void giftCards() throws InterruptedException {
 		Actions moveCursor = new Actions(driver);
 
-		moveCursor.moveToElement(ElementContainer.moreDropDown(driver)).perform();
-		String giftCardLink=ElementContainer.giftCardTab(driver).getText();
-		Highlight.flash(ElementContainer.giftCardTab(driver),"giftCardsTab");
-		ElementContainer.giftCardTab(driver).click();
+		moveCursor.moveToElement(ElementContainer.moreDropDown()).perform();
+		String giftCardLink=ElementContainer.giftCardTab().getText();
+		Highlight.flash(ElementContainer.giftCardTab(),"giftCardsTab");
+		ElementContainer.giftCardTab().click();
 
 		regReport.createTest("Gift Card page");
 		Assert.assertEquals(giftCardLink, "Giftcards", "Name doesn't match");
@@ -30,8 +30,8 @@ public class giftCardScenario extends testExecutor {
 	public void buyGiftCard() throws InterruptedException {
 		Actions click = new Actions(driver);
 
-		Highlight.flash(ElementContainer.giftCard(driver),"buyGiftCard");
-		click.moveToElement(ElementContainer.giftCard(driver)).click().perform();
+		Highlight.flash(ElementContainer.giftCard(),"buyGiftCard");
+		click.moveToElement(ElementContainer.giftCard()).click().perform();
 
 		Thread.sleep(500);
 
@@ -43,9 +43,9 @@ public class giftCardScenario extends testExecutor {
 		ElementContainer.sendersEmail().sendKeys(data[3][2]);
 		Thread.sleep(2000);
 
-		Highlight.flash(ElementContainer.buyNowButton(driver),"buyNowButton");
-		ElementContainer.buyNowButton(driver).click();
-		String errorMessage = ElementContainer.errorMessage(driver).getText();
+		Highlight.flash(ElementContainer.buyNowButton(),"buyNowButton");
+		ElementContainer.buyNowButton().click();
+		String errorMessage = ElementContainer.errorMessage().getText();
 
 		System.out.println(errorMessage);
 		regReport.createTest("Invalid email in gift card");
@@ -73,7 +73,7 @@ public class giftCardScenario extends testExecutor {
 
 		Actions click = new Actions(driver);
 
-		Highlight.flash(ElementContainer.giftCard(driver),"verifyFathersDayGiftCard");
+		Highlight.flash(ElementContainer.giftCard(),"verifyFathersDayGiftCard");
 
 		
 		click.moveToElement(ElementContainer.giftCard()).click().perform();
@@ -93,8 +93,8 @@ public class giftCardScenario extends testExecutor {
 		giftCardScenario.giftCards();
 		Actions click = new Actions(driver);
 
-		Highlight.flash(ElementContainer.giftCard(driver),"verifyBuyNowButton");
-		click.moveToElement(ElementContainer.giftCard(driver)).click().perform();
+		Highlight.flash(ElementContainer.giftCard(),"verifyBuyNowButton");
+		click.moveToElement(ElementContainer.giftCard()).click().perform();
 
 		Thread.sleep(1000);
 		String buttonName=driver.findElement(By.xpath("//button[contains(text(),'BUY NOW')]")).getText();

@@ -10,7 +10,6 @@ import org.testng.annotations.Test;
 import Executor.testExecutor;
 import Tools.ElementContainer;
 import Tools.Highlight;
-import Tools.Screenshot;
 
 public class smokeTest extends testExecutor {
 
@@ -19,7 +18,7 @@ public class smokeTest extends testExecutor {
 		String title = ElementContainer.homepageSignature().getText();// Web Page signature
 		Assert.assertEquals(title, data[1][1], "Title is not correct");
 
-		Highlight.flash(ElementContainer.homepageSignature(driver),"getHomePageSignature");
+		Highlight.flash(ElementContainer.homepageSignature(),"getHomePageSignature");
 		 
 
 	}
@@ -27,10 +26,10 @@ public class smokeTest extends testExecutor {
 	@Test(priority = 1)
 	public void verifyCountry() {
 
-		Highlight.flash(ElementContainer.countryVerify(driver),"verifyCountry");
-		String name = ElementContainer.countryVerify(driver).getText();
+		Highlight.flash(ElementContainer.countryVerify(),"verifyCountry");
+		String name = ElementContainer.countryVerify().getText();
 		Assert.assertEquals(name, "IN | ENG | INR", "India is not selected");
-		Highlight.flash(ElementContainer.countryVerify(driver),"Selected Country");
+		Highlight.flash(ElementContainer.countryVerify(),"Selected Country");
 
 
 	}
@@ -38,8 +37,8 @@ public class smokeTest extends testExecutor {
 	@Test(priority = 2)
 	public void verifyLoginButton() {
 
-		Highlight.flash(ElementContainer.loginButton(driver), "verifyLoginButton");
-		String buttonName = ElementContainer.loginButton(driver).getText();
+		Highlight.flash(ElementContainer.loginButton(), "verifyLoginButton");
+		String buttonName = ElementContainer.loginButton().getText();
 
 		Assert.assertEquals(buttonName, "Login or Create Account", "Button is not found");
 
@@ -49,11 +48,11 @@ public class smokeTest extends testExecutor {
 	public void loginWithGmail() {
 		try {
 
-			Highlight.flash(ElementContainer.loginButton(driver), "LoginButton");
-			ElementContainer.loginButton(driver).click();// login button
+			Highlight.flash(ElementContainer.loginButton(), "LoginButton");
+			ElementContainer.loginButton().click();// login button
 			Thread.sleep(500);
-			Highlight.flash(ElementContainer.googleLogin(driver), "googleLogin");
-			ElementContainer.googleLogin(driver).click();// login by google
+			Highlight.flash(ElementContainer.googleLogin(), "googleLogin");
+			ElementContainer.googleLogin().click();// login by google
 
 
 			Set<String> handle = driver.getWindowHandles();
@@ -64,16 +63,16 @@ public class smokeTest extends testExecutor {
 			Thread.sleep(1000);
 
 
-			ElementContainer.emailInput(driver).sendKeys(data[1][4]);// enter email
-			Highlight.flash(ElementContainer.nextButton(driver),"emailInput");
-			ElementContainer.nextButton(driver).click();// click next
+			ElementContainer.emailInput().sendKeys(data[1][4]);// enter email
+			Highlight.flash(ElementContainer.nextButton(),"emailInput");
+			ElementContainer.nextButton().click();// click next
 
 			Thread.sleep(1000);
 			ElementContainer.passwordInput().sendKeys(data[1][5]);// enter password
 			Thread.sleep(2000);
 
-			Highlight.flash(ElementContainer.nextButton(driver), "passwordInput");
-			ElementContainer.nextButton(driver).click();// click next
+			Highlight.flash(ElementContainer.nextButton(), "passwordInput");
+			ElementContainer.nextButton().click();// click next
 
 			driver.switchTo().window(parentwindowid);
 			Thread.sleep(5000);
@@ -93,8 +92,8 @@ public class smokeTest extends testExecutor {
 			String popUp = ElementContainer.popupTitle().getText();// popup title
 			if (popUp.equalsIgnoreCase(data[1][6])) {
 
-				Highlight.flash(ElementContainer.googleClick(driver),"loginFromPopUp");
-				ElementContainer.googleClick(driver).click();// login by google
+				Highlight.flash(ElementContainer.googleClick(),"loginFromPopUp");
+				ElementContainer.googleClick().click();// login by google
 
 				Set<String> handle = driver.getWindowHandles();
 				Iterator<String> it = handle.iterator();
@@ -104,13 +103,13 @@ public class smokeTest extends testExecutor {
 				Thread.sleep(1000);
 
 
-				ElementContainer.emailInput(driver).sendKeys(data[1][4]);// enter email
-				Highlight.flash(ElementContainer.nextButton(driver),"emailInput");
-				ElementContainer.nextButton(driver).click();// click next
+				ElementContainer.emailInput().sendKeys(data[1][4]);// enter email
+				Highlight.flash(ElementContainer.nextButton(),"emailInput");
+				ElementContainer.nextButton().click();// click next
 				Thread.sleep(2000);
-				ElementContainer.passwordInput(driver).sendKeys(data[1][5]);// enter password
-				Highlight.flash(ElementContainer.nextButton(driver),"passwordInput");
-				ElementContainer.nextButton(driver).click();// click next
+				ElementContainer.passwordInput().sendKeys(data[1][5]);// enter password
+				Highlight.flash(ElementContainer.nextButton(),"passwordInput");
+				ElementContainer.nextButton().click();// click next
 
 				driver.switchTo().window(parentwindowid);
 				Thread.sleep(5000);

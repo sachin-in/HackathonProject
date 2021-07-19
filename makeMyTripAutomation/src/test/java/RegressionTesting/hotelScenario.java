@@ -16,8 +16,8 @@ public class hotelScenario extends testExecutor{
 	@Test(priority=13)
 	public void verifyHotelButton() {
 
-		Highlight.flash(ElementContainer.hotelTab(driver),"verifyHotelButton");
-		String buttonName = ElementContainer.hotelTab(driver).getText();
+		Highlight.flash(ElementContainer.hotelTab(),"verifyHotelButton");
+		String buttonName = ElementContainer.hotelTab().getText();
 
 		smokeReport.createTest("Hotel button");
 		Assert.assertEquals(buttonName, "Hotels","Hotels button not found");
@@ -33,14 +33,14 @@ public class hotelScenario extends testExecutor{
 	public void getAdultsList() throws InterruptedException {
 
 
-		ElementContainer.hotelTab(driver);// hotels tab
-		Highlight.flash(ElementContainer.hotelTab(driver),"hotelTab");
-		ElementContainer.hotelTab(driver).click();
+		ElementContainer.hotelTab();// hotels tab
+		Highlight.flash(ElementContainer.hotelTab(),"hotelTab");
+		ElementContainer.hotelTab().click();
 		ArrayList<String> adults = new ArrayList<String>();
-		ElementContainer.guestsButton(driver);// guest button
-		Highlight.flash(ElementContainer.guestsButton(driver),"guestsButton");
-		ElementContainer.guestsButton(driver).click();
-		List<WebElement> adultsCount = ElementContainer.adultsList(driver);// no. of adults list
+		ElementContainer.guestsButton();// guest button
+		Highlight.flash(ElementContainer.guestsButton(),"guestsButton");
+		ElementContainer.guestsButton().click();
+		List<WebElement> adultsCount = ElementContainer.adultsList();// no. of adults list
 
 		for (WebElement c : adultsCount) {
 			adults.add(c.getText());

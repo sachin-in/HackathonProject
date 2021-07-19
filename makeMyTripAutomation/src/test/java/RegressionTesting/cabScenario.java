@@ -20,10 +20,10 @@ public class cabScenario extends testExecutor {
 	public static void searchCab() throws InterruptedException {
 		
 
-		Highlight.flash(ElementContainer.cabButton(driver),"cabButton");
-		ElementContainer.cabButton(driver).click();// Cab button
+		Highlight.flash(ElementContainer.cabButton(),"cabButton");
+		ElementContainer.cabButton().click();// Cab button
 
-		List<WebElement> radio = ElementContainer.radioButton(driver);
+		List<WebElement> radio = ElementContainer.radioButton();
 		for(int i=0;i<radio.size();i++) {
 		if (radio.get(i).getText().equalsIgnoreCase(radio.get(0).getText())) {
 			Highlight.flash(radio.get(0),"radioButton");
@@ -39,9 +39,9 @@ public class cabScenario extends testExecutor {
 	@Test(priority = 1)
 	public void departure() {
 
-		Highlight.flash(ElementContainer.fromCity(driver),"departure");
-		ElementContainer.fromCity(driver).click();// from option
-		ElementContainer.selectDeparture(driver).sendKeys(data[1][7]);// departure city
+		Highlight.flash(ElementContainer.fromCity(),"departure");
+		ElementContainer.fromCity().click();// from option
+		ElementContainer.selectDeparture().sendKeys(data[1][7]);// departure city
 
 		try {
 			Thread.sleep(500);
@@ -73,8 +73,8 @@ public class cabScenario extends testExecutor {
 	@Test(priority = 3)
 	public void calender() {
 
-		Highlight.flash(ElementContainer.calender(driver),"calender");
-		ElementContainer.calender(driver).click(); // calender
+		Highlight.flash(ElementContainer.calender(),"calender");
+		ElementContainer.calender().click(); // calender
 
 		
 		List<WebElement> dates = ElementContainer.daySelect();// day picker list
@@ -96,10 +96,10 @@ public class cabScenario extends testExecutor {
 	@Test(priority=4)
 	public static void time() throws InterruptedException {
 
-		Highlight.flash(ElementContainer.pickupTimeDropdown(driver),"time");
-		ElementContainer.pickupTimeDropdown(driver).click();// pickup time
+		Highlight.flash(ElementContainer.pickupTimeDropdown(),"time");
+		ElementContainer.pickupTimeDropdown().click();// pickup time
 
-		List<WebElement> optionList = ElementContainer.pickupTimeLists(driver);
+		List<WebElement> optionList = ElementContainer.pickupTimeLists();
 		JavascriptExecutor je = (JavascriptExecutor) driver;
 		je.executeScript("arguments[0].scrollIntoView(true);", optionList.get(14));
 		ElementContainer.timeSet().click();
@@ -109,8 +109,8 @@ public class cabScenario extends testExecutor {
 		regReport.flush();
 		Thread.sleep(1500);
 
-		Highlight.flash(ElementContainer.searchButton(driver),"searchButton");
-		ElementContainer.searchButton(driver).click();
+		Highlight.flash(ElementContainer.searchButton(),"searchButton");
+		ElementContainer.searchButton().click();
 
 		Thread.sleep(2000);
 	}
@@ -119,8 +119,8 @@ public class cabScenario extends testExecutor {
 	public static void getCabDetails() throws Exception {
 		Thread.sleep(2000);
 
-		Highlight.flash(ElementContainer.suvSelect(driver),"getCabDetails");
-		ElementContainer.suvSelect(driver).click();
+		Highlight.flash(ElementContainer.suvSelect(),"getCabDetails");
+		ElementContainer.suvSelect().click();
 		
 		String vehicleName=ElementContainer.carName().getText();
 		String fare=ElementContainer.charges().getText().split(" ")[1];
