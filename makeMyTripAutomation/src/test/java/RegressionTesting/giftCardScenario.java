@@ -1,5 +1,6 @@
 package RegressionTesting;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
@@ -47,6 +48,52 @@ public class giftCardScenario extends testExecutor {
 		Thread.sleep(2000);
 		driver.navigate().to(data[1][0]);
 
+	}
+	
+	@Test(priority = 14)
+	public void verifyGiftCardTitle() throws InterruptedException {
+		giftCardScenario.giftCards();
+		Thread.sleep(500);
+		String gcTitle = driver.getTitle();
+		System.out.println("title is = " + gcTitle);
+		smokeReport.createTest("Gift Card Page");
+		Assert.assertEquals(gcTitle, "Gift Cards - Buy Gift Vouchers Online, Gift Vouchers | MakeMyTrip.com", "Title is not correct");
+		smokeReport.flush();
+	
+		}
+	
+	@Test(priority=15)
+	public void verifyFathersDayGiftCard() throws Exception {
+
+		Actions click = new Actions(driver);
+		Highlight.flash(ElementContainer.giftCard(driver), driver);
+		
+		click.moveToElement(ElementContainer.giftCard(driver)).click().perform();
+
+		Thread.sleep(1000);
+		String giftCardName=driver.findElement(By.xpath("//body[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/p[1]")).getText();
+		
+		smokeReport.createTest("Father's Day gift card");
+		Assert.assertEquals(giftCardName, "Father's Day Gift Card", "Gift card is not expected");
+		smokeReport.flush();
+		Thread.sleep(2000);
+		driver.navigate().to(data[1][0]);
+	}
+	
+	@Test(priority=5)
+	public void verifyBuyNowButton() throws InterruptedException {//for gift card scenario
+		giftCardScenario.giftCards();
+		Actions click = new Actions(driver);
+		Highlight.flash(ElementContainer.giftCard(driver), driver);
+		click.moveToElement(ElementContainer.giftCard(driver)).click().perform();
+		Thread.sleep(1000);
+		String buttonName=driver.findElement(By.xpath("//button[contains(text(),'BUY NOW')]")).getText();
+		
+		smokeReport.createTest("Buy Now Button");
+		Assert.assertEquals(buttonName, "BUY NOW", "failed");
+		smokeReport.flush();
+		Thread.sleep(2000);
+		driver.navigate().to(data[1][0]);
 	}
 
 }

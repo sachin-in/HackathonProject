@@ -12,6 +12,20 @@ import Tools.Highlight;
 
 
 public class hotelScenario extends testExecutor{
+	
+	@Test(priority=13)
+	public void verifyHotelButton() {
+		Highlight.flash(ElementContainer.hotelTab(driver), driver);
+		String buttonName = ElementContainer.hotelTab(driver).getText();
+		smokeReport.createTest("Hotel button");
+		Assert.assertEquals(buttonName, "Hotels","Hotels button not found");
+		smokeReport.flush();
+
+	}
+	@Test(priority=16)
+	public void verifyRoomsAndGuestButton() {
+
+	}
 
 	@Test(priority=0)
 	public void getAdultsList() throws InterruptedException {
