@@ -4,14 +4,10 @@ import java.util.Iterator;
 import java.util.Set;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import Executor.testExecutor;
-import RegressionTesting.cabScenario;
-import RegressionTesting.giftCardScenario;
 import Tools.ElementContainer;
 import Tools.Highlight;
 import Tools.Screenshot;
@@ -20,25 +16,25 @@ public class smokeTest extends testExecutor {
 
 	@Test(priority = 0)
 	public void getHomePageSignature() {
-		String title = ElementContainer.homepageSignature(driver).getText();// Web Page signature
+		String title = ElementContainer.homepageSignature().getText();// Web Page signature
 		Assert.assertEquals(title, data[1][1], "Title is not correct");
-		Highlight.flash(ElementContainer.homepageSignature(driver), driver);
+		Highlight.flash(ElementContainer.homepageSignature(), driver);
 		Screenshot.captureScreenshot("Homepage", driver);
 	}
 
 	@Test(priority = 1)
 	public void verifyCountry() {
-		Highlight.flash(ElementContainer.countryVerify(driver), driver);
-		String name = ElementContainer.countryVerify(driver).getText();
+		Highlight.flash(ElementContainer.countryVerify(), driver);
+		String name = ElementContainer.countryVerify().getText();
 		Assert.assertEquals(name, "IN | ENG | INR", "India is not selected");
-		Highlight.flash(ElementContainer.countryVerify(driver), driver);
+		Highlight.flash(ElementContainer.countryVerify(), driver);
 
 	}
 
 	@Test(priority = 2)
 	public void verifyLoginButton() {
-		Highlight.flash(ElementContainer.loginButton(driver), driver);
-		String buttonName = ElementContainer.loginButton(driver).getText();
+		Highlight.flash(ElementContainer.loginButton(), driver);
+		String buttonName = ElementContainer.loginButton().getText();
 		Assert.assertEquals(buttonName, "Login or Create Account", "Button is not found");
 
 	}
@@ -46,11 +42,11 @@ public class smokeTest extends testExecutor {
 	@Test(priority = 3)
 	public void loginWithGmail() {
 		try {
-			Highlight.flash(ElementContainer.loginButton(driver), driver);
-			ElementContainer.loginButton(driver).click();// login button
+			Highlight.flash(ElementContainer.loginButton(), driver);
+			ElementContainer.loginButton().click();// login button
 			Thread.sleep(500);
-			Highlight.flash(ElementContainer.googleLogin(driver), driver);
-			ElementContainer.googleLogin(driver).click();// login by google
+			Highlight.flash(ElementContainer.googleLogin(), driver);
+			ElementContainer.googleLogin().click();// login by google
 
 			Set<String> handle = driver.getWindowHandles();
 			Iterator<String> it = handle.iterator();
@@ -59,14 +55,14 @@ public class smokeTest extends testExecutor {
 			driver.switchTo().window(childwindowid);
 			Thread.sleep(1000);
 
-			ElementContainer.emailInput(driver).sendKeys(data[1][4]);// enter email
-			Highlight.flash(ElementContainer.nextButton(driver), driver);
-			ElementContainer.nextButton(driver).click();// click next
+			ElementContainer.emailInput().sendKeys(data[1][4]);// enter email
+			Highlight.flash(ElementContainer.nextButton(), driver);
+			ElementContainer.nextButton().click();// click next
 			Thread.sleep(1000);
-			ElementContainer.passwordInput(driver).sendKeys(data[1][5]);// enter password
+			ElementContainer.passwordInput().sendKeys(data[1][5]);// enter password
 			Thread.sleep(2000);
-			Highlight.flash(ElementContainer.nextButton(driver), driver);
-			ElementContainer.nextButton(driver).click();// click next
+			Highlight.flash(ElementContainer.nextButton(), driver);
+			ElementContainer.nextButton().click();// click next
 			driver.switchTo().window(parentwindowid);
 			Thread.sleep(5000);
 			driver.findElement(By.xpath(
@@ -82,10 +78,10 @@ public class smokeTest extends testExecutor {
 	@Test(priority = 4)
 	public void loginFromPopUp() {
 		try {
-			String popUp = ElementContainer.popupTitle(driver).getText();// popup title
+			String popUp = ElementContainer.popupTitle().getText();// popup title
 			if (popUp.equalsIgnoreCase(data[1][6])) {
-				Highlight.flash(ElementContainer.googleClick(driver), driver);
-				ElementContainer.googleClick(driver).click();// login by google
+				Highlight.flash(ElementContainer.googleClick(), driver);
+				ElementContainer.googleClick().click();// login by google
 				Set<String> handle = driver.getWindowHandles();
 				Iterator<String> it = handle.iterator();
 				String parentwindowid = it.next();
@@ -93,13 +89,13 @@ public class smokeTest extends testExecutor {
 				driver.switchTo().window(childwindowid);
 				Thread.sleep(1000);
 
-				ElementContainer.emailInput(driver).sendKeys(data[1][4]);// enter email
-				Highlight.flash(ElementContainer.nextButton(driver), driver);
-				ElementContainer.nextButton(driver).click();// click next
+				ElementContainer.emailInput().sendKeys(data[1][4]);// enter email
+				Highlight.flash(ElementContainer.nextButton(), driver);
+				ElementContainer.nextButton().click();// click next
 				Thread.sleep(2000);
-				ElementContainer.passwordInput(driver).sendKeys(data[1][5]);// enter password
-				Highlight.flash(ElementContainer.nextButton(driver), driver);
-				ElementContainer.nextButton(driver).click();// click next
+				ElementContainer.passwordInput().sendKeys(data[1][5]);// enter password
+				Highlight.flash(ElementContainer.nextButton(), driver);
+				ElementContainer.nextButton().click();// click next
 				driver.switchTo().window(parentwindowid);
 				Thread.sleep(5000);
 
