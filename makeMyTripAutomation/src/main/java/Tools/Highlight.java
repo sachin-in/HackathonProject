@@ -21,8 +21,7 @@ public class Highlight {
 			Thread.sleep(500);
 			File src = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
 			FileUtils.copyFile(src,new File(screenshotName+".png"));
-		} catch(InterruptedException e) {
-		} catch (IOException e) {
+		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
