@@ -19,12 +19,12 @@ public class cabScenario extends testExecutor {
 	@Test(priority = 0)
 	public static void searchCab() throws InterruptedException {
 		
-		Highlight.flash(ElementContainer.cabButton(driver), driver);
+		Highlight.flash(ElementContainer.cabButton(driver),"cabButton");
 		ElementContainer.cabButton(driver).click();// Cab button
 		List<WebElement> radio = ElementContainer.radioButton(driver);
 		for(int i=0;i<radio.size();i++) {
 		if (radio.get(i).getText().equalsIgnoreCase(radio.get(0).getText())) {
-			Highlight.flash(radio.get(0), driver);
+			Highlight.flash(radio.get(0),"radioButton");
 			radio.get(i).click();
 			String radioSelected=radio.get(0).getText();
 			regReport.createTest("Outstation One way Selected");
@@ -36,7 +36,7 @@ public class cabScenario extends testExecutor {
 
 	@Test(priority = 1)
 	public void departure() {
-		Highlight.flash(ElementContainer.fromCity(driver), driver);
+		Highlight.flash(ElementContainer.fromCity(driver),"departure");
 		ElementContainer.fromCity(driver).click();// from option
 		ElementContainer.selectDeparture(driver).sendKeys(data[1][7]);// departure city
 		try {
@@ -68,7 +68,7 @@ public class cabScenario extends testExecutor {
 
 	@Test(priority = 3)
 	public void calender() {
-		Highlight.flash(ElementContainer.calender(driver), driver);
+		Highlight.flash(ElementContainer.calender(driver),"calender");
 		ElementContainer.calender(driver).click(); // calender
 		
 		List<WebElement> dates = ElementContainer.daySelect(driver);// day picker list
@@ -89,7 +89,7 @@ public class cabScenario extends testExecutor {
 
 	@Test(priority=4)
 	public static void time() throws InterruptedException {
-		Highlight.flash(ElementContainer.pickupTimeDropdown(driver), driver);
+		Highlight.flash(ElementContainer.pickupTimeDropdown(driver),"time");
 		ElementContainer.pickupTimeDropdown(driver).click();// pickup time
 		List<WebElement> optionList = ElementContainer.pickupTimeLists(driver);
 		JavascriptExecutor je = (JavascriptExecutor) driver;
@@ -100,7 +100,7 @@ public class cabScenario extends testExecutor {
 		Assert.assertEquals("06:30", "06:30", "Time of trip is not correct");
 		regReport.flush();
 		Thread.sleep(1500);
-		Highlight.flash(ElementContainer.searchButton(driver), driver);
+		Highlight.flash(ElementContainer.searchButton(driver),"searchButton");
 		ElementContainer.searchButton(driver).click();
 		Thread.sleep(2000);
 	}
@@ -108,7 +108,7 @@ public class cabScenario extends testExecutor {
 	@Test(dependsOnMethods = "time")
 	public static void getCabDetails() throws Exception {
 		Thread.sleep(2000);
-		Highlight.flash(ElementContainer.suvSelect(driver), driver);
+		Highlight.flash(ElementContainer.suvSelect(driver),"getCabDetails");
 		ElementContainer.suvSelect(driver).click();
 		
 		String vehicleName=ElementContainer.carName(driver).getText();
