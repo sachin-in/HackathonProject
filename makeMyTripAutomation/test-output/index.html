@@ -26,7 +26,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">2 suites</span>
+      <span class="top-banner-font-1">2 suites, 11 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -40,7 +40,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Executor" class="navigator-link">
-              <span class="suite-name border-passed">Executor</span>
+              <span class="suite-name border-failed">Executor</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -51,7 +51,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Executor" class="navigator-link ">
-                    <span>D:\Cognizant\Master\HackathonProject\makeMyTripAutomation\testng.xml</span>
+                    <span>D:\Cognizant\Clone File\HackathonProject\makeMyTripAutomation\testng.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -93,7 +93,90 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">11 methods,   11 passed</span>
+                    <span class="method-stats">16 methods, 11 failed,  2 skipped,  3 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Executor" class="hide-methods failed suite-Executor"> (hide)</a> <!-- hide-methods failed suite-Executor -->
+                      <a href="#" panel-name="suite-Executor" class="show-methods failed suite-Executor"> (show)</a> <!-- show-methods failed suite-Executor -->
+                    </span>
+                    <div class="method-list-content failed suite-Executor">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Executor" title="RegressionTesting.cabScenario" class="method navigator-link" hash-for-method="arrival">arrival</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Executor" title="RegressionTesting.cabScenario" class="method navigator-link" hash-for-method="calender">calender</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Executor" title="RegressionTesting.cabScenario" class="method navigator-link" hash-for-method="departure">departure</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Executor" title="RegressionTesting.hotelScenario" class="method navigator-link" hash-for-method="getAdultsList">getAdultsList</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Executor" title="RegressionTesting.giftCardScenario" class="method navigator-link" hash-for-method="giftCards">giftCards</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Executor" title="RegressionTesting.cabScenario" class="method navigator-link" hash-for-method="searchCab">searchCab</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Executor" title="RegressionTesting.cabScenario" class="method navigator-link" hash-for-method="time">time</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Executor" title="RegressionTesting.giftCardScenario" class="method navigator-link" hash-for-method="verifyBuyNowButton">verifyBuyNowButton</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Executor" title="RegressionTesting.giftCardScenario" class="method navigator-link" hash-for-method="verifyFathersDayGiftCard">verifyFathersDayGiftCard</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Executor" title="RegressionTesting.giftCardScenario" class="method navigator-link" hash-for-method="verifyGiftCardTitle">verifyGiftCardTitle</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Executor" title="RegressionTesting.hotelScenario" class="method navigator-link" hash-for-method="verifyHotelButton">verifyHotelButton</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Executor -->
+                  </li>
+                  <li>
+                    <span class="method-list-title skipped">Skipped methods</span>
+                    <span class="show-or-hide-methods skipped">
+                      <a href="#" panel-name="suite-Executor" class="hide-methods skipped suite-Executor"> (hide)</a> <!-- hide-methods skipped suite-Executor -->
+                      <a href="#" panel-name="suite-Executor" class="show-methods skipped suite-Executor"> (show)</a> <!-- show-methods skipped suite-Executor -->
+                    </span>
+                    <div class="method-list-content skipped suite-Executor">
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Executor" title="RegressionTesting.giftCardScenario" class="method navigator-link" hash-for-method="buyGiftCard">buyGiftCard</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Executor" title="RegressionTesting.cabScenario" class="method navigator-link" hash-for-method="getCabDetails">getCabDetails</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content skipped suite-Executor -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -102,41 +185,6 @@
                       <a href="#" panel-name="suite-Executor" class="show-methods passed suite-Executor"> (show)</a> <!-- show-methods passed suite-Executor -->
                     </span>
                     <div class="method-list-content passed suite-Executor">
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Executor" title="RegressionTesting.cabScenario" class="method navigator-link" hash-for-method="arrival">arrival</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Executor" title="RegressionTesting.giftCardScenario" class="method navigator-link" hash-for-method="buyGiftCard">buyGiftCard</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Executor" title="RegressionTesting.cabScenario" class="method navigator-link" hash-for-method="calender">calender</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Executor" title="RegressionTesting.cabScenario" class="method navigator-link" hash-for-method="departure">departure</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Executor" title="RegressionTesting.hotelScenario" class="method navigator-link" hash-for-method="getAdultsList">getAdultsList</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Executor" title="RegressionTesting.cabScenario" class="method navigator-link" hash-for-method="getCabDetails">getCabDetails</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Executor" title="RegressionTesting.giftCardScenario" class="method navigator-link" hash-for-method="giftCards">giftCards</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Executor" title="SmokeTesting.smokeTest" class="method navigator-link" hash-for-method="loginFromPopUp">loginFromPopUp</a> <!-- method navigator-link -->
@@ -149,12 +197,7 @@
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Executor" title="RegressionTesting.cabScenario" class="method navigator-link" hash-for-method="searchCab">searchCab</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Executor" title="RegressionTesting.cabScenario" class="method navigator-link" hash-for-method="time">time</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Executor" title="RegressionTesting.hotelScenario" class="method navigator-link" hash-for-method="verifyRoomsAndGuestButton">verifyRoomsAndGuestButton</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Executor -->
@@ -180,7 +223,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-SmokeTests" class="navigator-link ">
-                    <span>D:\Cognizant\Master\HackathonProject\makeMyTripAutomation\smokeTest.xml</span>
+                    <span>D:\Cognizant\Clone File\HackathonProject\makeMyTripAutomation\smokeTest.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -222,7 +265,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">17 methods,   17 passed</span>
+                    <span class="method-stats">5 methods,   5 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -248,72 +291,12 @@
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-SmokeTests" title="SmokeTesting.smokeTest" class="method navigator-link" hash-for-method="verifyBuyNowButton">verifyBuyNowButton</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-SmokeTests" title="SmokeTesting.smokeTest" class="method navigator-link" hash-for-method="verifyCabButton">verifyCabButton</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-SmokeTests" title="SmokeTesting.smokeTest" class="method navigator-link" hash-for-method="verifyCabSearchButton">verifyCabSearchButton</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-SmokeTests" title="SmokeTesting.smokeTest" class="method navigator-link" hash-for-method="verifyCalenderDropDown">verifyCalenderDropDown</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-SmokeTests" title="SmokeTesting.smokeTest" class="method navigator-link" hash-for-method="verifyCountry">verifyCountry</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-SmokeTests" title="SmokeTesting.smokeTest" class="method navigator-link" hash-for-method="verifyErrorForSameCitySelected">verifyErrorForSameCitySelected</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-SmokeTests" title="SmokeTesting.smokeTest" class="method navigator-link" hash-for-method="verifyFathersDayGiftCard">verifyFathersDayGiftCard</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-SmokeTests" title="SmokeTesting.smokeTest" class="method navigator-link" hash-for-method="verifyGiftCardTitle">verifyGiftCardTitle</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-SmokeTests" title="SmokeTesting.smokeTest" class="method navigator-link" hash-for-method="verifyHotelButton">verifyHotelButton</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-SmokeTests" title="SmokeTesting.smokeTest" class="method navigator-link" hash-for-method="verifyLoginButton">verifyLoginButton</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-SmokeTests" title="SmokeTesting.smokeTest" class="method navigator-link" hash-for-method="verifyPickUpTimeDropDown">verifyPickUpTimeDropDown</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-SmokeTests" title="SmokeTesting.smokeTest" class="method navigator-link" hash-for-method="verifyRoomsAndGuestButton">verifyRoomsAndGuestButton</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-SmokeTests" title="SmokeTesting.smokeTest" class="method navigator-link" hash-for-method="verifySUVButton">verifySUVButton</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-SmokeTests" title="SmokeTesting.smokeTest" class="method navigator-link" hash-for-method="verifySelectedRadioButton">verifySelectedRadioButton</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-SmokeTests -->
@@ -328,9 +311,182 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Executor" class="panel Executor">
-          <div class="suite-Executor-class-passed">
+          <div class="suite-Executor-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
+              <img src="failed.png"/>
+              <span class="class-name">RegressionTesting.cabScenario</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="arrival">
+                  </a> <!-- arrival -->
+                  <span class="method-name">arrival</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//input[contains(@placeholder,&apos;To&apos;)]&quot;}
+  (Session info: chrome=91.0.4472.164)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: &apos;4.0.0-beta-4&apos;, revision: &apos;29f46d02dd&apos;
+System info: host: &apos;DESKTOP-50JK38S&apos;, ip: &apos;192.168.1.36&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;16.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [97b21757beac7d77dd25466bb2811ee7, findElement {using=xpath, value=//input[contains(@placeholder,&apos;To&apos;)]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 91.0.4472.164, chrome: {chromedriverVersion: 91.0.4472.101 (af52a90bf870..., userDataDir: C:\Users\Dell\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:61134}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:61134/devtoo..., se:cdpVersion: 91.0.4472.164, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 97b21757beac7d77dd25466bb2811ee7
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:162)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:137)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:612)
+	at org.openqa.selenium.remote.RemoteWebDriver$Mechanism$2.findElement(RemoteWebDriver.java:1251)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:379)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:373)
+	at Tools.ElementContainer.selectArrival(ElementContainer.java:108)
+	at RegressionTesting.cabScenario.arrival(cabScenario.java:59)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at Executor.testExecutor.invokeTestNG(testExecutor.java:76)
+	at Executor.testExecutor.main(testExecutor.java:82)
+... Removed 29 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="calender">
+                  </a> <!-- calender -->
+                  <span class="method-name">calender</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//span[contains(text(),&apos;DEPARTURE&apos;)]&quot;}
+  (Session info: chrome=91.0.4472.164)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: &apos;4.0.0-beta-4&apos;, revision: &apos;29f46d02dd&apos;
+System info: host: &apos;DESKTOP-50JK38S&apos;, ip: &apos;192.168.1.36&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;16.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [97b21757beac7d77dd25466bb2811ee7, findElement {using=xpath, value=//span[contains(text(),&apos;DEPARTURE&apos;)]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 91.0.4472.164, chrome: {chromedriverVersion: 91.0.4472.101 (af52a90bf870..., userDataDir: C:\Users\Dell\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:61134}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:61134/devtoo..., se:cdpVersion: 91.0.4472.164, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 97b21757beac7d77dd25466bb2811ee7
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:162)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:137)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:612)
+	at org.openqa.selenium.remote.RemoteWebDriver$Mechanism$2.findElement(RemoteWebDriver.java:1251)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:379)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:373)
+	at Tools.ElementContainer.calender(ElementContainer.java:114)
+	at RegressionTesting.cabScenario.calender(cabScenario.java:75)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at Executor.testExecutor.invokeTestNG(testExecutor.java:76)
+	at Executor.testExecutor.main(testExecutor.java:82)
+... Removed 29 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="departure">
+                  </a> <!-- departure -->
+                  <span class="method-name">departure</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//span[normalize-space()=&apos;From&apos;]&quot;}
+  (Session info: chrome=91.0.4472.164)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: &apos;4.0.0-beta-4&apos;, revision: &apos;29f46d02dd&apos;
+System info: host: &apos;DESKTOP-50JK38S&apos;, ip: &apos;192.168.1.36&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;16.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [97b21757beac7d77dd25466bb2811ee7, findElement {using=xpath, value=//span[normalize-space()=&apos;From&apos;]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 91.0.4472.164, chrome: {chromedriverVersion: 91.0.4472.101 (af52a90bf870..., userDataDir: C:\Users\Dell\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:61134}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:61134/devtoo..., se:cdpVersion: 91.0.4472.164, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 97b21757beac7d77dd25466bb2811ee7
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:162)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:137)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:612)
+	at org.openqa.selenium.remote.RemoteWebDriver$Mechanism$2.findElement(RemoteWebDriver.java:1251)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:379)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:373)
+	at Tools.ElementContainer.fromCity(ElementContainer.java:96)
+	at RegressionTesting.cabScenario.departure(cabScenario.java:41)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at Executor.testExecutor.invokeTestNG(testExecutor.java:76)
+	at Executor.testExecutor.main(testExecutor.java:82)
+... Removed 29 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="searchCab">
+                  </a> <!-- searchCab -->
+                  <span class="method-name">searchCab</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//span[@class=&apos;chNavText darkGreyText&apos;][normalize-space()=&apos;Cabs&apos;]&quot;}
+  (Session info: chrome=91.0.4472.164)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: &apos;4.0.0-beta-4&apos;, revision: &apos;29f46d02dd&apos;
+System info: host: &apos;DESKTOP-50JK38S&apos;, ip: &apos;192.168.1.36&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;16.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [97b21757beac7d77dd25466bb2811ee7, findElement {using=xpath, value=//span[@class=&apos;chNavText darkGreyText&apos;][normalize-space()=&apos;Cabs&apos;]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 91.0.4472.164, chrome: {chromedriverVersion: 91.0.4472.101 (af52a90bf870..., userDataDir: C:\Users\Dell\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:61134}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:61134/devtoo..., se:cdpVersion: 91.0.4472.164, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 97b21757beac7d77dd25466bb2811ee7
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:162)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:137)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:612)
+	at org.openqa.selenium.remote.RemoteWebDriver$Mechanism$2.findElement(RemoteWebDriver.java:1251)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:379)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:373)
+	at Tools.ElementContainer.cabButton(ElementContainer.java:83)
+	at RegressionTesting.cabScenario.searchCab(cabScenario.java:22)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at Executor.testExecutor.invokeTestNG(testExecutor.java:76)
+	at Executor.testExecutor.main(testExecutor.java:82)
+... Removed 29 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="time">
+                  </a> <!-- time -->
+                  <span class="method-name">time</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//span[contains(text(),&apos;PICKUP-TIME&apos;)]&quot;}
+  (Session info: chrome=91.0.4472.164)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: &apos;4.0.0-beta-4&apos;, revision: &apos;29f46d02dd&apos;
+System info: host: &apos;DESKTOP-50JK38S&apos;, ip: &apos;192.168.1.36&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;16.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [97b21757beac7d77dd25466bb2811ee7, findElement {using=xpath, value=//span[contains(text(),&apos;PICKUP-TIME&apos;)]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 91.0.4472.164, chrome: {chromedriverVersion: 91.0.4472.101 (af52a90bf870..., userDataDir: C:\Users\Dell\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:61134}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:61134/devtoo..., se:cdpVersion: 91.0.4472.164, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 97b21757beac7d77dd25466bb2811ee7
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:162)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:137)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:612)
+	at org.openqa.selenium.remote.RemoteWebDriver$Mechanism$2.findElement(RemoteWebDriver.java:1251)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:379)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:373)
+	at Tools.ElementContainer.pickupTimeDropdown(ElementContainer.java:126)
+	at RegressionTesting.cabScenario.time(cabScenario.java:98)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at Executor.testExecutor.invokeTestNG(testExecutor.java:76)
+	at Executor.testExecutor.main(testExecutor.java:82)
+... Removed 29 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Executor-class-failed -->
+          <div class="suite-Executor-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
               <span class="class-name">RegressionTesting.hotelScenario</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -339,6 +495,264 @@
                   <a name="getAdultsList">
                   </a> <!-- getAdultsList -->
                   <span class="method-name">getAdultsList</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//body/div[@id=&apos;root&apos;]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/nav[1]/ul[1]/li[2]/a[1]/span[2]&quot;}
+  (Session info: chrome=91.0.4472.164)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: &apos;4.0.0-beta-4&apos;, revision: &apos;29f46d02dd&apos;
+System info: host: &apos;DESKTOP-50JK38S&apos;, ip: &apos;192.168.1.36&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;16.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [97b21757beac7d77dd25466bb2811ee7, findElement {using=xpath, value=//body/div[@id=&apos;root&apos;]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/nav[1]/ul[1]/li[2]/a[1]/span[2]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 91.0.4472.164, chrome: {chromedriverVersion: 91.0.4472.101 (af52a90bf870..., userDataDir: C:\Users\Dell\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:61134}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:61134/devtoo..., se:cdpVersion: 91.0.4472.164, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 97b21757beac7d77dd25466bb2811ee7
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:162)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:137)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:612)
+	at org.openqa.selenium.remote.RemoteWebDriver$Mechanism$2.findElement(RemoteWebDriver.java:1251)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:379)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:373)
+	at Tools.ElementContainer.hotelTab(ElementContainer.java:227)
+	at RegressionTesting.hotelScenario.getAdultsList(hotelScenario.java:36)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at Executor.testExecutor.invokeTestNG(testExecutor.java:76)
+	at Executor.testExecutor.main(testExecutor.java:82)
+... Removed 29 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyHotelButton">
+                  </a> <!-- verifyHotelButton -->
+                  <span class="method-name">verifyHotelButton</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//body/div[@id=&apos;root&apos;]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/nav[1]/ul[1]/li[2]/a[1]/span[2]&quot;}
+  (Session info: chrome=91.0.4472.164)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: &apos;4.0.0-beta-4&apos;, revision: &apos;29f46d02dd&apos;
+System info: host: &apos;DESKTOP-50JK38S&apos;, ip: &apos;192.168.1.36&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;16.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [97b21757beac7d77dd25466bb2811ee7, findElement {using=xpath, value=//body/div[@id=&apos;root&apos;]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/nav[1]/ul[1]/li[2]/a[1]/span[2]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 91.0.4472.164, chrome: {chromedriverVersion: 91.0.4472.101 (af52a90bf870..., userDataDir: C:\Users\Dell\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:61134}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:61134/devtoo..., se:cdpVersion: 91.0.4472.164, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 97b21757beac7d77dd25466bb2811ee7
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:162)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:137)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:612)
+	at org.openqa.selenium.remote.RemoteWebDriver$Mechanism$2.findElement(RemoteWebDriver.java:1251)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:379)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:373)
+	at Tools.ElementContainer.hotelTab(ElementContainer.java:227)
+	at RegressionTesting.hotelScenario.verifyHotelButton(hotelScenario.java:19)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at Executor.testExecutor.invokeTestNG(testExecutor.java:76)
+	at Executor.testExecutor.main(testExecutor.java:82)
+... Removed 29 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Executor-class-failed -->
+          <div class="suite-Executor-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">RegressionTesting.giftCardScenario</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="giftCards">
+                  </a> <!-- giftCards -->
+                  <span class="method-name">giftCards</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@id=&apos;SW&apos;]/div[1]/div[2]/div/div/nav/ul/li[9]/a/span[1]&quot;}
+  (Session info: chrome=91.0.4472.164)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: &apos;4.0.0-beta-4&apos;, revision: &apos;29f46d02dd&apos;
+System info: host: &apos;DESKTOP-50JK38S&apos;, ip: &apos;192.168.1.36&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;16.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [97b21757beac7d77dd25466bb2811ee7, findElement {using=xpath, value=//*[@id=&apos;SW&apos;]/div[1]/div[2]/div/div/nav/ul/li[9]/a/span[1]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 91.0.4472.164, chrome: {chromedriverVersion: 91.0.4472.101 (af52a90bf870..., userDataDir: C:\Users\Dell\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:61134}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:61134/devtoo..., se:cdpVersion: 91.0.4472.164, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 97b21757beac7d77dd25466bb2811ee7
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:162)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:137)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:612)
+	at org.openqa.selenium.remote.RemoteWebDriver$Mechanism$2.findElement(RemoteWebDriver.java:1251)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:379)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:373)
+	at Tools.ElementContainer.moreDropDown(ElementContainer.java:178)
+	at RegressionTesting.giftCardScenario.giftCards(giftCardScenario.java:19)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at Executor.testExecutor.invokeTestNG(testExecutor.java:76)
+	at Executor.testExecutor.main(testExecutor.java:82)
+... Removed 29 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyBuyNowButton">
+                  </a> <!-- verifyBuyNowButton -->
+                  <span class="method-name">verifyBuyNowButton</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@id=&apos;SW&apos;]/div[1]/div[2]/div/div/nav/ul/li[9]/a/span[1]&quot;}
+  (Session info: chrome=91.0.4472.164)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: &apos;4.0.0-beta-4&apos;, revision: &apos;29f46d02dd&apos;
+System info: host: &apos;DESKTOP-50JK38S&apos;, ip: &apos;192.168.1.36&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;16.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [97b21757beac7d77dd25466bb2811ee7, findElement {using=xpath, value=//*[@id=&apos;SW&apos;]/div[1]/div[2]/div/div/nav/ul/li[9]/a/span[1]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 91.0.4472.164, chrome: {chromedriverVersion: 91.0.4472.101 (af52a90bf870..., userDataDir: C:\Users\Dell\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:61134}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:61134/devtoo..., se:cdpVersion: 91.0.4472.164, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 97b21757beac7d77dd25466bb2811ee7
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:162)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:137)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:612)
+	at org.openqa.selenium.remote.RemoteWebDriver$Mechanism$2.findElement(RemoteWebDriver.java:1251)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:379)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:373)
+	at Tools.ElementContainer.moreDropDown(ElementContainer.java:178)
+	at RegressionTesting.giftCardScenario.giftCards(giftCardScenario.java:19)
+	at RegressionTesting.giftCardScenario.verifyBuyNowButton(giftCardScenario.java:90)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at Executor.testExecutor.invokeTestNG(testExecutor.java:76)
+	at Executor.testExecutor.main(testExecutor.java:82)
+... Removed 29 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyFathersDayGiftCard">
+                  </a> <!-- verifyFathersDayGiftCard -->
+                  <span class="method-name">verifyFathersDayGiftCard</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@class=&apos;card__data&apos;]&quot;}
+  (Session info: chrome=91.0.4472.164)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: &apos;4.0.0-beta-4&apos;, revision: &apos;29f46d02dd&apos;
+System info: host: &apos;DESKTOP-50JK38S&apos;, ip: &apos;192.168.1.36&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;16.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [97b21757beac7d77dd25466bb2811ee7, findElement {using=xpath, value=//div[@class=&apos;card__data&apos;]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 91.0.4472.164, chrome: {chromedriverVersion: 91.0.4472.101 (af52a90bf870..., userDataDir: C:\Users\Dell\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:61134}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:61134/devtoo..., se:cdpVersion: 91.0.4472.164, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 97b21757beac7d77dd25466bb2811ee7
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:162)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:137)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:612)
+	at org.openqa.selenium.remote.RemoteWebDriver$Mechanism$2.findElement(RemoteWebDriver.java:1251)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:379)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:373)
+	at Tools.ElementContainer.giftCard(ElementContainer.java:190)
+	at RegressionTesting.giftCardScenario.verifyFathersDayGiftCard(giftCardScenario.java:75)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at Executor.testExecutor.invokeTestNG(testExecutor.java:76)
+	at Executor.testExecutor.main(testExecutor.java:82)
+... Removed 29 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyGiftCardTitle">
+                  </a> <!-- verifyGiftCardTitle -->
+                  <span class="method-name">verifyGiftCardTitle</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@id=&apos;SW&apos;]/div[1]/div[2]/div/div/nav/ul/li[9]/a/span[1]&quot;}
+  (Session info: chrome=91.0.4472.164)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: &apos;4.0.0-beta-4&apos;, revision: &apos;29f46d02dd&apos;
+System info: host: &apos;DESKTOP-50JK38S&apos;, ip: &apos;192.168.1.36&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;16.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [97b21757beac7d77dd25466bb2811ee7, findElement {using=xpath, value=//*[@id=&apos;SW&apos;]/div[1]/div[2]/div/div/nav/ul/li[9]/a/span[1]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 91.0.4472.164, chrome: {chromedriverVersion: 91.0.4472.101 (af52a90bf870..., userDataDir: C:\Users\Dell\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:61134}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:61134/devtoo..., se:cdpVersion: 91.0.4472.164, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 97b21757beac7d77dd25466bb2811ee7
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:162)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:137)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:612)
+	at org.openqa.selenium.remote.RemoteWebDriver$Mechanism$2.findElement(RemoteWebDriver.java:1251)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:379)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:373)
+	at Tools.ElementContainer.moreDropDown(ElementContainer.java:178)
+	at RegressionTesting.giftCardScenario.giftCards(giftCardScenario.java:19)
+	at RegressionTesting.giftCardScenario.verifyGiftCardTitle(giftCardScenario.java:61)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at Executor.testExecutor.invokeTestNG(testExecutor.java:76)
+	at Executor.testExecutor.main(testExecutor.java:82)
+... Removed 29 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Executor-class-failed -->
+          <div class="suite-Executor-class-skipped">
+            <div class="main-panel-header rounded-window-top">
+              <img src="skipped.png"/>
+              <span class="class-name">RegressionTesting.cabScenario</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="getCabDetails">
+                  </a> <!-- getCabDetails -->
+                  <span class="method-name">getCabDetails</span>
+                  <div class="stack-trace">java.lang.Throwable: Method cabScenario.getCabDetails()[pri:0, instance:RegressionTesting.cabScenario@66d18979] depends on not successfully finished methods
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at Executor.testExecutor.invokeTestNG(testExecutor.java:76)
+	at Executor.testExecutor.main(testExecutor.java:82)
+... Removed 15 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Executor-class-skipped -->
+          <div class="suite-Executor-class-skipped">
+            <div class="main-panel-header rounded-window-top">
+              <img src="skipped.png"/>
+              <span class="class-name">RegressionTesting.giftCardScenario</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="buyGiftCard">
+                  </a> <!-- buyGiftCard -->
+                  <span class="method-name">buyGiftCard</span>
+                  <div class="stack-trace">java.lang.Throwable: Method giftCardScenario.buyGiftCard()[pri:0, instance:RegressionTesting.giftCardScenario@bccb269] depends on not successfully finished methods
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at Executor.testExecutor.invokeTestNG(testExecutor.java:76)
+	at Executor.testExecutor.main(testExecutor.java:82)
+... Removed 15 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Executor-class-skipped -->
+          <div class="suite-Executor-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">RegressionTesting.hotelScenario</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyRoomsAndGuestButton">
+                  </a> <!-- verifyRoomsAndGuestButton -->
+                  <span class="method-name">verifyRoomsAndGuestButton</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -361,78 +775,6 @@
                   <a name="loginWithGmail">
                   </a> <!-- loginWithGmail -->
                   <span class="method-name">loginWithGmail</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Executor-class-passed -->
-          <div class="suite-Executor-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">RegressionTesting.cabScenario</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="arrival">
-                  </a> <!-- arrival -->
-                  <span class="method-name">arrival</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="calender">
-                  </a> <!-- calender -->
-                  <span class="method-name">calender</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="departure">
-                  </a> <!-- departure -->
-                  <span class="method-name">departure</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="getCabDetails">
-                  </a> <!-- getCabDetails -->
-                  <span class="method-name">getCabDetails</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="searchCab">
-                  </a> <!-- searchCab -->
-                  <span class="method-name">searchCab</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="time">
-                  </a> <!-- time -->
-                  <span class="method-name">time</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Executor-class-passed -->
-          <div class="suite-Executor-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">RegressionTesting.giftCardScenario</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="buyGiftCard">
-                  </a> <!-- buyGiftCard -->
-                  <span class="method-name">buyGiftCard</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="giftCards">
-                  </a> <!-- giftCards -->
-                  <span class="method-name">giftCards</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -468,65 +810,9 @@
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="verifyBuyNowButton">
-                  </a> <!-- verifyBuyNowButton -->
-                  <span class="method-name">verifyBuyNowButton</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="verifyCabButton">
-                  </a> <!-- verifyCabButton -->
-                  <span class="method-name">verifyCabButton</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="verifyCabSearchButton">
-                  </a> <!-- verifyCabSearchButton -->
-                  <span class="method-name">verifyCabSearchButton</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="verifyCalenderDropDown">
-                  </a> <!-- verifyCalenderDropDown -->
-                  <span class="method-name">verifyCalenderDropDown</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
                   <a name="verifyCountry">
                   </a> <!-- verifyCountry -->
                   <span class="method-name">verifyCountry</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="verifyErrorForSameCitySelected">
-                  </a> <!-- verifyErrorForSameCitySelected -->
-                  <span class="method-name">verifyErrorForSameCitySelected</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="verifyFathersDayGiftCard">
-                  </a> <!-- verifyFathersDayGiftCard -->
-                  <span class="method-name">verifyFathersDayGiftCard</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="verifyGiftCardTitle">
-                  </a> <!-- verifyGiftCardTitle -->
-                  <span class="method-name">verifyGiftCardTitle</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="verifyHotelButton">
-                  </a> <!-- verifyHotelButton -->
-                  <span class="method-name">verifyHotelButton</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -536,40 +822,12 @@
                   <span class="method-name">verifyLoginButton</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="verifyPickUpTimeDropDown">
-                  </a> <!-- verifyPickUpTimeDropDown -->
-                  <span class="method-name">verifyPickUpTimeDropDown</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="verifyRoomsAndGuestButton">
-                  </a> <!-- verifyRoomsAndGuestButton -->
-                  <span class="method-name">verifyRoomsAndGuestButton</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="verifySUVButton">
-                  </a> <!-- verifySUVButton -->
-                  <span class="method-name">verifySUVButton</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="verifySelectedRadioButton">
-                  </a> <!-- verifySelectedRadioButton -->
-                  <span class="method-name">verifySelectedRadioButton</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-SmokeTests-class-passed -->
         </div> <!-- panel SmokeTests -->
         <div panel-name="test-xml-Executor" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">D:\Cognizant\Master\HackathonProject\makeMyTripAutomation\testng.xml</span>
+            <span class="header-content">D:\Cognizant\Clone File\HackathonProject\makeMyTripAutomation\testng.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -596,7 +854,7 @@
         </div> <!-- panel -->
         <div panel-name="test-xml-SmokeTests" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">D:\Cognizant\Master\HackathonProject\makeMyTripAutomation\smokeTest.xml</span>
+            <span class="header-content">D:\Cognizant\Clone File\HackathonProject\makeMyTripAutomation\smokeTest.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -664,56 +922,76 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(11);
+data.addRows(16);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'loginFromPopUp')
+data.setCell(0, 1, 'loginWithGmail')
 data.setCell(0, 2, 'SmokeTesting.smokeTest')
-data.setCell(0, 3, 10133);
+data.setCell(0, 3, 23475);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'buyGiftCard')
+data.setCell(1, 1, 'giftCards')
 data.setCell(1, 2, 'RegressionTesting.giftCardScenario')
-data.setCell(1, 3, 7087);
+data.setCell(1, 3, 93);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'getCabDetails')
+data.setCell(2, 1, 'departure')
 data.setCell(2, 2, 'RegressionTesting.cabScenario')
-data.setCell(2, 3, 6045);
+data.setCell(2, 3, 63);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'time')
-data.setCell(3, 2, 'RegressionTesting.cabScenario')
-data.setCell(3, 3, 6010);
+data.setCell(3, 1, 'getAdultsList')
+data.setCell(3, 2, 'RegressionTesting.hotelScenario')
+data.setCell(3, 3, 49);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'getAdultsList')
-data.setCell(4, 2, 'RegressionTesting.hotelScenario')
-data.setCell(4, 3, 4716);
+data.setCell(4, 1, 'arrival')
+data.setCell(4, 2, 'RegressionTesting.cabScenario')
+data.setCell(4, 3, 49);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'giftCards')
-data.setCell(5, 2, 'RegressionTesting.giftCardScenario')
-data.setCell(5, 3, 1978);
+data.setCell(5, 1, 'searchCab')
+data.setCell(5, 2, 'RegressionTesting.cabScenario')
+data.setCell(5, 3, 48);
 data.setCell(6, 0, 6)
-data.setCell(6, 1, 'loginWithGmail')
-data.setCell(6, 2, 'SmokeTesting.smokeTest')
-data.setCell(6, 3, 1583);
+data.setCell(6, 1, 'calender')
+data.setCell(6, 2, 'RegressionTesting.cabScenario')
+data.setCell(6, 3, 46);
 data.setCell(7, 0, 7)
-data.setCell(7, 1, 'searchCab')
+data.setCell(7, 1, 'time')
 data.setCell(7, 2, 'RegressionTesting.cabScenario')
-data.setCell(7, 3, 1577);
+data.setCell(7, 3, 46);
 data.setCell(8, 0, 8)
-data.setCell(8, 1, 'departure')
-data.setCell(8, 2, 'RegressionTesting.cabScenario')
-data.setCell(8, 3, 1297);
+data.setCell(8, 1, 'verifyFathersDayGiftCard')
+data.setCell(8, 2, 'RegressionTesting.giftCardScenario')
+data.setCell(8, 3, 38);
 data.setCell(9, 0, 9)
-data.setCell(9, 1, 'calender')
-data.setCell(9, 2, 'RegressionTesting.cabScenario')
-data.setCell(9, 3, 933);
+data.setCell(9, 1, 'loginFromPopUp')
+data.setCell(9, 2, 'SmokeTesting.smokeTest')
+data.setCell(9, 3, 37);
 data.setCell(10, 0, 10)
-data.setCell(10, 1, 'arrival')
-data.setCell(10, 2, 'RegressionTesting.cabScenario')
-data.setCell(10, 3, 617);
+data.setCell(10, 1, 'verifyBuyNowButton')
+data.setCell(10, 2, 'RegressionTesting.giftCardScenario')
+data.setCell(10, 3, 32);
+data.setCell(11, 0, 11)
+data.setCell(11, 1, 'verifyGiftCardTitle')
+data.setCell(11, 2, 'RegressionTesting.giftCardScenario')
+data.setCell(11, 3, 27);
+data.setCell(12, 0, 12)
+data.setCell(12, 1, 'verifyHotelButton')
+data.setCell(12, 2, 'RegressionTesting.hotelScenario')
+data.setCell(12, 3, 23);
+data.setCell(13, 0, 13)
+data.setCell(13, 1, 'verifyRoomsAndGuestButton')
+data.setCell(13, 2, 'RegressionTesting.hotelScenario')
+data.setCell(13, 3, 0);
+data.setCell(14, 0, 14)
+data.setCell(14, 1, 'getCabDetails')
+data.setCell(14, 2, 'RegressionTesting.cabScenario')
+data.setCell(14, 3, 0);
+data.setCell(15, 0, 15)
+data.setCell(15, 1, 'buyGiftCard')
+data.setCell(15, 2, 'RegressionTesting.giftCardScenario')
+data.setCell(15, 3, 0);
 window.suiteTableData['Executor']= { tableData: data, tableDiv: 'times-div-Executor'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 41 seconds</span>
+              <span class="suite-total-time">Total running time: 24 seconds</span>
               <div id="times-div-Executor">
               </div> <!-- times-div-Executor -->
             </div> <!-- times-div -->
@@ -733,80 +1011,32 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(17);
+data.addRows(5);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'loginFromPopUp')
 data.setCell(0, 2, 'SmokeTesting.smokeTest')
-data.setCell(0, 3, 10833);
+data.setCell(0, 3, 24387);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'verifyBuyNowButton')
+data.setCell(1, 1, 'loginWithGmail')
 data.setCell(1, 2, 'SmokeTesting.smokeTest')
-data.setCell(1, 3, 9524);
+data.setCell(1, 3, 1683);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'verifyFathersDayGiftCard')
+data.setCell(2, 1, 'verifyCountry')
 data.setCell(2, 2, 'SmokeTesting.smokeTest')
-data.setCell(2, 3, 4660);
+data.setCell(2, 3, 1137);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'verifyErrorForSameCitySelected')
+data.setCell(3, 1, 'getHomePageSignature')
 data.setCell(3, 2, 'SmokeTesting.smokeTest')
-data.setCell(3, 3, 3137);
+data.setCell(3, 3, 908);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'verifyGiftCardTitle')
+data.setCell(4, 1, 'verifyLoginButton')
 data.setCell(4, 2, 'SmokeTesting.smokeTest')
-data.setCell(4, 3, 2698);
-data.setCell(5, 0, 5)
-data.setCell(5, 1, 'verifyCabButton')
-data.setCell(5, 2, 'SmokeTesting.smokeTest')
-data.setCell(5, 3, 2165);
-data.setCell(6, 0, 6)
-data.setCell(6, 1, 'loginWithGmail')
-data.setCell(6, 2, 'SmokeTesting.smokeTest')
-data.setCell(6, 3, 1648);
-data.setCell(7, 0, 7)
-data.setCell(7, 1, 'verifySelectedRadioButton')
-data.setCell(7, 2, 'SmokeTesting.smokeTest')
-data.setCell(7, 3, 1222);
-data.setCell(8, 0, 8)
-data.setCell(8, 1, 'verifyCountry')
-data.setCell(8, 2, 'SmokeTesting.smokeTest')
-data.setCell(8, 3, 1129);
-data.setCell(9, 0, 9)
-data.setCell(9, 1, 'getHomePageSignature')
-data.setCell(9, 2, 'SmokeTesting.smokeTest')
-data.setCell(9, 3, 834);
-data.setCell(10, 0, 10)
-data.setCell(10, 1, 'verifyHotelButton')
-data.setCell(10, 2, 'SmokeTesting.smokeTest')
-data.setCell(10, 3, 573);
-data.setCell(11, 0, 11)
-data.setCell(11, 1, 'verifyLoginButton')
-data.setCell(11, 2, 'SmokeTesting.smokeTest')
-data.setCell(11, 3, 558);
-data.setCell(12, 0, 12)
-data.setCell(12, 1, 'verifyCabSearchButton')
-data.setCell(12, 2, 'SmokeTesting.smokeTest')
-data.setCell(12, 3, 558);
-data.setCell(13, 0, 13)
-data.setCell(13, 1, 'verifyRoomsAndGuestButton')
-data.setCell(13, 2, 'SmokeTesting.smokeTest')
-data.setCell(13, 3, 0);
-data.setCell(14, 0, 14)
-data.setCell(14, 1, 'verifyPickUpTimeDropDown')
-data.setCell(14, 2, 'SmokeTesting.smokeTest')
-data.setCell(14, 3, 0);
-data.setCell(15, 0, 15)
-data.setCell(15, 1, 'verifySUVButton')
-data.setCell(15, 2, 'SmokeTesting.smokeTest')
-data.setCell(15, 3, 0);
-data.setCell(16, 0, 16)
-data.setCell(16, 1, 'verifyCalenderDropDown')
-data.setCell(16, 2, 'SmokeTesting.smokeTest')
-data.setCell(16, 3, 0);
+data.setCell(4, 3, 589);
 window.suiteTableData['SmokeTests']= { tableData: data, tableDiv: 'times-div-SmokeTests'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 39 seconds</span>
+              <span class="suite-total-time">Total running time: 28 seconds</span>
               <div id="times-div-SmokeTests">
               </div> <!-- times-div-SmokeTests -->
             </div> <!-- times-div -->
@@ -828,67 +1058,24 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Executor" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">31 ignored methods</span>
+            <span class="header-content">19 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="ignored-class-div">
-              <span class="ignored-class-name">RegressionTesting.hotelScenario</span>
-              <div class="ignored-methods-div">
-                <span class="ignored-method-name">getWebDriver</span>
-                <br/>
-                <span class="ignored-method-name">getExcelData</span>
-                <br/>
-                <span class="ignored-method-name">createExtentReport</span>
-                <br/>
-                <span class="ignored-method-name">closeBrowser</span>
-                <br/>
-              </div> <!-- ignored-methods-div -->
-            </div> <!-- ignored-class-div -->
-            <div class="ignored-class-div">
-              <span class="ignored-class-name">SmokeTesting.smokeTest</span>
-              <div class="ignored-methods-div">
-                <span class="ignored-method-name">getHomePageSignature</span>
-                <br/>
-                <span class="ignored-method-name">verifyRoomsAndGuestButton</span>
-                <br/>
-                <span class="ignored-method-name">getExcelData</span>
-                <br/>
-                <span class="ignored-method-name">verifyGiftCardTitle</span>
-                <br/>
-                <span class="ignored-method-name">createExtentReport</span>
-                <br/>
-                <span class="ignored-method-name">verifyHotelButton</span>
-                <br/>
-                <span class="ignored-method-name">verifyCabSearchButton</span>
-                <br/>
-                <span class="ignored-method-name">getWebDriver</span>
-                <br/>
-                <span class="ignored-method-name">verifyCountry</span>
-                <br/>
-                <span class="ignored-method-name">verifyBuyNowButton</span>
-                <br/>
-                <span class="ignored-method-name">verifyCabButton</span>
-                <br/>
-                <span class="ignored-method-name">verifySUVButton</span>
-                <br/>
-                <span class="ignored-method-name">verifyCalenderDropDown</span>
-                <br/>
-                <span class="ignored-method-name">verifyErrorForSameCitySelected</span>
-                <br/>
-                <span class="ignored-method-name">verifySelectedRadioButton</span>
-                <br/>
-                <span class="ignored-method-name">verifyLoginButton</span>
-                <br/>
-                <span class="ignored-method-name">closeBrowser</span>
-                <br/>
-                <span class="ignored-method-name">verifyPickUpTimeDropDown</span>
-                <br/>
-                <span class="ignored-method-name">verifyFathersDayGiftCard</span>
-                <br/>
-              </div> <!-- ignored-methods-div -->
-            </div> <!-- ignored-class-div -->
-            <div class="ignored-class-div">
               <span class="ignored-class-name">RegressionTesting.cabScenario</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">getWebDriver</span>
+                <br/>
+                <span class="ignored-method-name">getExcelData</span>
+                <br/>
+                <span class="ignored-method-name">createExtentReport</span>
+                <br/>
+                <span class="ignored-method-name">closeBrowser</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">RegressionTesting.hotelScenario</span>
               <div class="ignored-methods-div">
                 <span class="ignored-method-name">getWebDriver</span>
                 <br/>
@@ -908,6 +1095,25 @@ return data;
                 <span class="ignored-method-name">getExcelData</span>
                 <br/>
                 <span class="ignored-method-name">createExtentReport</span>
+                <br/>
+                <span class="ignored-method-name">closeBrowser</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">SmokeTesting.smokeTest</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">getHomePageSignature</span>
+                <br/>
+                <span class="ignored-method-name">getWebDriver</span>
+                <br/>
+                <span class="ignored-method-name">verifyCountry</span>
+                <br/>
+                <span class="ignored-method-name">getExcelData</span>
+                <br/>
+                <span class="ignored-method-name">createExtentReport</span>
+                <br/>
+                <span class="ignored-method-name">verifyLoginButton</span>
                 <br/>
                 <span class="ignored-method-name">closeBrowser</span>
                 <br/>
@@ -934,75 +1140,117 @@ return data;
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-suite before -->
               <div class="configuration-test before">
-                <span class="method-name">getWebDriver</span>
-                <span class="method-start">24 ms</span>
+                <span class="method-name">createExtentReport</span>
+                <span class="method-start">60 ms</span>
               </div> <!-- configuration-test before -->
               <div class="configuration-test before">
-                <span class="method-name">createExtentReport</span>
-                <span class="method-start">24 ms</span>
+                <span class="method-name">getWebDriver</span>
+                <span class="method-start">61 ms</span>
               </div> <!-- configuration-test before -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">SmokeTesting.smokeTest</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">loginWithGmail</span>
-                <span class="method-start">3604 ms</span>
+                <span class="method-start">17465 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">loginFromPopUp</span>
-                <span class="method-start">5187 ms</span>
+                <span class="method-start">40942 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">RegressionTesting.hotelScenario</div> <!-- chronological-class-name -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">getAdultsList</span>
-                <span class="method-start">15321 ms</span>
+                <span class="method-start">40980 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">verifyHotelButton</span>
+                <span class="method-start">41030 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">verifyRoomsAndGuestButton</span>
+                <span class="method-start">41053 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">RegressionTesting.cabScenario</div> <!-- chronological-class-name -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">searchCab</span>
-                <span class="method-start">20037 ms</span>
+                <span class="method-start">41055 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">departure</span>
-                <span class="method-start">21614 ms</span>
+                <span class="method-start">41103 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">arrival</span>
-                <span class="method-start">22912 ms</span>
+                <span class="method-start">41168 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">calender</span>
-                <span class="method-start">23530 ms</span>
+                <span class="method-start">41218 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">time</span>
-                <span class="method-start">24463 ms</span>
+                <span class="method-start">41265 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">getCabDetails</span>
-                <span class="method-start">30474 ms</span>
+                <span class="method-start">41314 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">RegressionTesting.giftCardScenario</div> <!-- chronological-class-name -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">giftCards</span>
-                <span class="method-start">36520 ms</span>
+                <span class="method-start">41315 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">buyGiftCard</span>
-                <span class="method-start">38498 ms</span>
+                <span class="method-start">41409 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">verifyBuyNowButton</span>
+                <span class="method-start">41409 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">verifyGiftCardTitle</span>
+                <span class="method-start">41442 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">verifyFathersDayGiftCard</span>
+                <span class="method-start">41471 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">Executor.testExecutor</div> <!-- chronological-class-name -->
               <div class="configuration-test after">
                 <span class="method-name">closeBrowser</span>
-                <span class="method-start">45586 ms</span>
+                <span class="method-start">41509 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
@@ -1019,83 +1267,35 @@ return data;
               </div> <!-- configuration-suite before -->
               <div class="configuration-test before">
                 <span class="method-name">createExtentReport</span>
-                <span class="method-start">390 ms</span>
+                <span class="method-start">655 ms</span>
               </div> <!-- configuration-test before -->
               <div class="configuration-test before">
                 <span class="method-name">getWebDriver</span>
-                <span class="method-start">555 ms</span>
+                <span class="method-start">891 ms</span>
               </div> <!-- configuration-test before -->
               <div class="test-method">
                 <span class="method-name">getHomePageSignature</span>
-                <span class="method-start">6573 ms</span>
+                <span class="method-start">21245 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifyCountry</span>
-                <span class="method-start">7409 ms</span>
+                <span class="method-start">22156 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifyLoginButton</span>
-                <span class="method-start">8539 ms</span>
+                <span class="method-start">23294 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">loginWithGmail</span>
-                <span class="method-start">9097 ms</span>
+                <span class="method-start">23883 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">loginFromPopUp</span>
-                <span class="method-start">10746 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">verifyBuyNowButton</span>
-                <span class="method-start">21579 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">verifyCabButton</span>
-                <span class="method-start">31103 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">verifySelectedRadioButton</span>
-                <span class="method-start">33269 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">verifyErrorForSameCitySelected</span>
-                <span class="method-start">34491 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">verifyPickUpTimeDropDown</span>
-                <span class="method-start">37629 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">verifyCabSearchButton</span>
-                <span class="method-start">37629 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">verifyCalenderDropDown</span>
-                <span class="method-start">37629 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">verifyHotelButton</span>
-                <span class="method-start">38187 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">verifySUVButton</span>
-                <span class="method-start">38187 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">verifyGiftCardTitle</span>
-                <span class="method-start">38761 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">verifyFathersDayGiftCard</span>
-                <span class="method-start">41459 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">verifyRoomsAndGuestButton</span>
-                <span class="method-start">46119 ms</span>
+                <span class="method-start">25567 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-test after">
                 <span class="method-name">closeBrowser</span>
-                <span class="method-start">46120 ms</span>
+                <span class="method-start">49955 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

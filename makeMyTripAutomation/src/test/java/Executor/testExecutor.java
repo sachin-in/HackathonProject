@@ -1,22 +1,19 @@
 package Executor;
 import java.io.IOException;
 import java.util.List;
+
 import org.openqa.selenium.WebDriver;
-import org.testng.Assert;
 import org.testng.TestNG;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
-import org.testng.annotations.Test;
 import org.testng.collections.Lists;
 
 import com.aventstack.extentreports.ExtentReports;
 
 import Tools.DriverSetup;
-import Tools.ElementContainer;
-import Tools.ExtentReport;
-import Tools.Screenshot;
 import Tools.ExcelData;
+import Tools.ExtentReport;
 
 public class testExecutor {
 

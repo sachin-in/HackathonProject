@@ -5,10 +5,12 @@
     <classes>
       <class name="SmokeTesting.smokeTest">
         <methods>
+          <include name="getHomePageSignature"/>
+          <include name="verifyCountry"/>
           <include name="getWebDriver"/>
           <include name="getExcelData"/>
           <include name="createExtentReport"/>
-          <include name="verifyErrorForSameCitySelected"/>
+          <include name="verifyLoginButton"/>
           <include name="closeBrowser"/>
         </methods>
       </class> <!-- SmokeTesting.smokeTest -->
