@@ -5,13 +5,10 @@
     <classes>
       <class name="RegressionTesting.cabScenario">
         <methods>
-          <include name="arrival"/>
           <include name="getWebDriver"/>
           <include name="getExcelData"/>
-          <include name="calender"/>
           <include name="time"/>
           <include name="createExtentReport"/>
-          <include name="departure"/>
           <include name="getCabDetails"/>
           <include name="closeBrowser"/>
         </methods>

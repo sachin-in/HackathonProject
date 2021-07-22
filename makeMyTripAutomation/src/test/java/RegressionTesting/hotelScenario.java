@@ -13,34 +13,34 @@ import Tools.Highlight;
 
 public class hotelScenario extends testExecutor{
 	
-	@Test(priority=13)
-	public void verifyHotelButton() {
-
-		Highlight.flash(ElementContainer.hotelTab(),"verifyHotelButton");
-		String buttonName = ElementContainer.hotelTab().getText();
-
-		smokeReport.createTest("Hotel button");
-		Assert.assertEquals(buttonName, "Hotels","Hotels button not found");
-		smokeReport.flush();
-
-	}
-	@Test(priority=16)
-	public void verifyRoomsAndGuestButton() {
-
-	}
-
+	ArrayList<String> adults;	
+	
 	@Test(priority=0)
+	public void enterCity() {
+		
+	}
+	
+	@Test(priority=1)
+	public void enterCheckInCheckOutDate() {
+		
+	}
+	
+	@Test(priority=2)
+	public void verifyRoomsAndGuestButton() {
+		ElementContainer.hotelTab(driver);// hotels tab
+		Highlight.flash(ElementContainer.hotelTab(driver), driver,"HotelButton");
+		ElementContainer.hotelTab(driver).click();
+		adults = new ArrayList<String>();
+		ElementContainer.guestsButton(driver);// guest button
+		ElementContainer.guestsButton(driver).click();
+	}
+
+	@Test(priority=3)
 	public void getAdultsList() throws InterruptedException {
 
 
-		ElementContainer.hotelTab();// hotels tab
-		Highlight.flash(ElementContainer.hotelTab(),"hotelTab");
-		ElementContainer.hotelTab().click();
-		ArrayList<String> adults = new ArrayList<String>();
-		ElementContainer.guestsButton();// guest button
-		Highlight.flash(ElementContainer.guestsButton(),"guestsButton");
-		ElementContainer.guestsButton().click();
-		List<WebElement> adultsCount = ElementContainer.adultsList();// no. of adults list
+		
+		List<WebElement> adultsCount = ElementContainer.adultsList(driver);// no. of adults list
 
 		for (WebElement c : adultsCount) {
 			adults.add(c.getText());
@@ -48,7 +48,12 @@ public class hotelScenario extends testExecutor{
 		regReport.createTest("Number of adults (Hotel Scenario)");
 		Assert.assertEquals(adults.size() + ".0", data[1][2], "No. of adults is not correct");
 		regReport.flush();
-		Thread.sleep(2000);
-		driver.navigate().to(data[1][0]);
+
 	}
+	
+	@Test(priority=4)
+	public void verifyFreeBreakfastCheckBox() {
+		
+	}
+	
 }

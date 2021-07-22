@@ -1,6 +1,5 @@
 package Tools;
 import java.io.File;
-import java.io.IOException;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.JavascriptExecutor;
@@ -10,21 +9,25 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 public class Highlight {
-	public static void flash(WebElement element,String screenshotName)
+	public static void flash(WebElement element, WebDriver driver,String ssName)
 	{
-		WebDriver driver = DriverSetup.createWebDriver("Drivers");
+//		WebDriver driver = DriverSetup.createWebDriver("Drivers");
 		
 		String bgColor = element.getCssValue("backgroundColor");
 		
 		changeColor("rgb(255,83,73)", element, driver);
 		try {
 			Thread.sleep(500);
+
 			File src = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-			FileUtils.copyFile(src,new File(screenshotName+".png"));
+			FileUtils.copyFile(src,new File("D:\\Cognizant\\Master\\HackathonProject\\makeMyTripAutomation\\Screenshots\\"+ssName+".png"));
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
+
 			e.printStackTrace();
 		}
+
+		
+
 		changeColor(bgColor, element, driver);
 	
 	}
