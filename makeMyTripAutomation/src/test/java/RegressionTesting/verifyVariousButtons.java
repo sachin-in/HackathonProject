@@ -24,6 +24,7 @@ public class verifyVariousButtons extends testExecutor {
 		ElementContainer.searchButton(driver).click();
 		String pageTitle = driver.getTitle();
 		Assert.assertEquals(pageTitle, "Cabs","Search button is not working Correctly");
+
 	}
 	
 	@Test(priority=2)
@@ -44,8 +45,7 @@ public class verifyVariousButtons extends testExecutor {
 		ElementContainer.searchButton(driver).click();
 		String text = ElementContainer.hotelsearch(driver).getText();
 		Assert.assertEquals(text, "Hotels, Villas, Apartments and more in Goa","Hotel Search button is not working Correctly");
-		
-		
+
 	}
 	
 	@Test(priority=4)
