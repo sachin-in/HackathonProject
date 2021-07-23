@@ -227,7 +227,6 @@ public class ElementContainer {
 		element = driver.findElement(By.xpath("//body/div[@id='root']/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/nav[1]/ul[1]/li[2]/a[1]/span[2]"));
 		return element;
 	}
-
 	// to locate the guests button
 	public static WebElement guestsButton(WebDriver driver) {
 		element = driver.findElement(By.id("guest"));
@@ -238,6 +237,11 @@ public class ElementContainer {
 	public static List<WebElement> adultsList(WebDriver driver) {
 		elements = driver.findElements(By.xpath("//ul[@data-cy='adultCount']/li"));
 		return elements;
+	}
+	public static WebElement hotelsearch(WebDriver driver)
+	{
+		element = driver.findElement(By.xpath("//p[@id='seoH1DontRemove']"));
+		return element;
 	}
 
 }
