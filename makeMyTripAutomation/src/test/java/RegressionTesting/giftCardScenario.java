@@ -78,6 +78,14 @@ public class giftCardScenario extends testExecutor {
 	
 	@Test(priority=4)
 	public void verifyMajorErrorMessage() {
+		ElementContainer.buyNowButton(driver).click();
+		String majorErrorMessage = ElementContainer.majorErrorMessage(driver).getText();
+		System.out.println(majorErrorMessage);
+		
+//		regReport.createTest("Invalid details in gift card");
+//		Assert.assertEquals(majorErrorMessage, "Please fill in the required information below.", "Error message displayed is not correct");
+//		regReport.flush();
+
 	
 	}
 	
