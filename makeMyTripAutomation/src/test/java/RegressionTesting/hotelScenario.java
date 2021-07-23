@@ -2,6 +2,8 @@ package RegressionTesting;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -16,7 +18,8 @@ public class hotelScenario extends testExecutor{
 	ArrayList<String> adults;	
 	
 	@Test(priority=0)
-	public void enterCity() {
+	public WebElement enterCity(WebDriver driver) {
+		WebElement city = driver.findElement(By.xpath("//p[normalize-space()='RECENT SEARCHES']")).sendKeys("Manali");
 		
 	}
 	
@@ -37,8 +40,6 @@ public class hotelScenario extends testExecutor{
 
 	@Test(priority=3)
 	public void getAdultsList() throws InterruptedException {
-
-
 		
 		List<WebElement> adultsCount = ElementContainer.adultsList(driver);// no. of adults list
 
