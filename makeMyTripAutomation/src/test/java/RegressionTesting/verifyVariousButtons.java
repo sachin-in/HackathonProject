@@ -13,12 +13,17 @@ public class verifyVariousButtons extends testExecutor {
 	
 	@Test(priority=0)
 	public void verifyCabButton() {
-		
+		ElementContainer.cabButton(driver).click();
+		String pageTitle = driver.getTitle();
+		Assert.assertEquals(pageTitle,"Online Cab Booking - Book Outstation Cabs at Lowest Fare @ MakeMyTrip","Cab button is not working correctly" );
 	}
 	
 	@Test(priority=1)
 	public void verifyCabSearchButton() {
-		
+		ElementContainer.cabButton(driver).click();
+		ElementContainer.searchButton(driver).click();
+		String pageTitle = driver.getTitle();
+		Assert.assertEquals(pageTitle, "Cabs","Search button is not working Correctly");
 	}
 	
 	@Test(priority=2)
@@ -35,6 +40,11 @@ public class verifyVariousButtons extends testExecutor {
 	
 	@Test(priority=3)
 	public void verifyHotelSearchButton() {
+		ElementContainer.hotelTab(driver).click();
+		ElementContainer.searchButton(driver).click();
+		String text = ElementContainer.hotelsearch(driver).getText();
+		Assert.assertEquals(text, "Hotels, Villas, Apartments and more in Goa","Hotel Search button is not working Correctly");
+		
 		
 	}
 	

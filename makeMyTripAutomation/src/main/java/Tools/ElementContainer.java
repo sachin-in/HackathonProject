@@ -213,6 +213,12 @@ public class ElementContainer {
 		element = driver.findElement(By.xpath("//p[contains(text(),'Please enter a valid Email id.')]"));
 		return element;
 	}
+	
+	//majorErrorMessage
+	public static WebElement majorErrorMessage(WebDriver driver) {
+		element = driver.findElement(By.xpath("//p[@class='note-text red-text lato-black append-bottom20']"));
+		return element;
+	}
 
 	// buy now button
 	public static WebElement buyNowButton(WebDriver driver) {
@@ -233,8 +239,14 @@ public class ElementContainer {
 		element = driver.findElement(By.id("guest"));
 		return element;
 	}
+	
+	public static WebElement hotelsearch(WebDriver driver)
+	{
+		element = driver.findElement(By.xpath("//p[@id='seoH1DontRemove']"));
+		return element;
+	}
+	
 	// the numbers available for adults
-
 	public static List<WebElement> adultsList(WebDriver driver) {
 		elements = driver.findElements(By.xpath("//ul[@data-cy='adultCount']/li"));
 		return elements;

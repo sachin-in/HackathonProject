@@ -18,8 +18,7 @@ public class hotelScenario extends testExecutor{
 	ArrayList<String> adults;	
 	
 	@Test(priority=0)
-	public WebElement enterCity(WebDriver driver) {
-		WebElement city = driver.findElement(By.xpath("//p[normalize-space()='RECENT SEARCHES']")).sendKeys("Manali");
+	public void enterCity() {
 		
 	}
 	
@@ -54,6 +53,7 @@ public class hotelScenario extends testExecutor{
 	
 	@Test(priority=4)
 	public void verifyFreeBreakfastCheckBox() {
+		
 		
 	}
 	
