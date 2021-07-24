@@ -43,6 +43,7 @@ public class testExecutor {
 
 	@BeforeTest
 	public void createExtentReport() {
+		
 		smokeReport = ExtentReport.createExtentReport("SmokeTest");
 		regReport = ExtentReport.createExtentReport("RegressionTest");
 	}
@@ -53,7 +54,7 @@ public class testExecutor {
 	public void closeBrowser() {
 
 		try {
-			Thread.sleep(3000);
+			Thread.sleep(2000);
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

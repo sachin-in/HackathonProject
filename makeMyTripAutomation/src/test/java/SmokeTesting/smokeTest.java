@@ -16,8 +16,11 @@ public class smokeTest extends testExecutor {
 	@Test(priority = 0)
 	public void getHomePageSignature() {
 		String title = ElementContainer.homepageSignature(driver).getText();// Web Page signature
+		smokeReport.createTest("HomePageSignature");
+		System.out.println(title);
 		Assert.assertEquals(title, data[1][1], "Title is not correct");
-
+		smokeReport.flush();
+		
 		Highlight.flash(ElementContainer.homepageSignature(driver),driver,"Homepage");
 		 
 
@@ -28,7 +31,10 @@ public class smokeTest extends testExecutor {
 
 		Highlight.flash(ElementContainer.countryVerify(driver),driver,"Country/Currency");
 		String name = ElementContainer.countryVerify(driver).getText();
+		smokeReport.createTest("WebsiteDomainContry/Currency");
+		System.out.println(name);
 		Assert.assertEquals(name, "IN | ENG | INR", "India is not selected");
+		smokeReport.flush();
 
 	}
 
@@ -37,8 +43,9 @@ public class smokeTest extends testExecutor {
 
 		Highlight.flash(ElementContainer.loginButton(driver), driver,"LoginButton");
 		String buttonName = ElementContainer.loginButton(driver).getText();
-
+		smokeReport.createTest("Verifyloginbutton");
 		Assert.assertEquals(buttonName, "Login or Create Account", "Button is not found");
+		smokeReport.flush();
 
 	}
 
@@ -46,7 +53,7 @@ public class smokeTest extends testExecutor {
 	public void loginWithGmail() {
 		try {
 
-
+			smokeReport.createTest("LoginWithLoginButton");
 			ElementContainer.loginButton(driver).click();// login button
 			Thread.sleep(500);
 			Highlight.flash(ElementContainer.googleLogin(driver), driver,"LoginWithGoogle");
@@ -78,6 +85,7 @@ public class smokeTest extends testExecutor {
 					"//body/div[@id='root']/div[1]/div[1]/div[1]/div[2]/div[2]/section[1]/div[1]/div[1]/span[1]"))
 					.click();
 			Thread.sleep(5000);
+			smokeReport.flush();
 
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -87,6 +95,7 @@ public class smokeTest extends testExecutor {
 	@Test(priority = 4)
 	public void loginFromPopUp() {
 		try {
+			smokeReport.createTest("LoginFromPopUp");
 			String popUp = ElementContainer.popupTitle(driver).getText();// popup title
 			if (popUp.equalsIgnoreCase(data[1][6])) {
 
@@ -110,8 +119,8 @@ public class smokeTest extends testExecutor {
 				ElementContainer.nextButton(driver).click();// click next
 
 				driver.switchTo().window(parentwindowid);
+				smokeReport.flush();
 				Thread.sleep(5000);
-
 			}
 		} catch (Exception e) {
 			e.printStackTrace();

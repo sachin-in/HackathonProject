@@ -28,27 +28,27 @@ public class giftCardScenario extends testExecutor {
 	
 	@Test(priority = 1)
 	public void verifyGiftCardTitle() throws InterruptedException {
-		Thread.sleep(500);
+		Thread.sleep(2000);
 		String gcTitle = driver.getTitle();
 		System.out.println("Title is = " + gcTitle);
-		smokeReport.createTest("Gift Card Page");
+		regReport.createTest("VerifyGiftCardPageTitle");
 		Assert.assertEquals(gcTitle, "Gift Cards - Buy Gift Vouchers Online, Gift Vouchers | MakeMyTrip.com", "Title is not correct");
-		smokeReport.flush();
+		regReport.flush();
 		}
 	
 	@Test(priority=2)
 	public void verifyGiftCard() throws Exception {
 
 		Thread.sleep(1000);
-		String giftCardName=driver.findElement(By.xpath("//body[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/p[1]")).getText();
+		String giftCardName=driver.findElement(By.xpath("//p[contains(text(),'Eid Mubarak Gift Card')]")).getText();
 		
-		smokeReport.createTest("Eid Mubarak Gift Card");
+		regReport.createTest("Eid Mubarak Gift Card");
 		Assert.assertEquals(giftCardName, "Eid Mubarak Gift Card", "Gift card is not expected");
-		smokeReport.flush();
+		regReport.flush();
 
 	}
 
-	@Test(dependsOnMethods = "giftCards", priority=3)
+	@Test( priority=3)
 	public void buyGiftCard() throws InterruptedException {
 		Actions click = new Actions(driver);
 
@@ -77,16 +77,20 @@ public class giftCardScenario extends testExecutor {
 	}
 	
 	@Test(priority=4)
-	public void verifyMajorErrorMessage() {
+	public void verifyMajorErrorMessage() throws InterruptedException {
+		
 		ElementContainer.buyNowButton(driver).click();
+		
 		String majorErrorMessage = ElementContainer.majorErrorMessage(driver).getText();
 		System.out.println(majorErrorMessage);
+		regReport.createTest("VerifyMajorErrorMessage");
+		Assert.assertEquals(majorErrorMessage, "Please fill in the required information below.", "Major error message iis not corect");
+		regReport.flush();
 		
-//		regReport.createTest("Invalid details in gift card");
-//		Assert.assertEquals(majorErrorMessage, "Please fill in the required information below.", "Error message displayed is not correct");
-//		regReport.flush();
-
-	
+		Thread.sleep(2000);
+		driver.navigate().to(data[1][0]);
+		Thread.sleep(2000);
+		
 	}
 	
 }

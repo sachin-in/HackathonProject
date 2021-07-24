@@ -3,43 +3,28 @@
 <suite name="Failed suite [Executor]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="RegressionTesting.cabScenario">
+      <class name="RegressionTesting.verifyVariousButtons">
         <methods>
-          <include name="arrival"/>
-          <include name="searchCab"/>
           <include name="getWebDriver"/>
           <include name="getExcelData"/>
-          <include name="calender"/>
-          <include name="time"/>
           <include name="createExtentReport"/>
-          <include name="departure"/>
-          <include name="getCabDetails"/>
+          <include name="verifyBuyNowButton"/>
           <include name="closeBrowser"/>
         </methods>
-      </class> <!-- RegressionTesting.cabScenario -->
+      </class> <!-- RegressionTesting.verifyVariousButtons -->
       <class name="RegressionTesting.hotelScenario">
         <methods>
-          <include name="verifyHotelButton"/>
           <include name="getWebDriver"/>
+          <include name="verifyFreeBreakfastCheckBox"/>
           <include name="getExcelData"/>
+          <include name="enterCheckInCheckOutDate"/>
+          <include name="verifyRoomsAndGuestButton"/>
           <include name="createExtentReport"/>
           <include name="getAdultsList"/>
           <include name="closeBrowser"/>
+          <include name="enterCity"/>
         </methods>
       </class> <!-- RegressionTesting.hotelScenario -->
-      <class name="RegressionTesting.giftCardScenario">
-        <methods>
-          <include name="verifyFathersDayGiftCard"/>
-          <include name="getWebDriver"/>
-          <include name="verifyGiftCardTitle"/>
-          <include name="getExcelData"/>
-          <include name="createExtentReport"/>
-          <include name="buyGiftCard"/>
-          <include name="giftCards"/>
-          <include name="closeBrowser"/>
-          <include name="verifyBuyNowButton"/>
-        </methods>
-      </class> <!-- RegressionTesting.giftCardScenario -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Executor] -->

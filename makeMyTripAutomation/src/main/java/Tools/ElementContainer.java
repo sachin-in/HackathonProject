@@ -241,7 +241,7 @@ public class ElementContainer {
 	
 	public static WebElement hotelsearch(WebDriver driver)
 	{
-		element = driver.findElement(By.xpath("//p[@id='seoH1DontRemove']"));
+		element = driver.findElement(By.xpath("//button[@id='hsw_search_button']"));
 		return element;
 	}
 	

@@ -10,6 +10,7 @@
                   <include name="loginFromPopUp"/>
             </methods>
        </class>
+       <class name="RegressionTesting.verifyVariousButtons"/>
        <class name="RegressionTesting.hotelScenario"/>
        <class name="RegressionTesting.cabScenario"/>
        <class name="RegressionTesting.giftCardScenario"/>

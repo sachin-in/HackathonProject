@@ -86,7 +86,7 @@ public class cabScenario extends testExecutor {
 				dates.get(i).click();
 				
 				regReport.createTest("Date of trip");
-				Assert.assertEquals("20", "20", "Date of trip is not correct");
+				Assert.assertEquals(test + ".0", data[1][9], "Date of trip is not correct");
 				regReport.flush();
 				break;
 			}
@@ -131,15 +131,17 @@ public class cabScenario extends testExecutor {
 		regReport.createTest("Cheapest SUV found");
 		Assert.assertEquals(vehicleName, "Xylo, Ertiga", "SUV name is not correct");
 		regReport.flush();
-		ExcelData.writeData(0, 0, "CabScenario");
-		ExcelData.writeData(1, 0, "Car Name");
-		ExcelData.writeData(1, 1, "Fare");
-		ExcelData.writeData(1, 2, "Ratings");
-		ExcelData.writeData(2, 0, vehicleName);
-		ExcelData.writeData(2, 1, fare);
-		ExcelData.writeData(2, 2, popularity);
+//		ExcelData.writeData(0, 0, "CabScenario");
+//		ExcelData.writeData(1, 0, "Car Name");
+//		ExcelData.writeData(1, 1, "Fare");
+//		ExcelData.writeData(1, 2, "Ratings");
+//		ExcelData.writeData(2, 0, vehicleName);
+//		ExcelData.writeData(2, 1, fare);
+//		ExcelData.writeData(2, 2, popularity);
+		
 		Thread.sleep(2000);
 		driver.navigate().to(data[1][0]);
+		Thread.sleep(2000);
 	}
 
 }
