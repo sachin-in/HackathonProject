@@ -40,7 +40,7 @@ public class giftCardScenario extends testExecutor {
 	public void verifyGiftCard() throws Exception {
 
 		Thread.sleep(1000);
-		String giftCardName=driver.findElement(By.xpath("//p[contains(text(),'Eid Mubarak Gift Card')]")).getText();
+		String giftCardName=ElementContainer.EidGiftCard(driver).getText();
 		
 		regReport.createTest("Eid Mubarak Gift Card");
 		Assert.assertEquals(giftCardName, "Eid Mubarak Gift Card", "Gift card is not expected");

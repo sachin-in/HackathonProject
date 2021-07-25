@@ -1,4 +1,5 @@
 package RegressionTesting;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -13,94 +14,91 @@ import Executor.testExecutor;
 import Tools.ElementContainer;
 import Tools.Highlight;
 
+public class hotelScenario extends testExecutor {
 
-public class hotelScenario extends testExecutor{
-	
-	ArrayList<String> adults;	
-	
-	@Test(priority=0)
+	ArrayList<String> adults;
+
+	@Test(priority = 0)
 	public void enterCity() {
-		
-        Highlight.flash(ElementContainer.hotelTab(driver), driver,"HotelButton");
-        ElementContainer.hotelTab(driver).click();
-        
-        Highlight.flash( driver.findElement(By.xpath("//span[contains(text(),'City / Hotel / Area / Building')]")), driver, "EnterCityButton");
-        driver.findElement(By.xpath("//span[contains(text(),'City / Hotel / Area / Building')]")).click();
-        String buttonText=driver.findElement(By.xpath("//span[contains(text(),'City / Hotel / Area / Building')]")).getText();
-        regReport.createTest("EnterHotelLocation");
+
+		Highlight.flash(ElementContainer.hotelTab(driver), driver, "HotelButton");
+		ElementContainer.hotelTab(driver).click();
+
+		Highlight.flash(ElementContainer.enterCity(driver), driver, "EnterCityButton");
+		ElementContainer.enterCity(driver).click();
+		String buttonText = ElementContainer.enterCity(driver).getText();
+		regReport.createTest("EnterHotelLocation");
 		Assert.assertEquals(buttonText, "CITY / HOTEL / AREA / BUILDING", "Text is not correct");
 		regReport.flush();
-		
-        try {
-            Thread.sleep(1000);
-        } catch (InterruptedException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        }
-        driver.findElement(By.xpath("//input[@placeholder='Enter city/ Hotel/ Area/ Building']")).sendKeys(data[1][8]);
-        try {
-            Thread.sleep(1000);
-        } catch (InterruptedException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        }
-        Actions keyPress = new Actions(driver);
-        keyPress.sendKeys(Keys.chord(Keys.ARROW_DOWN, Keys.ENTER)).perform();
 
-		
-		
+		try {
+			Thread.sleep(1000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		ElementContainer.inputCity(driver).sendKeys(data[1][8]);
+		try {
+			Thread.sleep(1000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		Actions keyPress = new Actions(driver);
+		keyPress.sendKeys(Keys.chord(Keys.ARROW_DOWN, Keys.ENTER)).perform();
+
 	}
-	
-	@Test(dependsOnMethods="enterCity",priority=1)
+
+	@Test(dependsOnMethods = "enterCity", priority = 1)
 	public void enterCheckInCheckOutDate() {
-		
-		Highlight.flash(driver.findElement(By.xpath("//span[contains(text(),'CHECK-IN')]")),driver,"Calender");
-		
-			try {
-	            Thread.sleep(1000);
-	        } catch (InterruptedException e) {
-	            // TODO Auto-generated catch block
-	            e.printStackTrace();
-	        }
-			
-		WebElement checkInDate = driver.findElement(By.xpath("//body/div[@id='root']/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[2]/div[1]/div[3]/div[5]/div[4]"));// day picker list
+
+		Highlight.flash(ElementContainer.checkInTab(driver), driver, "Calender");
+
+		try {
+			Thread.sleep(1000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+		WebElement checkInDate = ElementContainer.checkInDropdown(driver);// day picker list
 		checkInDate.click();
-			try {
-				Thread.sleep(1000);
-			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-		WebElement checkOutDate = driver.findElement(By.xpath("//body/div[@id='root']/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[2]/div[1]/div[3]/div[5]/div[5]"));// day picker list
+		try {
+			Thread.sleep(1000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		WebElement checkOutDate = ElementContainer.checkOutDropdown(driver);// day picker list
 		checkOutDate.click();
-			try {
-				Thread.sleep(1000);
-			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-		String buttonText=driver.findElement(By.xpath("//span[contains(text(),'CHECK-IN')]")).getText();
+		try {
+			Thread.sleep(1000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		String buttonText = ElementContainer.checkInTab(driver).getText();
 		regReport.createTest("EnterCheckInChekOutDate");
 		Assert.assertEquals(buttonText, "CHECK-IN", "Text is not correct");
 		regReport.flush();
 	}
-	
-	@Test(priority=2)
+
+	@Test(priority = 2)
 	public void verifyRoomsAndGuestButton() {
-		
+
 		adults = new ArrayList<String>();
 		ElementContainer.guestsButton(driver);// guest button
-		Highlight.flash(driver.findElement(By.xpath("//span[contains(text(),'ROOMS & GUESTS')]")), driver, "RoomsAndGuestButton");
-		String buttonText=driver.findElement(By.xpath("//span[contains(text(),'ROOMS & GUESTS')]")).getText();
+		Highlight.flash(ElementContainer.roomsAndGuestsTab(driver), driver, "RoomsAndGuestButton");
+		String buttonText = ElementContainer.roomsAndGuestsTab(driver).getText();
 		ElementContainer.guestsButton(driver).click();
 		regReport.createTest("VerifyROoms&GuestButton");
 		Assert.assertEquals(buttonText, "ROOMS & GUESTS", "Text doesn't match");
 		regReport.flush();
 	}
 
-	@Test(priority=3,dependsOnMethods = "verifyRoomsAndGuestButton")
+	@Test(priority = 3, dependsOnMethods = "verifyRoomsAndGuestButton")
 	public void getAdultsList() throws InterruptedException {
-		
+
 		List<WebElement> adultsCount = ElementContainer.adultsList(driver);// no. of adults list
 
 		for (WebElement c : adultsCount) {
@@ -112,7 +110,7 @@ public class hotelScenario extends testExecutor{
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		driver.findElement(By.xpath("//button[contains(text(),'APPLY')]")).click();
+		ElementContainer.applyButton(driver).click();
 		try {
 			Thread.sleep(1000);
 		} catch (InterruptedException e) {
@@ -120,7 +118,7 @@ public class hotelScenario extends testExecutor{
 			e.printStackTrace();
 		}
 		ElementContainer.hotelsearch(driver).click();
-		
+
 		regReport.createTest("SelectNumberOfAdults");
 		Assert.assertEquals(adults.size() + ".0", data[1][2], "No. of adults is not correct");
 		regReport.flush();
@@ -132,21 +130,21 @@ public class hotelScenario extends testExecutor{
 			e.printStackTrace();
 		}
 	}
-	
-	@Test(priority=4,dependsOnMethods="getAdultsList")
+
+	@Test(priority = 4, dependsOnMethods = "getAdultsList")
 	public void verifyFreeBreakfastCheckBox() throws InterruptedException {
-		
-		WebElement freeBreakfastButton=driver.findElement(By.xpath("//p[contains(text(),'Free Breakfast')]"));
+
+		WebElement freeBreakfastButton =ElementContainer.freeBreakfastCheckbox(driver);
 		Highlight.flash(freeBreakfastButton, driver, "FreeBreakfastCheckBox");
-		String buttonText=freeBreakfastButton.getText();
+		String buttonText = freeBreakfastButton.getText();
 		freeBreakfastButton.click();
 		regReport.createTest("SelectFreeBreakfast");
 		Assert.assertEquals(buttonText, "Free Breakfast", "Text is not correct");
 		regReport.flush();
-		
+
 		Thread.sleep(2000);
 		driver.navigate().to(data[1][0]);
 		Thread.sleep(2000);
 	}
-	
+
 }

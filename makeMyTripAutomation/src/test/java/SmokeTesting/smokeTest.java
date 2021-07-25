@@ -81,9 +81,7 @@ public class smokeTest extends testExecutor {
 
 			driver.switchTo().window(parentwindowid);
 			Thread.sleep(5000);
-			driver.findElement(By.xpath(
-					"//body/div[@id='root']/div[1]/div[1]/div[1]/div[2]/div[2]/section[1]/div[1]/div[1]/span[1]"))
-					.click();
+			ElementContainer.button(driver).click();
 			Thread.sleep(5000);
 			smokeReport.flush();
 

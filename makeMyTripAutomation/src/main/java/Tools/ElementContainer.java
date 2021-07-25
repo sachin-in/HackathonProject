@@ -8,7 +8,7 @@ import org.openqa.selenium.WebElement;
 
 public class ElementContainer {
 
-	public static WebDriver driver ;
+	public static WebDriver driver;
 	public static WebElement element;
 	public static List<WebElement> elements;
 
@@ -16,18 +16,19 @@ public class ElementContainer {
 //	{
 //		driver = DriverSetup.createWebDriver("Drivers");
 //	}
-	
+
 	// login Button
 	public static WebElement loginButton(WebDriver driver) {
 		element = driver.findElement(By.xpath("//body/div[@id='root']/div[1]/div[1]/div[1]/div[1]/ul[1]/li[3]/div[1]"));
 		return element;
 	}
-	// country 
+
+	// country
 	public static WebElement countryVerify(WebDriver driver) {
-		element = driver.findElement(By.xpath("//body/div[@id='root']/div[1]/div[1]/div[1]/div[1]/ul[1]/li[4]/div[1]/span[2]")) ;
+		element = driver
+				.findElement(By.xpath("//body/div[@id='root']/div[1]/div[1]/div[1]/div[1]/ul[1]/li[4]/div[1]/span[2]"));
 		return element;
 	}
-	
 
 	// google login
 	public static WebElement googleLogin(WebDriver driver) {
@@ -71,6 +72,14 @@ public class ElementContainer {
 
 	}
 
+	// Button
+	public static WebElement button(WebDriver driver) {
+		element = driver.findElement(
+				By.xpath("//body/div[@id='root']/div[1]/div[1]/div[1]/div[2]/div[2]/section[1]/div[1]/div[1]/span[1]"));
+		return element;
+
+	}
+
 	// 3 Webpage Signature
 	public static WebElement homepageSignature(WebDriver driver) {
 		element = driver.findElement(By.xpath("//p[contains(text(),'© 2021 MAKEMYTRIP PVT. LTD.')]"));
@@ -82,12 +91,13 @@ public class ElementContainer {
 	public static WebElement cabButton(WebDriver driver) {
 		element = driver.findElement(By.xpath("//span[@class='chNavText darkGreyText'][normalize-space()='Cabs']"));
 		return element;
-		
+
 	}
 
 	// radio button
 	public static List<WebElement> radioButton(WebDriver driver) {
-		List<WebElement> elements = driver.findElements(By.xpath("//body/div[@id='root']/div[1]/div[2]/div[1]/div[1]/div[1]/ul[1]/li"));
+		List<WebElement> elements = driver
+				.findElements(By.xpath("//body/div[@id='root']/div[1]/div[2]/div[1]/div[1]/div[1]/ul[1]/li"));
 		return elements;
 	}
 
@@ -185,11 +195,18 @@ public class ElementContainer {
 		return element;
 	}
 
+	// Eid Mubarak Gift Card
+	public static WebElement EidGiftCard(WebDriver driver) {
+		element = driver.findElement(By.xpath("//p[contains(text(),'Eid Mubarak Gift Card')]"));
+		return element;
+	}
+
 	// select gift card
 	public static WebElement giftCard(WebDriver driver) {
 		element = driver.findElement(By.xpath("//div[@class='card__data']"));
 		return element;
 	}
+
 	// senders name
 	public static WebElement sendersName(WebDriver driver) {
 		element = driver.findElement(By.name("senderName"));
@@ -213,8 +230,8 @@ public class ElementContainer {
 		element = driver.findElement(By.xpath("//p[contains(text(),'Please enter a valid Email id.')]"));
 		return element;
 	}
-	
-	//majorErrorMessage
+
+	// majorErrorMessage
 	public static WebElement majorErrorMessage(WebDriver driver) {
 		element = driver.findElement(By.xpath("//p[@class='note-text red-text lato-black append-bottom20']"));
 		return element;
@@ -230,26 +247,77 @@ public class ElementContainer {
 	// TO locate the hotel tab
 
 	public static WebElement hotelTab(WebDriver driver) {
-		element = driver.findElement(By.xpath("//body/div[@id='root']/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/nav[1]/ul[1]/li[2]/a[1]/span[2]"));
+		element = driver.findElement(By.xpath(
+				"//body/div[@id='root']/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/nav[1]/ul[1]/li[2]/a[1]/span[2]"));
 		return element;
 	}
+
+	// enter city
+	public static WebElement enterCity(WebDriver driver) {
+		element = driver.findElement(By.xpath("//span[contains(text(),'City / Hotel / Area / Building')]"));
+		return element;
+	}
+
+	// input city
+	public static WebElement inputCity(WebDriver driver) {
+		element = driver.findElement(By.xpath("//input[@placeholder='Enter city/ Hotel/ Area/ Building']"));
+		return element;
+	}
+
+	// check in
+	public static WebElement checkInTab(WebDriver driver) {
+		element = driver.findElement(By.xpath("//span[contains(text(),'CHECK-IN')]"));
+		return element;
+	}
+
+	// check in dropdown
+	public static WebElement checkInDropdown(WebDriver driver) {
+		element = driver.findElement(By.xpath(
+				"//body/div[@id='root']/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[2]/div[1]/div[3]/div[5]/div[4]"));
+		return element;
+	}
+
+	// checkout dropdown
+	public static WebElement checkOutDropdown(WebDriver driver) {
+		element = driver.findElement(By.xpath(
+				"//body/div[@id='root']/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[2]/div[1]/div[3]/div[5]/div[5]"));
+		return element;
+	}
+
+	// room and Guests Tab
+	public static WebElement roomsAndGuestsTab(WebDriver driver) {
+		element = driver.findElement(By.xpath("//span[contains(text(),'ROOMS & GUESTS')]"));
+		return element;
+	}
+
+	// apply button
+	public static WebElement applyButton(WebDriver driver) {
+		element = driver.findElement(By.xpath("//button[contains(text(),'APPLY')]"));
+		return element;
+	}
+
+	// free breakfast Check box
+	public static WebElement freeBreakfastCheckbox(WebDriver driver) {
+		element = driver.findElement(By.xpath("//p[contains(text(),'Free Breakfast')]"));
+		return element;
+	}
+
 	// to locate the guests button
 	public static WebElement guestsButton(WebDriver driver) {
 		element = driver.findElement(By.id("guest"));
 		return element;
 	}
-	
-	public static WebElement hotelsearch(WebDriver driver)
-	{
+
+	// hotel search button
+	public static WebElement hotelsearch(WebDriver driver) {
 		element = driver.findElement(By.xpath("//button[@id='hsw_search_button']"));
 		return element;
 	}
-	
+
 	// the numbers available for adults
 	public static List<WebElement> adultsList(WebDriver driver) {
 		elements = driver.findElements(By.xpath("//ul[@data-cy='adultCount']/li"));
 		return elements;
 	}
-	
 
 }
