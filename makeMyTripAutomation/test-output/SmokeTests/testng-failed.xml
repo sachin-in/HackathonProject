@@ -6,11 +6,13 @@
       <class name="SmokeTesting.smokeTest">
         <methods>
           <include name="getHomePageSignature"/>
+          <include name="loginFromPopUp"/>
           <include name="verifyCountry"/>
           <include name="getWebDriver"/>
           <include name="getExcelData"/>
           <include name="createExtentReport"/>
           <include name="verifyLoginButton"/>
+          <include name="loginWithGmail"/>
           <include name="closeBrowser"/>
         </methods>
       </class> <!-- SmokeTesting.smokeTest -->
