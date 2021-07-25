@@ -123,21 +123,18 @@ public class cabScenario extends testExecutor {
 		ElementContainer.suvSelect(driver).click();
 		
 		String vehicleName=ElementContainer.carName(driver).getText();
+		System.out.println("Cab Details");
+		System.out.println(vehicleName);
 		Highlight.flash(ElementContainer.carName(driver), driver, "VehicleName");
 		String fare=ElementContainer.charges(driver).getText().split(" ")[1];
+		System.out.println(fare);
 		Highlight.flash(ElementContainer.charges(driver), driver, "TripFare");
 		String popularity=ElementContainer.rating(driver).getText();
+		System.out.println(popularity);
 		Highlight.flash(ElementContainer.rating(driver), driver, "VehicleRating");
 		regReport.createTest("Cheapest SUV found");
 		Assert.assertEquals(vehicleName, "Xylo, Ertiga", "SUV name is not correct");
 		regReport.flush();
-//		ExcelData.writeData(0, 0, "CabScenario");
-//		ExcelData.writeData(1, 0, "Car Name");
-//		ExcelData.writeData(1, 1, "Fare");
-//		ExcelData.writeData(1, 2, "Ratings");
-//		ExcelData.writeData(2, 0, vehicleName);
-//		ExcelData.writeData(2, 1, fare);
-//		ExcelData.writeData(2, 2, popularity);
 		
 		Thread.sleep(2000);
 		driver.navigate().to(data[1][0]);

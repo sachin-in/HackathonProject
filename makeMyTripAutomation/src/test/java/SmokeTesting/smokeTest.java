@@ -31,7 +31,7 @@ public class smokeTest extends testExecutor {
 
 		Highlight.flash(ElementContainer.countryVerify(driver),driver,"Country&Currency");
 		String name = ElementContainer.countryVerify(driver).getText();
-		smokeReport.createTest("WebsiteDomainContry/Currency");
+		smokeReport.createTest("WebsiteDomainContry&Currency");
 		System.out.println(name);
 		Assert.assertEquals(name, "IN | ENG | INR", "India is not selected");
 		smokeReport.flush();
