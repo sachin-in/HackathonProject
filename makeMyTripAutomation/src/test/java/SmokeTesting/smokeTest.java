@@ -29,7 +29,7 @@ public class smokeTest extends testExecutor {
 	@Test(priority = 1)
 	public void verifyCountry() {
 
-		Highlight.flash(ElementContainer.countryVerify(driver),driver,"Country/Currency");
+		Highlight.flash(ElementContainer.countryVerify(driver),driver,"Country&Currency");
 		String name = ElementContainer.countryVerify(driver).getText();
 		smokeReport.createTest("WebsiteDomainContry/Currency");
 		System.out.println(name);

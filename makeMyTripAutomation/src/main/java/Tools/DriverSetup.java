@@ -1,14 +1,19 @@
 package Tools;
 import java.io.File;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.Scanner;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
 
 public class DriverSetup {
 	
 		public static WebDriver driver;
+		public static RemoteWebDriver remoteDriver;
 		
 		public static WebDriver createWebDriver(String folder) {//creating driver for Firefox and Chrome drivers respectively
 			
@@ -41,5 +46,23 @@ public class DriverSetup {
 				
 				return driver;
 				
+		}
+		public static RemoteWebDriver createRemoteDriver() throws MalformedURLException {
+			
+			Scanner sc=new Scanner(System.in);
+			System.out.println("Chrome, Firefox");
+			System.out.println("Choose any of the above broswers: ");
+			String browser="Chrome";//sc.nextLine();
+			sc.close();
+			
+			if (browser.equalsIgnoreCase("Chrome")) {
+				DesiredCapabilities dc=DesiredCapabilities.chrome();
+				remoteDriver=new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), dc);
+			}
+			else if(browser.equalsIgnoreCase("firefox")) {
+				DesiredCapabilities df=DesiredCapabilities.firefox();
+				remoteDriver=new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), df);
+			}
+			return remoteDriver;
 		}
 }

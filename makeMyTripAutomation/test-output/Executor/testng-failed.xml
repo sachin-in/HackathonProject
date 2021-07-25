@@ -5,13 +5,54 @@
     <classes>
       <class name="RegressionTesting.verifyVariousButtons">
         <methods>
+          <include name="verifyCabSearchButton"/>
+          <include name="verifyHotelSearchButton"/>
           <include name="getWebDriver"/>
           <include name="getExcelData"/>
+          <include name="verifyHotelButton"/>
+          <include name="verifyCabButton"/>
           <include name="createExtentReport"/>
           <include name="verifyBuyNowButton"/>
           <include name="closeBrowser"/>
         </methods>
       </class> <!-- RegressionTesting.verifyVariousButtons -->
+      <class name="RegressionTesting.cabScenario">
+        <methods>
+          <include name="arrival"/>
+          <include name="searchCab"/>
+          <include name="getWebDriver"/>
+          <include name="getExcelData"/>
+          <include name="calender"/>
+          <include name="time"/>
+          <include name="createExtentReport"/>
+          <include name="departure"/>
+          <include name="getCabDetails"/>
+          <include name="closeBrowser"/>
+        </methods>
+      </class> <!-- RegressionTesting.cabScenario -->
+      <class name="SmokeTesting.smokeTest">
+        <methods>
+          <include name="loginFromPopUp"/>
+          <include name="getWebDriver"/>
+          <include name="getExcelData"/>
+          <include name="createExtentReport"/>
+          <include name="loginWithGmail"/>
+          <include name="closeBrowser"/>
+        </methods>
+      </class> <!-- SmokeTesting.smokeTest -->
+      <class name="RegressionTesting.giftCardScenario">
+        <methods>
+          <include name="getWebDriver"/>
+          <include name="verifyGiftCardTitle"/>
+          <include name="getExcelData"/>
+          <include name="verifyMajorErrorMessage"/>
+          <include name="createExtentReport"/>
+          <include name="buyGiftCard"/>
+          <include name="giftCards"/>
+          <include name="closeBrowser"/>
+          <include name="verifyGiftCard"/>
+        </methods>
+      </class> <!-- RegressionTesting.giftCardScenario -->
       <class name="RegressionTesting.hotelScenario">
         <methods>
           <include name="getWebDriver"/>
