@@ -1,6 +1,7 @@
 package RegressionTesting;
 
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
@@ -11,7 +12,6 @@ import org.testng.annotations.Test;
 
 import Executor.testExecutor;
 import Tools.ElementContainer;
-import Tools.ExcelData;
 import Tools.Highlight;
 
 public class cabScenario extends testExecutor {
@@ -36,16 +36,14 @@ public class cabScenario extends testExecutor {
 	}
 
 	@Test(priority = 1)
-	public void departure() {
+	public void departure() throws InterruptedException {
 
 		Highlight.flash(ElementContainer.fromCity(driver),driver,"DepartureCityInput");
+		driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
 		ElementContainer.fromCity(driver).click();// from option
 		ElementContainer.selectDeparture(driver).sendKeys(data[1][7]);// departure city
 
-		try {
-			Thread.sleep(500);
-		} catch (InterruptedException e) {
-		}
+		Thread.sleep(500);
 		Actions keyPress = new Actions(driver);
 		keyPress.sendKeys(Keys.chord(Keys.ARROW_DOWN, Keys.ENTER)).perform();
 		
@@ -55,13 +53,10 @@ public class cabScenario extends testExecutor {
 	}
 
 	@Test(priority = 2)
-	public void arrival() {
+	public void arrival() throws InterruptedException {
 		ElementContainer.selectArrival(driver).sendKeys(data[1][8]);// arrival city
 		Highlight.flash(ElementContainer.selectArrival(driver), driver, "ArrivalCity");
-		try {
-			Thread.sleep(500);
-		} catch (InterruptedException e) {
-		}
+		Thread.sleep(1000);
 		Actions keyPress = new Actions(driver);
 		keyPress.sendKeys(Keys.chord(Keys.ARROW_DOWN, Keys.ENTER)).perform();
 		
@@ -107,17 +102,16 @@ public class cabScenario extends testExecutor {
 		regReport.createTest("Time of trip");
 		Assert.assertEquals("06:30", "06:30", "Time of trip is not correct");
 		regReport.flush();
-		Thread.sleep(1500);
+		driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
 
 		Highlight.flash(ElementContainer.searchButton(driver),driver,"SearchButton");
 		ElementContainer.searchButton(driver).click();
 
-		Thread.sleep(2000);
 	}
 
 	@Test(dependsOnMethods = "time",priority=5)
 	public static void getCabDetails() throws Exception {
-		Thread.sleep(2000);
+		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 
 		Highlight.flash(ElementContainer.suvSelect(driver),driver,"SuvCheckBox");
 		ElementContainer.suvSelect(driver).click();
@@ -136,9 +130,9 @@ public class cabScenario extends testExecutor {
 		Assert.assertEquals(vehicleName, "Xylo, Ertiga", "SUV name is not correct");
 		regReport.flush();
 		
-		Thread.sleep(2000);
+		
 		driver.navigate().to(data[1][0]);
-		Thread.sleep(2000);
+		
 	}
 
 }

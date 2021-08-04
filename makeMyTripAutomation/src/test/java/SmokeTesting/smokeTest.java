@@ -2,8 +2,8 @@ package SmokeTesting;
 
 import java.util.Iterator;
 import java.util.Set;
+import java.util.concurrent.TimeUnit;
 
-import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -31,7 +31,7 @@ public class smokeTest extends testExecutor {
 
 		Highlight.flash(ElementContainer.countryVerify(driver),driver,"Country&Currency");
 		String name = ElementContainer.countryVerify(driver).getText();
-		smokeReport.createTest("WebsiteDomainContry&Currency");
+		smokeReport.createTest("WebsiteDomainContryAndCurrency");
 		System.out.println(name);
 		Assert.assertEquals(name, "IN | ENG | INR", "India is not selected");
 		smokeReport.flush();
@@ -55,7 +55,7 @@ public class smokeTest extends testExecutor {
 
 			smokeReport.createTest("LoginWithLoginButton");
 			ElementContainer.loginButton(driver).click();// login button
-			Thread.sleep(500);
+			driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 			Highlight.flash(ElementContainer.googleLogin(driver), driver,"LoginWithGoogle");
 			ElementContainer.googleLogin(driver).click();// login by google
 
@@ -65,7 +65,7 @@ public class smokeTest extends testExecutor {
 			String parentwindowid = it.next();
 			String childwindowid = it.next();
 			driver.switchTo().window(childwindowid);
-			Thread.sleep(1000);
+			
 
 
 			ElementContainer.emailInput(driver).sendKeys(data[1][4]);// enter email
@@ -80,9 +80,11 @@ public class smokeTest extends testExecutor {
 			ElementContainer.nextButton(driver).click();// click next
 
 			driver.switchTo().window(parentwindowid);
+			
 			Thread.sleep(5000);
 			ElementContainer.button(driver).click();
-			Thread.sleep(5000);
+			
+
 			smokeReport.flush();
 
 		} catch (Exception e) {
@@ -105,20 +107,23 @@ public class smokeTest extends testExecutor {
 				String parentwindowid = it.next();
 				String childwindowid = it.next();
 				driver.switchTo().window(childwindowid);
-				Thread.sleep(1000);
+				driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+
 
 
 				ElementContainer.emailInput(driver).sendKeys(data[1][4]);// enter email
 
 				ElementContainer.nextButton(driver).click();// click next
-				Thread.sleep(2000);
+				Thread.sleep(1000);
 				ElementContainer.passwordInput(driver).sendKeys(data[1][5]);// enter password
-
+				Thread.sleep(2000);
 				ElementContainer.nextButton(driver).click();// click next
 
 				driver.switchTo().window(parentwindowid);
-				smokeReport.flush();
 				Thread.sleep(5000);
+				smokeReport.flush();
+				
+
 			}
 		} catch (Exception e) {
 			e.printStackTrace();

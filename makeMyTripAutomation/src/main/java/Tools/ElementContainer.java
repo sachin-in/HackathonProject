@@ -12,10 +12,6 @@ public class ElementContainer {
 	public static WebElement element;
 	public static List<WebElement> elements;
 
-//	public static void getWebDriver()
-//	{
-//		driver = DriverSetup.createWebDriver("Drivers");
-//	}
 
 	// login Button
 	public static WebElement loginButton(WebDriver driver) {

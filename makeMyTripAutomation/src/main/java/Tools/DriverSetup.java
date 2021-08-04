@@ -15,14 +15,10 @@ public class DriverSetup {
 		public static WebDriver driver;
 		public static RemoteWebDriver remoteDriver;
 		
-		public static WebDriver createWebDriver(String folder) {//creating driver for Firefox and Chrome drivers respectively
+		public static WebDriver createWebDriver(String folder, String browser) {//creating driver for Firefox and Chrome drivers respectively
 			
 			//Getting input from user as to choose from chrome or firefox driver
-			Scanner sc=new Scanner(System.in);
-			System.out.println("Chrome, Firefox");
-			System.out.println("Choose any of the above broswers: ");
-			String browser="Chrome";//sc.nextLine();
-			sc.close();
+			
 			    
 				String firefoxPath= System.getProperty("user.dir")+"\\"+folder+"\\geckodriver.exe";
 				String chromePath= System.getProperty("user.dir")+"\\"+folder+"\\chromedriver.exe";
@@ -47,13 +43,7 @@ public class DriverSetup {
 				return driver;
 				
 		}
-		public static RemoteWebDriver createRemoteDriver() throws MalformedURLException {
-			
-			Scanner sc=new Scanner(System.in);
-			System.out.println("Chrome, Firefox");
-			System.out.println("Choose any of the above broswers: ");
-			String browser="Chrome";//sc.nextLine();
-			sc.close();
+		public static RemoteWebDriver createRemoteDriver(String browser) throws MalformedURLException {
 			
 			if (browser.equalsIgnoreCase("Chrome")) {
 				DesiredCapabilities dc=DesiredCapabilities.chrome();

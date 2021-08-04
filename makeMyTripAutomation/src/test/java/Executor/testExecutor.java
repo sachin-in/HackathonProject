@@ -2,6 +2,8 @@ package Executor;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.util.List;
+import java.util.Scanner;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.TestNG;
@@ -18,17 +20,21 @@ import Tools.ExtentReport;
 
 public class testExecutor {
 
-	public static RemoteWebDriver driver;
-	//public static WebDriver driver;
+	//public static RemoteWebDriver driver;
+	public static WebDriver driver;
 	public static String[][] data;
 	public static ExtentReports regReport;
 	public static ExtentReports smokeReport;
+	
 
 	@BeforeTest
 	public void getWebDriver() throws MalformedURLException {
 		
-			driver =  DriverSetup.createRemoteDriver();
-			//driver =  DriverSetup.createWebDriver("Drivers");
+		String browser="chrome";
+		System.out.println("Chosen browser is: "+browser);
+		
+			//driver =  DriverSetup.createRemoteDriver(browser);
+			driver =  DriverSetup.createWebDriver("Drivers", browser);
 			String baseURL = data[1][0];
 			driver.manage().window().maximize();
 			driver.get(baseURL);

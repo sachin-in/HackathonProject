@@ -1,5 +1,7 @@
 package RegressionTesting;
 
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
@@ -28,16 +30,19 @@ public class verifyVariousButtons extends testExecutor {
 	@Test(priority = 1, dependsOnMethods = "verifyCabButton")
 	public void verifyCabSearchButton() throws InterruptedException {
 
+		driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
 		ElementContainer.searchButton(driver).click();
 
 		String pageTitle = driver.getTitle();
 		regReport.createTest("VerifyCabSearchButton(CabScenario)");
 		Assert.assertEquals(pageTitle, "Cabs", "Search button is not working Correctly");
 		regReport.flush();
-
-		Thread.sleep(2000);
+		
+		driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
+		
 		driver.navigate().to(data[1][0]);
-		Thread.sleep(2000);
+		driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
+		
 	}
 
 	@Test(priority = 2)
@@ -50,26 +55,17 @@ public class verifyVariousButtons extends testExecutor {
 		regReport.createTest("VerifyHotelButton(HotelScenario)");
 		Assert.assertEquals(buttonName, "Hotels", "Hotels button not found");
 		regReport.flush();
+		driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
 
-		try {
-			Thread.sleep(1500);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
 	}
 
 	@Test(priority = 3, dependsOnMethods = "verifyHotelButton")
 	public void verifyHotelSearchButton() throws InterruptedException {
 
 		ElementContainer.hotelsearch(driver).click();
-		try {
-			Thread.sleep(5000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 
+		Thread.sleep(5000);
 		WebElement freeBreakfastButton =  ElementContainer.freeBreakfastCheckbox(driver);
 		Highlight.flash(freeBreakfastButton, driver, "FreeBreakfastCheckBox");
 
@@ -77,10 +73,11 @@ public class verifyVariousButtons extends testExecutor {
 		regReport.createTest("SelectFreeBreakfast");
 		Assert.assertEquals(buttonText, "Free Breakfast", "Text is not correct");
 		regReport.flush();
-
-		Thread.sleep(2000);
+		
+		
 		driver.navigate().to(data[1][0]);
-		Thread.sleep(2000);
+		
+		
 	}
 
 	@Test(priority = 4)
@@ -96,17 +93,18 @@ public class verifyVariousButtons extends testExecutor {
 
 		Highlight.flash(ElementContainer.giftCard(driver), driver, "SelectedGiftCard");
 		click.moveToElement(ElementContainer.giftCard(driver)).click().perform();
-
-		Thread.sleep(1000);
+		driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
+		//Thread.sleep(1000);
 		String buttonName = ElementContainer.buyNowButton(driver).getText();
 
 		regReport.createTest("VerifyBuyNowButton(GiftCardScenario)");
 		Assert.assertEquals(buttonName, "BUY NOW", "failed");
 		regReport.flush();
-
-		Thread.sleep(2000);
+		
+		
 		driver.navigate().to(data[1][0]);
-		Thread.sleep(2000);
+		
+		
 	}
 
 }

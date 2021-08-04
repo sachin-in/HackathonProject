@@ -11,7 +11,6 @@ import org.openqa.selenium.WebElement;
 public class Highlight {
 	public static void flash(WebElement element, WebDriver driver,String ssName)
 	{
-//		WebDriver driver = DriverSetup.createWebDriver("Drivers");
 		
 		String bgColor = element.getCssValue("backgroundColor");
 		
@@ -27,7 +26,6 @@ public class Highlight {
 		}
 
 		
-
 		changeColor(bgColor, element, driver);
 	
 	}

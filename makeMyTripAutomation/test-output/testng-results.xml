@@ -2,170 +2,170 @@
 <testng-results ignored="23" total="51" passed="28" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-07-25T14:54:21 IST" name="Executor" finished-at="2021-07-25T14:56:17 IST" duration-ms="116140">
+  <suite started-at="2021-08-04T13:28:53 IST" name="Executor" finished-at="2021-08-04T13:30:18 IST" duration-ms="85135">
     <groups>
     </groups>
-    <test started-at="2021-07-25T14:54:21 IST" name="Test" finished-at="2021-07-25T14:56:17 IST" duration-ms="116140">
+    <test started-at="2021-08-04T13:28:53 IST" name="Test" finished-at="2021-08-04T13:30:18 IST" duration-ms="85135">
       <class name="Executor.testExecutor">
-        <test-method is-config="true" signature="getExcelData()[pri:0, instance:Executor.testExecutor@61322f9d]" started-at="2021-07-25T14:54:21 IST" name="getExcelData" finished-at="2021-07-25T14:54:21 IST" duration-ms="49" status="PASS">
+        <test-method is-config="true" signature="getExcelData()[pri:0, instance:Executor.testExecutor@2a5c8d3f]" started-at="2021-08-04T13:28:53 IST" name="getExcelData" finished-at="2021-08-04T13:28:53 IST" duration-ms="220" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getExcelData -->
-        <test-method is-config="true" signature="createExtentReport()[pri:0, instance:Executor.testExecutor@61322f9d]" started-at="2021-07-25T14:54:21 IST" name="createExtentReport" finished-at="2021-07-25T14:54:21 IST" duration-ms="2" status="PASS">
+        <test-method is-config="true" signature="createExtentReport()[pri:0, instance:Executor.testExecutor@2a5c8d3f]" started-at="2021-08-04T13:28:53 IST" name="createExtentReport" finished-at="2021-08-04T13:28:53 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createExtentReport -->
-        <test-method is-config="true" signature="getWebDriver()[pri:0, instance:Executor.testExecutor@61322f9d]" started-at="2021-07-25T14:54:21 IST" name="getWebDriver" finished-at="2021-07-25T14:54:27 IST" duration-ms="5913" status="PASS">
+        <test-method is-config="true" signature="getWebDriver()[pri:0, instance:Executor.testExecutor@2a5c8d3f]" started-at="2021-08-04T13:28:53 IST" name="getWebDriver" finished-at="2021-08-04T13:28:58 IST" duration-ms="4764" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getWebDriver -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:Executor.testExecutor@61322f9d]" started-at="2021-07-25T14:56:15 IST" name="closeBrowser" finished-at="2021-07-25T14:56:17 IST" duration-ms="2075" status="PASS">
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:Executor.testExecutor@2a5c8d3f]" started-at="2021-08-04T13:30:15 IST" name="closeBrowser" finished-at="2021-08-04T13:30:18 IST" duration-ms="2783" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
       </class> <!-- Executor.testExecutor -->
       <class name="RegressionTesting.cabScenario">
-        <test-method signature="searchCab()[pri:0, instance:RegressionTesting.cabScenario@fa4c865]" started-at="2021-07-25T14:55:34 IST" name="searchCab" finished-at="2021-07-25T14:55:37 IST" duration-ms="2502" status="PASS">
+        <test-method signature="searchCab()[pri:0, instance:RegressionTesting.cabScenario@65e98b1c]" started-at="2021-08-04T13:29:51 IST" name="searchCab" finished-at="2021-08-04T13:29:54 IST" duration-ms="2182" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- searchCab -->
-        <test-method signature="departure()[pri:1, instance:RegressionTesting.cabScenario@fa4c865]" started-at="2021-07-25T14:55:37 IST" name="departure" finished-at="2021-07-25T14:55:38 IST" duration-ms="1718" status="PASS">
+        <test-method signature="departure()[pri:1, instance:RegressionTesting.cabScenario@65e98b1c]" started-at="2021-08-04T13:29:54 IST" name="departure" finished-at="2021-08-04T13:29:55 IST" duration-ms="1531" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- departure -->
-        <test-method signature="arrival()[pri:2, instance:RegressionTesting.cabScenario@fa4c865]" started-at="2021-07-25T14:55:38 IST" name="arrival" finished-at="2021-07-25T14:55:40 IST" duration-ms="1535" status="PASS">
+        <test-method signature="arrival()[pri:2, instance:RegressionTesting.cabScenario@65e98b1c]" started-at="2021-08-04T13:29:55 IST" name="arrival" finished-at="2021-08-04T13:29:57 IST" duration-ms="1890" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- arrival -->
-        <test-method signature="calender()[pri:3, instance:RegressionTesting.cabScenario@fa4c865]" started-at="2021-07-25T14:55:40 IST" name="calender" finished-at="2021-07-25T14:55:41 IST" duration-ms="1571" status="PASS">
+        <test-method signature="calender()[pri:3, instance:RegressionTesting.cabScenario@65e98b1c]" started-at="2021-08-04T13:29:57 IST" name="calender" finished-at="2021-08-04T13:29:58 IST" duration-ms="1234" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- calender -->
-        <test-method signature="time()[pri:4, instance:RegressionTesting.cabScenario@fa4c865]" started-at="2021-07-25T14:55:41 IST" name="time" finished-at="2021-07-25T14:55:49 IST" duration-ms="7083" status="PASS">
+        <test-method signature="time()[pri:4, instance:RegressionTesting.cabScenario@65e98b1c]" started-at="2021-08-04T13:29:58 IST" name="time" finished-at="2021-08-04T13:30:01 IST" duration-ms="3048" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- time -->
-        <test-method signature="getCabDetails()[pri:5, instance:RegressionTesting.cabScenario@fa4c865]" started-at="2021-07-25T14:55:49 IST" name="getCabDetails" finished-at="2021-07-25T14:56:00 IST" depends-on-methods="RegressionTesting.cabScenario.time" duration-ms="11432" status="PASS">
+        <test-method signature="getCabDetails()[pri:5, instance:RegressionTesting.cabScenario@65e98b1c]" started-at="2021-08-04T13:30:01 IST" name="getCabDetails" finished-at="2021-08-04T13:30:10 IST" depends-on-methods="RegressionTesting.cabScenario.time" duration-ms="8270" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getCabDetails -->
       </class> <!-- RegressionTesting.cabScenario -->
       <class name="RegressionTesting.giftCardScenario">
-        <test-method signature="giftCards()[pri:0, instance:RegressionTesting.giftCardScenario@3bd82cf5]" started-at="2021-07-25T14:56:00 IST" name="giftCards" finished-at="2021-07-25T14:56:02 IST" duration-ms="2254" status="PASS">
+        <test-method signature="giftCards()[pri:0, instance:RegressionTesting.giftCardScenario@61322f9d]" started-at="2021-08-04T13:30:10 IST" name="giftCards" finished-at="2021-08-04T13:30:12 IST" duration-ms="2122" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- giftCards -->
-        <test-method signature="verifyGiftCardTitle()[pri:1, instance:RegressionTesting.giftCardScenario@3bd82cf5]" started-at="2021-07-25T14:56:02 IST" name="verifyGiftCardTitle" finished-at="2021-07-25T14:56:04 IST" duration-ms="2062" status="PASS">
+        <test-method signature="verifyGiftCardTitle()[pri:1, instance:RegressionTesting.giftCardScenario@61322f9d]" started-at="2021-08-04T13:30:12 IST" name="verifyGiftCardTitle" finished-at="2021-08-04T13:30:12 IST" duration-ms="21" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyGiftCardTitle -->
-        <test-method signature="verifyGiftCard()[pri:2, instance:RegressionTesting.giftCardScenario@3bd82cf5]" started-at="2021-07-25T14:56:04 IST" name="verifyGiftCard" finished-at="2021-07-25T14:56:05 IST" duration-ms="1063" status="PASS">
+        <test-method signature="verifyGiftCard()[pri:2, instance:RegressionTesting.giftCardScenario@61322f9d]" started-at="2021-08-04T13:30:12 IST" name="verifyGiftCard" finished-at="2021-08-04T13:30:12 IST" duration-ms="134" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyGiftCard -->
-        <test-method signature="buyGiftCard()[pri:3, instance:RegressionTesting.giftCardScenario@3bd82cf5]" started-at="2021-07-25T14:56:05 IST" name="buyGiftCard" finished-at="2021-07-25T14:56:10 IST" duration-ms="4485" status="PASS">
+        <test-method signature="buyGiftCard()[pri:3, instance:RegressionTesting.giftCardScenario@61322f9d]" started-at="2021-08-04T13:30:12 IST" name="buyGiftCard" finished-at="2021-08-04T13:30:14 IST" duration-ms="2113" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- buyGiftCard -->
-        <test-method signature="verifyMajorErrorMessage()[pri:4, instance:RegressionTesting.giftCardScenario@3bd82cf5]" started-at="2021-07-25T14:56:10 IST" name="verifyMajorErrorMessage" finished-at="2021-07-25T14:56:15 IST" duration-ms="5216" status="PASS">
+        <test-method signature="verifyMajorErrorMessage()[pri:4, instance:RegressionTesting.giftCardScenario@61322f9d]" started-at="2021-08-04T13:30:14 IST" name="verifyMajorErrorMessage" finished-at="2021-08-04T13:30:15 IST" duration-ms="1268" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyMajorErrorMessage -->
       </class> <!-- RegressionTesting.giftCardScenario -->
       <class name="RegressionTesting.verifyVariousButtons">
-        <test-method signature="verifyCabButton()[pri:0, instance:RegressionTesting.verifyVariousButtons@b2c9a9c]" started-at="2021-07-25T14:54:38 IST" name="verifyCabButton" finished-at="2021-07-25T14:54:41 IST" duration-ms="2570" status="PASS">
+        <test-method signature="verifyCabButton()[pri:0, instance:RegressionTesting.verifyVariousButtons@710f4dc7]" started-at="2021-08-04T13:29:16 IST" name="verifyCabButton" finished-at="2021-08-04T13:29:18 IST" duration-ms="1255" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyCabButton -->
-        <test-method signature="verifyCabSearchButton()[pri:1, instance:RegressionTesting.verifyVariousButtons@b2c9a9c]" started-at="2021-07-25T14:54:41 IST" name="verifyCabSearchButton" finished-at="2021-07-25T14:54:48 IST" depends-on-methods="RegressionTesting.verifyVariousButtons.verifyCabButton" duration-ms="6835" status="PASS">
+        <test-method signature="verifyCabSearchButton()[pri:1, instance:RegressionTesting.verifyVariousButtons@710f4dc7]" started-at="2021-08-04T13:29:18 IST" name="verifyCabSearchButton" finished-at="2021-08-04T13:29:22 IST" depends-on-methods="RegressionTesting.verifyVariousButtons.verifyCabButton" duration-ms="4346" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyCabSearchButton -->
-        <test-method signature="verifyHotelButton()[pri:2, instance:RegressionTesting.verifyVariousButtons@b2c9a9c]" started-at="2021-07-25T14:54:48 IST" name="verifyHotelButton" finished-at="2021-07-25T14:54:50 IST" duration-ms="2974" status="PASS">
+        <test-method signature="verifyHotelButton()[pri:2, instance:RegressionTesting.verifyVariousButtons@710f4dc7]" started-at="2021-08-04T13:29:22 IST" name="verifyHotelButton" finished-at="2021-08-04T13:29:23 IST" duration-ms="1479" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyHotelButton -->
-        <test-method signature="verifyHotelSearchButton()[pri:3, instance:RegressionTesting.verifyVariousButtons@b2c9a9c]" started-at="2021-07-25T14:54:50 IST" name="verifyHotelSearchButton" finished-at="2021-07-25T14:55:03 IST" depends-on-methods="RegressionTesting.verifyVariousButtons.verifyHotelButton" duration-ms="12363" status="PASS">
+        <test-method signature="verifyHotelSearchButton()[pri:3, instance:RegressionTesting.verifyVariousButtons@710f4dc7]" started-at="2021-08-04T13:29:23 IST" name="verifyHotelSearchButton" finished-at="2021-08-04T13:29:33 IST" depends-on-methods="RegressionTesting.verifyVariousButtons.verifyHotelButton" duration-ms="9767" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyHotelSearchButton -->
-        <test-method signature="verifyBuyNowButton()[pri:4, instance:RegressionTesting.verifyVariousButtons@b2c9a9c]" started-at="2021-07-25T14:55:03 IST" name="verifyBuyNowButton" finished-at="2021-07-25T14:55:13 IST" duration-ms="10157" status="PASS">
+        <test-method signature="verifyBuyNowButton()[pri:4, instance:RegressionTesting.verifyVariousButtons@710f4dc7]" started-at="2021-08-04T13:29:33 IST" name="verifyBuyNowButton" finished-at="2021-08-04T13:29:38 IST" duration-ms="5193" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyBuyNowButton -->
       </class> <!-- RegressionTesting.verifyVariousButtons -->
       <class name="SmokeTesting.smokeTest">
-        <test-method signature="loginWithGmail()[pri:3, instance:SmokeTesting.smokeTest@7817fd62]" started-at="2021-07-25T14:54:27 IST" name="loginWithGmail" finished-at="2021-07-25T14:54:28 IST" duration-ms="1132" status="PASS">
+        <test-method signature="loginWithGmail()[pri:3, instance:SmokeTesting.smokeTest@b3ca52e]" started-at="2021-08-04T13:28:58 IST" name="loginWithGmail" finished-at="2021-08-04T13:29:11 IST" duration-ms="13561" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginWithGmail -->
-        <test-method signature="loginFromPopUp()[pri:4, instance:SmokeTesting.smokeTest@7817fd62]" started-at="2021-07-25T14:54:28 IST" name="loginFromPopUp" finished-at="2021-07-25T14:54:38 IST" duration-ms="10009" status="PASS">
+        <test-method signature="loginFromPopUp()[pri:4, instance:SmokeTesting.smokeTest@b3ca52e]" started-at="2021-08-04T13:29:11 IST" name="loginFromPopUp" finished-at="2021-08-04T13:29:16 IST" duration-ms="5105" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginFromPopUp -->
       </class> <!-- SmokeTesting.smokeTest -->
       <class name="RegressionTesting.hotelScenario">
-        <test-method signature="enterCity()[pri:0, instance:RegressionTesting.hotelScenario@4c178a76]" started-at="2021-07-25T14:55:13 IST" name="enterCity" finished-at="2021-07-25T14:55:18 IST" duration-ms="4823" status="PASS">
+        <test-method signature="enterCity()[pri:0, instance:RegressionTesting.hotelScenario@1ff4931d]" started-at="2021-08-04T13:29:38 IST" name="enterCity" finished-at="2021-08-04T13:29:44 IST" duration-ms="5426" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- enterCity -->
-        <test-method signature="enterCheckInCheckOutDate()[pri:1, instance:RegressionTesting.hotelScenario@4c178a76]" started-at="2021-07-25T14:55:18 IST" name="enterCheckInCheckOutDate" finished-at="2021-07-25T14:55:22 IST" depends-on-methods="RegressionTesting.hotelScenario.enterCity" duration-ms="4178" status="PASS">
+        <test-method signature="enterCheckInCheckOutDate()[pri:1, instance:RegressionTesting.hotelScenario@1ff4931d]" started-at="2021-08-04T13:29:44 IST" name="enterCheckInCheckOutDate" finished-at="2021-08-04T13:29:46 IST" depends-on-methods="RegressionTesting.hotelScenario.enterCity" duration-ms="2028" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- enterCheckInCheckOutDate -->
-        <test-method signature="verifyRoomsAndGuestButton()[pri:2, instance:RegressionTesting.hotelScenario@4c178a76]" started-at="2021-07-25T14:55:22 IST" name="verifyRoomsAndGuestButton" finished-at="2021-07-25T14:55:23 IST" duration-ms="1031" status="PASS">
+        <test-method signature="verifyRoomsAndGuestButton()[pri:2, instance:RegressionTesting.hotelScenario@1ff4931d]" started-at="2021-08-04T13:29:46 IST" name="verifyRoomsAndGuestButton" finished-at="2021-08-04T13:29:47 IST" duration-ms="906" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyRoomsAndGuestButton -->
-        <test-method signature="getAdultsList()[pri:3, instance:RegressionTesting.hotelScenario@4c178a76]" started-at="2021-07-25T14:55:23 IST" name="getAdultsList" finished-at="2021-07-25T14:55:28 IST" depends-on-methods="RegressionTesting.hotelScenario.verifyRoomsAndGuestButton" duration-ms="4771" status="PASS">
+        <test-method signature="getAdultsList()[pri:3, instance:RegressionTesting.hotelScenario@1ff4931d]" started-at="2021-08-04T13:29:47 IST" name="getAdultsList" finished-at="2021-08-04T13:29:48 IST" depends-on-methods="RegressionTesting.hotelScenario.verifyRoomsAndGuestButton" duration-ms="1054" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getAdultsList -->
-        <test-method signature="verifyFreeBreakfastCheckBox()[pri:4, instance:RegressionTesting.hotelScenario@4c178a76]" started-at="2021-07-25T14:55:28 IST" name="verifyFreeBreakfastCheckBox" finished-at="2021-07-25T14:55:34 IST" depends-on-methods="RegressionTesting.hotelScenario.getAdultsList" duration-ms="6367" status="PASS">
+        <test-method signature="verifyFreeBreakfastCheckBox()[pri:4, instance:RegressionTesting.hotelScenario@1ff4931d]" started-at="2021-08-04T13:29:48 IST" name="verifyFreeBreakfastCheckBox" finished-at="2021-08-04T13:29:51 IST" depends-on-methods="RegressionTesting.hotelScenario.getAdultsList" duration-ms="3635" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyFreeBreakfastCheckBox -->
       </class> <!-- RegressionTesting.hotelScenario -->
     </test> <!-- Test -->
   </suite> <!-- Executor -->
-  <suite started-at="2021-07-25T14:53:58 IST" name="SmokeTests" finished-at="2021-07-25T14:54:21 IST" duration-ms="23404">
+  <suite started-at="2021-08-04T13:28:28 IST" name="SmokeTests" finished-at="2021-08-04T13:28:52 IST" duration-ms="24397">
     <groups>
     </groups>
-    <test started-at="2021-07-25T14:53:58 IST" name="Test" finished-at="2021-07-25T14:54:21 IST" duration-ms="23404">
+    <test started-at="2021-08-04T13:28:28 IST" name="Test" finished-at="2021-08-04T13:28:52 IST" duration-ms="24397">
       <class name="SmokeTesting.smokeTest">
-        <test-method is-config="true" signature="getExcelData()[pri:0, instance:SmokeTesting.smokeTest@7c7a06ec]" started-at="2021-07-25T14:53:57 IST" name="getExcelData" finished-at="2021-07-25T14:53:58 IST" duration-ms="390" status="PASS">
+        <test-method is-config="true" signature="getExcelData()[pri:0, instance:SmokeTesting.smokeTest@62379589]" started-at="2021-08-04T13:28:27 IST" name="getExcelData" finished-at="2021-08-04T13:28:28 IST" duration-ms="444" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getExcelData -->
-        <test-method is-config="true" signature="createExtentReport()[pri:0, instance:SmokeTesting.smokeTest@7c7a06ec]" started-at="2021-07-25T14:53:58 IST" name="createExtentReport" finished-at="2021-07-25T14:53:58 IST" duration-ms="155" status="PASS">
+        <test-method is-config="true" signature="createExtentReport()[pri:0, instance:SmokeTesting.smokeTest@62379589]" started-at="2021-08-04T13:28:28 IST" name="createExtentReport" finished-at="2021-08-04T13:28:28 IST" duration-ms="170" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createExtentReport -->
-        <test-method is-config="true" signature="getWebDriver()[pri:0, instance:SmokeTesting.smokeTest@7c7a06ec]" started-at="2021-07-25T14:53:58 IST" name="getWebDriver" finished-at="2021-07-25T14:54:03 IST" duration-ms="4884" status="PASS">
+        <test-method is-config="true" signature="getWebDriver()[pri:0, instance:SmokeTesting.smokeTest@62379589]" started-at="2021-08-04T13:28:28 IST" name="getWebDriver" finished-at="2021-08-04T13:28:34 IST" duration-ms="6084" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getWebDriver -->
-        <test-method signature="getHomePageSignature()[pri:0, instance:SmokeTesting.smokeTest@7c7a06ec]" started-at="2021-07-25T14:54:03 IST" name="getHomePageSignature" finished-at="2021-07-25T14:54:04 IST" duration-ms="1230" status="PASS">
+        <test-method signature="getHomePageSignature()[pri:0, instance:SmokeTesting.smokeTest@62379589]" started-at="2021-08-04T13:28:34 IST" name="getHomePageSignature" finished-at="2021-08-04T13:28:36 IST" duration-ms="1411" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getHomePageSignature -->
-        <test-method signature="verifyCountry()[pri:1, instance:SmokeTesting.smokeTest@7c7a06ec]" started-at="2021-07-25T14:54:04 IST" name="verifyCountry" finished-at="2021-07-25T14:54:05 IST" duration-ms="892" status="PASS">
+        <test-method signature="verifyCountry()[pri:1, instance:SmokeTesting.smokeTest@62379589]" started-at="2021-08-04T13:28:36 IST" name="verifyCountry" finished-at="2021-08-04T13:28:36 IST" duration-ms="842" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyCountry -->
-        <test-method signature="verifyLoginButton()[pri:2, instance:SmokeTesting.smokeTest@7c7a06ec]" started-at="2021-07-25T14:54:05 IST" name="verifyLoginButton" finished-at="2021-07-25T14:54:06 IST" duration-ms="1036" status="PASS">
+        <test-method signature="verifyLoginButton()[pri:2, instance:SmokeTesting.smokeTest@62379589]" started-at="2021-08-04T13:28:36 IST" name="verifyLoginButton" finished-at="2021-08-04T13:28:37 IST" duration-ms="826" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyLoginButton -->
-        <test-method signature="loginWithGmail()[pri:3, instance:SmokeTesting.smokeTest@7c7a06ec]" started-at="2021-07-25T14:54:06 IST" name="loginWithGmail" finished-at="2021-07-25T14:54:07 IST" duration-ms="1280" status="PASS">
+        <test-method signature="loginWithGmail()[pri:3, instance:SmokeTesting.smokeTest@62379589]" started-at="2021-08-04T13:28:37 IST" name="loginWithGmail" finished-at="2021-08-04T13:28:39 IST" duration-ms="1660" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginWithGmail -->
-        <test-method signature="loginFromPopUp()[pri:4, instance:SmokeTesting.smokeTest@7c7a06ec]" started-at="2021-07-25T14:54:07 IST" name="loginFromPopUp" finished-at="2021-07-25T14:54:19 IST" duration-ms="11824" status="PASS">
+        <test-method signature="loginFromPopUp()[pri:4, instance:SmokeTesting.smokeTest@62379589]" started-at="2021-08-04T13:28:39 IST" name="loginFromPopUp" finished-at="2021-08-04T13:28:50 IST" duration-ms="10626" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginFromPopUp -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:SmokeTesting.smokeTest@7c7a06ec]" started-at="2021-07-25T14:54:19 IST" name="closeBrowser" finished-at="2021-07-25T14:54:21 IST" duration-ms="2080" status="PASS">
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:SmokeTesting.smokeTest@62379589]" started-at="2021-08-04T13:28:50 IST" name="closeBrowser" finished-at="2021-08-04T13:28:52 IST" duration-ms="2755" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->

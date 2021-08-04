@@ -1,6 +1,7 @@
 package RegressionTesting;
 
-import org.openqa.selenium.By;
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
@@ -28,7 +29,8 @@ public class giftCardScenario extends testExecutor {
 	
 	@Test(priority = 1)
 	public void verifyGiftCardTitle() throws InterruptedException {
-		Thread.sleep(2000);
+		
+		driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
 		String gcTitle = driver.getTitle();
 		System.out.println("Title is = " + gcTitle);
 		regReport.createTest("VerifyGiftCardPageTitle");
@@ -39,7 +41,7 @@ public class giftCardScenario extends testExecutor {
 	@Test(priority=2)
 	public void verifyGiftCard() throws Exception {
 
-		Thread.sleep(1000);
+		driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
 		String giftCardName=ElementContainer.EidGiftCard(driver).getText();
 		
 		regReport.createTest("Eid Mubarak Gift Card");
@@ -55,7 +57,7 @@ public class giftCardScenario extends testExecutor {
 		Highlight.flash(ElementContainer.giftCard(driver),driver,"SelectedGiftCard");
 		click.moveToElement(ElementContainer.giftCard(driver)).click().perform();
 
-		Thread.sleep(500);
+		driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
 
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("window.scrollBy(0,500)");
@@ -63,7 +65,7 @@ public class giftCardScenario extends testExecutor {
 		ElementContainer.sendersName(driver).sendKeys(data[3][0]);
 		ElementContainer.sendersMobile(driver).sendKeys(data[3][1]);
 		ElementContainer.sendersEmail(driver).sendKeys(data[3][2]);
-		Thread.sleep(2000);
+		driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
 
 
 		ElementContainer.buyNowButton(driver).click();
@@ -79,6 +81,7 @@ public class giftCardScenario extends testExecutor {
 	@Test(priority=4)
 	public void verifyMajorErrorMessage() throws InterruptedException {
 		
+		driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
 		ElementContainer.buyNowButton(driver).click();
 		
 		String majorErrorMessage = ElementContainer.majorErrorMessage(driver).getText();
@@ -87,9 +90,9 @@ public class giftCardScenario extends testExecutor {
 		Assert.assertEquals(majorErrorMessage, "Please fill in the required information below.", "Major error message iis not corect");
 		regReport.flush();
 		
-		Thread.sleep(2000);
+		
 		driver.navigate().to(data[1][0]);
-		Thread.sleep(2000);
+		
 		
 	}
 	

@@ -15,7 +15,7 @@ public class ExcelData {
 	public static String[][] readData(int cells, String fileName, String sheetName) throws IOException {
 		
 		
-			String[][] data=new String[4][cells];
+			String[][] data=new String[8][cells];
 		
 			//getting absolute path of excel file
 			String cwd=new File(fileName).getAbsolutePath();

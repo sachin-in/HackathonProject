@@ -5,14 +5,26 @@
     <classes>
       <class name="RegressionTesting.verifyVariousButtons">
         <methods>
-          <include name="verifyCabSearchButton"/>
           <include name="getWebDriver"/>
           <include name="getExcelData"/>
-          <include name="verifyCabButton"/>
           <include name="createExtentReport"/>
+          <include name="verifyBuyNowButton"/>
           <include name="closeBrowser"/>
         </methods>
       </class> <!-- RegressionTesting.verifyVariousButtons -->
+      <class name="RegressionTesting.hotelScenario">
+        <methods>
+          <include name="getWebDriver"/>
+          <include name="verifyFreeBreakfastCheckBox"/>
+          <include name="getExcelData"/>
+          <include name="enterCheckInCheckOutDate"/>
+          <include name="verifyRoomsAndGuestButton"/>
+          <include name="createExtentReport"/>
+          <include name="getAdultsList"/>
+          <include name="closeBrowser"/>
+          <include name="enterCity"/>
+        </methods>
+      </class> <!-- RegressionTesting.hotelScenario -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Executor] -->
